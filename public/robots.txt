@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tinyspice123.github.io/riftbound_collection_tracker/sitemap.xml

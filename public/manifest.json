@@ -1,0 +1,10 @@
+{
+  "name": "Riftbound Collection Tracker",
+  "short_name": "Riftbound Tracker",
+  "description": "Riftbound set and variant checklists fed live from Google Sheets",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0920",
+  "theme_color": "#0b0920"
+}

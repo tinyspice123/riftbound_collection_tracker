@@ -1,0 +1,12 @@
+.update-banner{
+  position:fixed;left:50%;bottom:18px;z-index:100;display:flex;align-items:center;gap:12px;
+  width:min(520px,calc(100% - 32px));transform:translateX(-50%);
+  border:1px solid #332e5c;border-radius:14px;padding:12px 14px;
+  background:#221e42;color:#eceaf7;box-shadow:0 12px 36px rgba(0,0,0,.4);
+  font:13px/1.4 "Sora",-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+.update-banner button{
+  margin-left:auto;border:1px solid #8db4ff;border-radius:999px;padding:7px 12px;
+  background:#1a1733;color:#eceaf7;font:inherit;font-weight:700;cursor:pointer;
+}
+.update-banner button:hover{background:#332e5c}

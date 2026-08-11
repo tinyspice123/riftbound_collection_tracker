@@ -1,0 +1,62 @@
+  :root{
+    --night:#100e22; --panel:#1a1733; --panel2:#221e42; --line:#332e5c;
+    --ink:#eceaf7; --dim:#8d88b0; --faint:#5b5680;
+    --tera1:#7ef0d4; --tera2:#8db4ff; --tera3:#e29bff; --tera4:#ffd47e;
+    --good:#7ef0d4; --miss:#ff8da1;
+    --crystal:linear-gradient(120deg,var(--tera1),var(--tera2) 34%,var(--tera3) 68%,var(--tera4));
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--night);
+    background-image:radial-gradient(ellipse 60% 40% at 80% -5%, rgba(141,180,255,.10), transparent),
+                     radial-gradient(ellipse 50% 35% at 10% 0%, rgba(226,155,255,.08), transparent);
+    color:var(--ink);
+    font-family:"Sora",-apple-system,"Segoe UI",Roboto,sans-serif;
+    min-height:100vh;padding:0 20px 80px;
+  }
+  header{max-width:900px;margin:0 auto;padding:46px 0 26px;text-align:center}
+  .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim)}
+  h1{font-family:"Unbounded","Sora",sans-serif;font-weight:700;font-size:clamp(26px,5vw,40px);margin-top:10px}
+  h1 .tera{background:var(--crystal);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tagline{color:var(--dim);font-size:14px;margin-top:8px}
+
+  .homesearch{display:block;width:min(420px,100%);margin:0 auto 24px;
+    background:var(--panel);border:1px solid var(--line);border-radius:999px;
+    color:var(--ink);font:inherit;font-size:14px;padding:10px 18px;outline:none}
+  .homesearch::placeholder{color:var(--faint)}
+  .homesearch:focus{border-color:var(--tera2);box-shadow:0 0 0 3px rgba(141,180,255,.12)}
+  .setcard.hidden{display:none}
+  .setgroup.hidden{display:none}
+  .noresults{display:none;text-align:center;color:var(--dim);font-size:14px;margin-top:8px}
+  .setgroups{max-width:900px;margin:0 auto;display:grid;gap:34px}
+  .setgroup h2{font-family:"Unbounded","Sora",sans-serif;font-size:16px;
+    letter-spacing:.04em;margin:0 2px 14px;color:var(--ink)}
+  .setgroup h2::after{content:"";display:block;width:52px;height:2px;margin-top:9px;
+    border-radius:99px;background:var(--crystal)}
+  .sets{max-width:900px;margin:0 auto;display:grid;gap:18px;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+  .setcard{display:block;text-decoration:none;color:var(--ink);
+    background:linear-gradient(160deg,var(--panel2),var(--panel));
+    border:1px solid var(--line);border-radius:18px;padding:22px 20px 18px;
+    transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease}
+  .setcard:hover{transform:translateY(-3px);border-color:var(--tera2);
+    box-shadow:0 10px 34px rgba(141,180,255,.16)}
+  .setcard.unconfigured{opacity:.58;cursor:not-allowed}
+  .setcard.unconfigured:hover{transform:none;border-color:var(--line);box-shadow:none}
+  .setcard.unconfigured .prog{color:var(--tera4)}
+  .setcard img{display:block;max-width:82%;max-height:88px;margin:2px auto 14px;
+    filter:drop-shadow(0 4px 14px rgba(141,180,255,.3))}
+  .setcard .noimg{font-family:"Unbounded",sans-serif;font-size:20px;text-align:center;margin:14px 0 18px}
+  .setcard .meta{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;color:var(--dim)}
+  .setcard .code{letter-spacing:.14em;text-transform:uppercase}
+  .setcard .prog{font-variant-numeric:tabular-nums}
+  .bar{height:5px;border-radius:99px;background:var(--panel);border:1px solid var(--line);
+    margin-top:10px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--crystal);width:0;transition:width .6s ease}
+  footer{max-width:900px;margin:44px auto 0;text-align:center;font-size:11px;color:var(--faint)}
+  footer a{color:var(--dim)}
+  .errorpage{max-width:620px;margin:0 auto;text-align:center}
+  .errorpage p{color:var(--dim);font-size:15px;line-height:1.6;margin-top:12px}
+  .homebutton{display:inline-block;margin-top:24px;padding:11px 18px;border:1px solid var(--line);
+    border-radius:999px;background:var(--panel2);color:var(--ink);font-weight:700;text-decoration:none}
+  .homebutton:hover{border-color:var(--tera2);box-shadow:0 8px 24px rgba(141,180,255,.14)}

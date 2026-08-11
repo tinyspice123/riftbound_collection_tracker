@@ -1,0 +1,48 @@
+name: Backup collection sheets
+
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sheet-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: "3.14"
+      - name: Download and validate all published tabs
+        run: python scripts/backup_sheets.py
+      - name: Commit changed snapshots and fallbacks
+        id: commit
+        shell: bash
+        run: |
+          git config user.name "riftbound-backup[bot]"
+          git config user.email "actions@github.com"
+          git add backups/ public/data/
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No sheet changes"
+          else
+            git commit -m "Daily collection backup [skip ci]"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Deploy refreshed fallbacks
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self' https://docs.google.com https://*.googleusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests">
+<title>Riftbound — Collection Tracker</title>
+<meta name="description" content="Browse a Riftbound set checklist, filter missing cards and track collection progress.">
+<meta name="robots" content="noindex,follow">
+<link rel="preconnect" href="https://docs.google.com" crossorigin>
+<script src="sets.js"></script>
+<script src="lib.js"></script>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="tracker.css">
+<link rel="stylesheet" href="pwa.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b0920">
+</head>
+<body>
+
+<header>
+  <a class="backlink" href="index.html">← All sets</a>
+  <div class="eyebrow" id="eyebrowText">Riftbound TCG</div>
+  <img class="setlogo" id="setLogo" alt="">
+  <h1 id="titleFallback" class="initially-hidden"><span id="fallbackName" class="tera">Set</span></h1>
+  <div class="subtitle initially-hidden" id="subtitleText"></div>
+</header>
+
+<div class="notice" id="notice">
+  <div class="inner"></div>
+</div>
+<output class="data-banner" id="dataBanner" aria-live="polite"></output>
+
+<section class="stats" id="stats">
+  <div class="ring">
+    <svg width="104" height="104" viewBox="0 0 104 104">
+      <defs><linearGradient id="tg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#7ef0d4"/><stop offset=".4" stop-color="#8db4ff"/>
+        <stop offset=".7" stop-color="#e29bff"/><stop offset="1" stop-color="#ffd47e"/>
+      </linearGradient></defs>
+      <circle cx="52" cy="52" r="45" fill="none" stroke="#2a2650" stroke-width="9"/>
+      <circle id="ringbar" cx="52" cy="52" r="45" fill="none" stroke="url(#tg)" stroke-width="9"
+        stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="283"/>
+    </svg>
+    <div class="pct"><b id="pct">0%</b><i>complete</i></div>
+  </div>
+  <div class="statgrid">
+    <div class="stat own"><b id="sOwn">0</b><span>owned</span></div>
+    <div class="stat miss"><b id="sMiss">0</b><span>missing</span></div>
+    <div class="stat"><b id="sQty">0</b><span>total copies</span></div>
+    <div class="stat own"><b id="sValOwn">£0</b><span>est. value owned</span></div>
+    <div class="stat miss"><b id="sValMiss">£0</b><span>est. cost of gaps</span></div>
+  </div>
+  <div class="synced" id="syncedInfo"></div>
+</section>
+
+<div class="controls" id="controls">
+  <input type="search" id="q" aria-label="Search cards" placeholder="Search card, number, stamp…">
+  <select id="groupSel" aria-label="Filter by group"><option value="">All groups</option></select>
+  <select id="sortSel" title="Sort cards" aria-label="Sort cards">
+    <option value="">Sheet order</option>
+    <option value="name">Name A–Z</option>
+    <option value="price-desc">Price high → low</option>
+    <option value="price-asc">Price low → high</option>
+  </select>
+  <select id="viewSel" title="Display mode" aria-label="Display mode">
+    <option value="cards">Card images</option>
+    <option value="table">Text table (data saver)</option>
+  </select>
+  <label class="toggle"><input type="checkbox" id="missOnly"> Missing only</label>
+  <span class="exportwrap">
+    <button type="button" class="exportbtn" id="exportMissing" aria-haspopup="menu" aria-expanded="false">⤓ Missing</button>
+    <div class="exportmenu" data-menu>
+      <button type="button" data-act="copy">Copy list</button>
+      <button type="button" data-act="csv">Download CSV</button>
+    </div>
+  </span>
+  <span class="exportwrap">
+    <button type="button" class="exportbtn" id="exportOwned" aria-haspopup="menu" aria-expanded="false">⤓ Owned</button>
+    <div class="exportmenu" data-menu>
+      <button type="button" data-act="copy">Copy list</button>
+      <button type="button" data-act="csv">Download CSV</button>
+    </div>
+  </span>
+  <span class="exportwrap">
+    <button type="button" class="exportbtn" id="exportSpares" data-kind="spares" aria-haspopup="menu" aria-expanded="false">⤓ Spares</button>
+    <div class="exportmenu" data-menu>
+      <button type="button" data-act="copy">Copy list</button>
+      <button type="button" data-act="csv">Download CSV</button>
+    </div>
+  </span>
+</div>
+
+<main id="main"></main>
+<div class="empty" id="empty">Nothing matches those filters.</div>
+
+<footer id="foot" class="initially-hidden">
+  This page is read-only: edit quantities in the Google Sheet (the Have column — “x” or a number), then refresh.
+  Card photos come from the configured image sources; unusual variants without an image show a crystal placeholder.
+  Prices are read from the sheet's Price column.
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Card image viewer">
+  <button class="lb-close" aria-label="Close">✕</button>
+  <figure>
+    <img id="lbImg" alt="">
+    <figcaption><span id="lbName"></span><span class="lb-num" id="lbNum"></span><span class="lb-var" id="lbVar"></span></figcaption>
+  </figure>
+</dialog>
+
+<script src="tracker.js"></script>
+<script src="pwa.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+Arena Kingpin|001/219|Regular|001-219-arena-kingpin-aed54c53.webp
+Baron Pit|T01|Token|t01-baron-pit-1dc07c63.webp
+Bird|T02|Token|t02-bird-1816b0f7.webp
+Inferna|002/219|Regular|002-219-inferna-8394918c.webp
+Brush|T03|Token|t03-brush-4fa14f46.webp
+Mischievous Marai|003/219|Regular|003-219-mischievous-marai-aad8f783.webp
+Buff|T04|Token|t04-buff-d9fcd54f.webp
+Prepared Neophyte|004/219|Regular|004-219-prepared-neophyte-de92eb64.webp
+Gold|T05|Token|t05-gold-3142c985.webp
+Revna the Lorekeeper|005/219|Regular|005-219-revna-the-lorekeeper-26100cdd.webp
+Reflection|T06|Token|t06-reflection-7b1fb938.webp
+Sharkling|006/219|Regular|006-219-sharkling-7db8a055.webp
+Smite|007/219|Regular|007-219-smite-09902b84.webp
+Sprite|T07|Token|t07-sprite-cd35af0b.webp
+Towering Pairofant|008/219|Regular|008-219-towering-pairofant-52ec0a78.webp
+XP Tracker|T08|Token|t08-xp-tracker-a38ec3a4.webp
+Upstage Comedy|009/219|Regular|009-219-upstage-comedy-90a0c26a.webp
+Vault Breaker|010/219|Regular|010-219-vault-breaker-c434ab9e.webp
+Fresh Beans|011/219|Regular|011-219-fresh-beans-d9d0708e.webp
+Lord Broadmane|012/219|Regular|012-219-lord-broadmane-08371fb1.webp
+Lotus Trap|013/219|Regular|013-219-lotus-trap-6ea52b44.webp
+Monster Harpoon|014/219|Regular|014-219-monster-harpoon-c6853129.webp
+Right of Conquest|015/219|Regular|015-219-right-of-conquest-49517a57.webp
+Scorchclaw|016/219|Regular|016-219-scorchclaw-7fc9d46e.webp
+Square Up|017/219|Regular|017-219-square-up-d3748e59.webp
+Yeti Brawler|018/219|Regular|018-219-yeti-brawler-581bdc77.webp
+Blighted Battleaxe|019/219|Regular|019-219-blighted-battleaxe-dde411eb.webp
+Dancing Grenade|020/219|Regular|020-219-dancing-grenade-3e4f764a.webp
+Grim Apothecary|021/219|Regular|021-219-grim-apothecary-b17ede57.webp
+Jhin, Murderous Artist|022a/219|Alternate art|022a-219-jhin-murderous-artist-c9ce758f.webp
+Jhin, Murderous Artist|022/219|Regular|022-219-jhin-murderous-artist-957041db.webp
+Katarina, Reckless|023/219|Regular|023-219-katarina-reckless-a71f700d.webp
+Rengar, Unseen|024/219|Regular|024-219-rengar-unseen-434c0c95.webp
+Rengar, Unseen|024a/219|Alternate art|024a-219-rengar-unseen-f2d6093a.webp
+Undying Legion|025/219|Regular|025-219-undying-legion-d1ce9d34.webp
+Xerath, Freed|026/219|Regular|026-219-xerath-freed-7c603d04.webp
+Inviolus Vox|027/219|Regular|027-219-inviolus-vox-4b1ec3d3.webp
+Pyke, Dockside Butcher|028a/219|Alternate art|028a-219-pyke-dockside-butcher-4c4c1e5a.webp
+Pyke, Dockside Butcher|028/219|Regular|028-219-pyke-dockside-butcher-592c83ac.webp
+Red Brambleback|029a/219|Alternate art|029a-219-red-brambleback-4d393a5c.webp
+Red Brambleback|029/219|Regular|029-219-red-brambleback-bdee558a.webp
+Vi, Hotheaded|030/219|Regular|030-219-vi-hotheaded-3a9b8097.webp
+Vi, Hotheaded|030a/219|Alternate art|030a-219-vi-hotheaded-9f053f49.webp
+Combat Experience|031/219|Regular|031-219-combat-experience-da3a5c82.webp
+Double Trouble|032/219|Regular|032-219-double-trouble-00d4134f.webp
+Frisky Hunter|033/219|Regular|033-219-frisky-hunter-7709695f.webp
+Herald of Spring|034/219|Regular|034-219-herald-of-spring-d8f30d3a.webp
+Monch|035/219|Regular|035-219-monch-cd8bac18.webp
+Mutated Mouser|036/219|Regular|036-219-mutated-mouser-531ee8fb.webp
+Shadow Watcher|037/219|Regular|037-219-shadow-watcher-c2335e98.webp
+Skyward Strike|038/219|Regular|038-219-skyward-strike-6acd4b63.webp
+Soul Sword|039/219|Regular|039-219-soul-sword-ee6bcd39.webp
+Wuju Apprentice|040/219|Regular|040-219-wuju-apprentice-d6371519.webp
+Allay, Eager Admirer|041/219|Regular|041-219-allay-eager-admirer-71e3cd5f.webp
+Back Off|042/219|Regular|042-219-back-off-707dd8e3.webp
+Enthusiastic Promoter|043/219|Regular|043-219-enthusiastic-promoter-97d89d87.webp
+Flurry of Feathers|044/219|Regular|044-219-flurry-of-feathers-758aece7.webp
+Forgotten Signpost|045/219|Regular|045-219-forgotten-signpost-1caaa0de.webp
+Friendship|046/219|Regular|046-219-friendship-7be92c70.webp
+Mosstomper|047/219|Regular|047-219-mosstomper-d62fcd59.webp
+Trevor Snoozebottom|048/219|Regular|048-219-trevor-snoozebottom-5199d716.webp
+Honeyfruit|049/219|Regular|049-219-honeyfruit-17455709.webp
+Iascylla|050/219|Regular|050-219-iascylla-81c45b38.webp
+Ivern, Nurturer|051a/219|Alternate art|051a-219-ivern-nurturer-a0b60d79.webp
+Ivern, Nurturer|051/219|Regular|051-219-ivern-nurturer-7a28b79b.webp
+Nami, Headstrong|052/219|Regular|052-219-nami-headstrong-9d0f0898.webp
+Scuttle Crab|053/219|Regular|053-219-scuttle-crab-cb530421.webp
+Tricksy Tentacles|054/219|Regular|054-219-tricksy-tentacles-c86c5fdd.webp
+Vex, Mocking|055/219|Regular|055-219-vex-mocking-f7482925.webp
+Vex, Mocking|055a/219|Alternate art|055a-219-vex-mocking-4a3d8caf.webp
+Yuumi, Magical Cat|056/219|Regular|056-219-yuumi-magical-cat-cbb86d86.webp
+Alpha Wildclaw|057/219|Regular|057-219-alpha-wildclaw-599ff78c.webp
+Lillia, Protector of Dreams|058a/219|Alternate art|058a-219-lillia-protector-of-dreams-74561fd9.webp
+Lillia, Protector of Dreams|058/219|Regular|058-219-lillia-protector-of-dreams-fe063977.webp
+Master Yi, Unstoppable|059/219|Regular|059-219-master-yi-unstoppable-62f17021.webp
+Master Yi, Unstoppable|059a/219|Alternate art|059a-219-master-yi-unstoppable-78c6bbea.webp
+Vilemaw|060/219|Regular|060-219-vilemaw-12f1629b.webp
+Vilemaw|060a/219|Alternate art|060a-219-vilemaw-3d0b5884.webp
+Downstage Dramatics|061/219|Regular|061-219-downstage-dramatics-7f41bca3.webp
+Dramatic Visionary|062/219|Regular|062-219-dramatic-visionary-13a61c89.webp
+Eclipse|063/219|Regular|063-219-eclipse-2ec46e07.webp
+Fate Weaver|064/219|Regular|064-219-fate-weaver-6fc01d7b.webp
+Icevale Archer|065/219|Regular|065-219-icevale-archer-902cf0c6.webp
+Moonlight Affliction|066/219|Regular|066-219-moonlight-affliction-ed103c75.webp
+Ruined Rex|067/219|Regular|067-219-ruined-rex-a443c6b9.webp
+Spectral Centaur|068/219|Regular|068-219-spectral-centaur-d72248f6.webp
+Sprite Burst|069/219|Regular|069-219-sprite-burst-8e261acc.webp
+Turn to Dust|070/219|Regular|070-219-turn-to-dust-bfb2ea8e.webp
+Chakram Dancer|071/219|Regular|071-219-chakram-dancer-dfe0b457.webp
+Crescent Strike|072/219|Regular|072-219-crescent-strike-8cb3f091.webp
+Deadly Flourish|073/219|Regular|073-219-deadly-flourish-26552f35.webp
+Frigid Jewel|074/219|Regular|074-219-frigid-jewel-23cc05fc.webp
+Gustwalker|075/219|Regular|075-219-gustwalker-2873e1cd.webp
+Petal Pixie|076/219|Regular|076-219-petal-pixie-d7ed0fa3.webp
+Soul Shepherd|077/219|Regular|077-219-soul-shepherd-37f0d7b5.webp
+Sprite Fountain|078/219|Regular|078-219-sprite-fountain-79f26675.webp
+Diana, Lunari|079/219|Regular|079-219-diana-lunari-f758f724.webp
+Diana, Lunari|079a/219|Alternate art|079a-219-diana-lunari-275130ca.webp
+Hwei, Brooding Painter|080/219|Regular|080-219-hwei-brooding-painter-43c95541.webp
+Keeper of Masks|081/219|Regular|081-219-keeper-of-masks-e6b10f1a.webp
+Lillia, Fae Fawn|082/219|Regular|082-219-lillia-fae-fawn-c217dbe4.webp
+Lillia, Fae Fawn|082a/219|Alternate art|082a-219-lillia-fae-fawn-d2f2b6c7.webp
+Smoke and Mirrors|083/219|Regular|083-219-smoke-and-mirrors-671d41f6.webp
+Sprite Queen|084/219|Regular|084-219-sprite-queen-8988fc74.webp
+Sumpworks Map|085/219|Regular|085-219-sumpworks-map-496fde27.webp
+Zilean, Time Mage|086/219|Regular|086-219-zilean-time-mage-26dde968.webp
+Blue Sentinel|087a/219|Alternate art|087a-219-blue-sentinel-48be0a84.webp
+Blue Sentinel|087/219|Regular|087-219-blue-sentinel-9042490a.webp
+Gutter Palace|088/219|Regular|088-219-gutter-palace-82edf138.webp
+Jhin, Meticulous Killer|089a/219|Alternate art|089a-219-jhin-meticulous-killer-183084a7.webp
+Jhin, Meticulous Killer|089/219|Regular|089-219-jhin-meticulous-killer-38cd9917.webp
+LeBlanc, Everywhere at Once|090a/219|Alternate art|090a-219-leblanc-everywhere-at-once-9b9fd828.webp
+LeBlanc, Everywhere at Once|090/219|Regular|090-219-leblanc-everywhere-at-once-c36517ed.webp
+Concentrate|091/219|Regular|091-219-concentrate-957f1766.webp
+Demacian Diplomat|092/219|Regular|092-219-demacian-diplomat-2732870e.webp
+Dragonsoul Sage|093/219|Regular|093-219-dragonsoul-sage-e4309d07.webp
+Gemhand Hunter|094/219|Regular|094-219-gemhand-hunter-d51281d7.webp
+Grim Resolve|095/219|Regular|095-219-grim-resolve-66697d12.webp
+Hunter's Machete|096/219|Regular|096-219-hunter-s-machete-3cef3b33.webp
+Kinkou Initiate|097/219|Regular|097-219-kinkou-initiate-e2762657.webp
+Targonian Visionary|098/219|Regular|098-219-targonian-visionary-73ed5650.webp
+Towering Combatant|099/219|Regular|099-219-towering-combatant-573fbcc5.webp
+Voracious Gromp|100/219|Regular|100-219-voracious-gromp-cf387499.webp
+Call to Battle|101/219|Regular|101-219-call-to-battle-0fd17e03.webp
+Crowd Favorite|102/219|Regular|102-219-crowd-favorite-16dae0f1.webp
+Disposal Order|103/219|Regular|103-219-disposal-order-eba91583.webp
+Gentle Gemdragon|104/219|Regular|104-219-gentle-gemdragon-de5c132f.webp
+Imposing Challenger|105/219|Regular|105-219-imposing-challenger-421a905e.webp
+Repulse|106/219|Regular|106-219-repulse-c40c97f3.webp
+Stare Down|107/219|Regular|107-219-stare-down-9a5719b8.webp
+Wily Newtfish|108/219|Regular|108-219-wily-newtfish-4b134541.webp
+Blood Rose|109/219|Regular|109-219-blood-rose-167b7347.webp
+Clash of Giants|110/219|Regular|110-219-clash-of-giants-b5c65827.webp
+Determined Sentry|111/219|Regular|111-219-determined-sentry-a5a2d663.webp
+Irresistible Faefolk|112/219|Regular|112-219-irresistible-faefolk-ac73b176.webp
+Master Yi, Tempered|113/219|Regular|113-219-master-yi-tempered-7ab03793.webp
+Master Yi, Tempered|113a/219|Alternate art|113a-219-master-yi-tempered-9d3c0ef9.webp
+Nidalee, Cat Form|114/219|Regular|114-219-nidalee-cat-form-8b7eea5a.webp
+Nilah, Joyful Ascetic|115/219|Regular|115-219-nilah-joyful-ascetic-67943429.webp
+Poppy, Paragon|116/219|Regular|116-219-poppy-paragon-f9806325.webp
+Poppy, Paragon|116a/219|Alternate art|116a-219-poppy-paragon-479f5a7a.webp
+Arachnoid Horror|117/219|Regular|117-219-arachnoid-horror-a33e75d5.webp
+Elder Dragon|118/219|Regular|118-219-elder-dragon-90891117.webp
+Elder Dragon|118a/219|Alternate art|118a-219-elder-dragon-93aabc0b.webp
+Kha'Zix, Evolving Hunter|119/219|Regular|119-219-kha-zix-evolving-hunter-cd4417f2.webp
+Kha'Zix, Evolving Hunter|119a/219|Alternate art|119a-219-kha-zix-evolving-hunter-69c8923d.webp
+Rengar, Trophy Hunter|120a/219|Alternate art|120a-219-rengar-trophy-hunter-6eaee9fe.webp
+Rengar, Trophy Hunter|120/219|Regular|120-219-rengar-trophy-hunter-7b820fe1.webp
+Bewitching Spirit|121/219|Regular|121-219-bewitching-spirit-27420ecf.webp
+Crescent Guardian|122/219|Regular|122-219-crescent-guardian-4cc345c7.webp
+Evershade Stalker|123/219|Regular|123-219-evershade-stalker-f8943147.webp
+Isolate|124/219|Regular|124-219-isolate-22d3ddc6.webp
+Lunar Boon|125/219|Regular|125-219-lunar-boon-6f68dea3.webp
+Megatusk|126/219|Regular|126-219-megatusk-24f47603.webp
+Mister Root|127/219|Regular|127-219-mister-root-6ca5c555.webp
+Star-Crossed|128/219|Regular|128-219-star-crossed-c3793901.webp
+Vicious Snapjaws|129/219|Regular|129-219-vicious-snapjaws-13f2f44b.webp
+Walking Roost|130/219|Regular|130-219-walking-roost-bab9a86f.webp
+Abandon|131/219|Regular|131-219-abandon-eb332e97.webp
+Angler Beast|132/219|Regular|132-219-angler-beast-21960105.webp
+Blast Cone|133/219|Regular|133-219-blast-cone-3e56e983.webp
+Existential Dread|134/219|Regular|134-219-existential-dread-d8fa1a3a.webp
+Insightful Investigator|135/219|Regular|135-219-insightful-investigator-c9e80532.webp
+Scryer's Bloom|136/219|Regular|136-219-scryer-s-bloom-4f94ca8f.webp
+Sinister Poro|137/219|Regular|137-219-sinister-poro-6838053b.webp
+The List|138/219|Regular|138-219-the-list-1683e493.webp
+Bone Skewer|139/219|Regular|139-219-bone-skewer-b0a3d8e6.webp
+Conscription|140/219|Regular|140-219-conscription-dde04707.webp
+Evelynn, Entrancing|141/219|Regular|141-219-evelynn-entrancing-8d010d8c.webp
+Heedless Resurrection|142/219|Regular|142-219-heedless-resurrection-872d6acb.webp
+Kha'Zix, Mutating Horror|143a/219|Alternate art|143a-219-kha-zix-mutating-horror-30cfc5c0.webp
+Kha'Zix, Mutating Horror|143/219|Regular|143-219-kha-zix-mutating-horror-8c939c00.webp
+Maduli the Gatekeeper|144/219|Regular|144-219-maduli-the-gatekeeper-5261180a.webp
+Pyke, Returned|145a/219|Alternate art|145a-219-pyke-returned-39dd8a2a.webp
+Pyke, Returned|145/219|Regular|145-219-pyke-returned-2af6eda5.webp
+Syndra, Transcendent|146/219|Regular|146-219-syndra-transcendent-f25cccb7.webp
+Baron Nashor|147a/219|Alternate art|147a-219-baron-nashor-09476d4a.webp
+Baron Nashor|147/219|Regular|147-219-baron-nashor-5f75cc51.webp
+Cursed Sarcophagus|148/219|Regular|148-219-cursed-sarcophagus-d03775c2.webp
+Diana, No Longer Human|149/219|Regular|149-219-diana-no-longer-human-4f494d39.webp
+Diana, No Longer Human|149a/219|Alternate art|149a-219-diana-no-longer-human-e729478b.webp
+Vex, Apathetic|150/219|Regular|150-219-vex-apathetic-7f8bdadc.webp
+Vex, Apathetic|150a/219|Alternate art|150a-219-vex-apathetic-7e4ee4f5.webp
+Bandle Soldier|151/219|Regular|151-219-bandle-soldier-381ff64b.webp
+Black Rose Dignitary|152/219|Regular|152-219-black-rose-dignitary-9d79a6c4.webp
+Carrion Dredger|153/219|Regular|153-219-carrion-dredger-b2e7a826.webp
+Crimson Pigeons|154/219|Regular|154-219-crimson-pigeons-1703bfef.webp
+Heroic Charge|155/219|Regular|155-219-heroic-charge-c0ce54a6.webp
+Loyal Poro|156/219|Regular|156-219-loyal-poro-fbb5ccfa.webp
+Scrutinizing Sergeant|157/219|Regular|157-219-scrutinizing-sergeant-0ea91524.webp
+Shepherd's Heirloom|158/219|Regular|158-219-shepherd-s-heirloom-164577e9.webp
+Soul Harvest|159/219|Regular|159-219-soul-harvest-551b4122.webp
+Ultrasoft Poro|160/219|Regular|160-219-ultrasoft-poro-22a26fd7.webp
+Divining Shells|161/219|Regular|161-219-divining-shells-bef5a414.webp
+Enthralling Protector|162/219|Regular|162-219-enthralling-protector-04169385.webp
+Mageseeker Investigator|163/219|Regular|163-219-mageseeker-investigator-d6079a96.webp
+Safety Inspector|164/219|Regular|164-219-safety-inspector-24931742.webp
+Shadow's Call|165/219|Regular|165-219-shadow-s-call-096758e2.webp
+Stalking Wolf|166/219|Regular|166-219-stalking-wolf-39d69066.webp
+Starhound|167/219|Regular|167-219-starhound-ccffb79a.webp
+Undying Loyalty|168/219|Regular|168-219-undying-loyalty-a56b9a97.webp
+Ashe, Focused|169/219|Regular|169-219-ashe-focused-3448937f.webp
+Atakhan|170/219|Regular|170-219-atakhan-53f0887b.webp
+Galio, Indefatigable|171/219|Regular|171-219-galio-indefatigable-a4e966d3.webp
+LeBlanc, Fragmented|172a/219|Alternate art|172a-219-leblanc-fragmented-7062c76c.webp
+LeBlanc, Fragmented|172/219|Regular|172-219-leblanc-fragmented-74fb806e.webp
+Sacrifice|173/219|Regular|173-219-sacrifice-b9285cd3.webp
+Shard of Undoing|174/219|Regular|174-219-shard-of-undoing-0767915f.webp
+Tactical Retreat|175/219|Regular|175-219-tactical-retreat-dd2d8414.webp
+Vi, Peacekeeper|176/219|Regular|176-219-vi-peacekeeper-43cc21fa.webp
+Vi, Peacekeeper|176a/219|Alternate art|176a-219-vi-peacekeeper-6c7d8b0a.webp
+Ivern, Friend to All|177/219|Regular|177-219-ivern-friend-to-all-8691a404.webp
+Ivern, Friend to All|177a/219|Alternate art|177a-219-ivern-friend-to-all-092ef55f.webp
+Poppy, Defender of the Meek|178/219|Regular|178-219-poppy-defender-of-the-meek-8cce4e06.webp
+Poppy, Defender of the Meek|178a/219|Alternate art|178a-219-poppy-defender-of-the-meek-000ccf7d.webp
+Rift Herald|179a/219|Alternate art|179a-219-rift-herald-53406a35.webp
+Rift Herald|179/219|Regular|179-219-rift-herald-3f699095.webp
+The Ruination|180/219|Regular|180-219-the-ruination-c95d91f2.webp
+Virtuoso|181/219|Regular|181-219-virtuoso-feeeb3ce.webp
+Curtain Call|182/219|Regular|182-219-curtain-call-eea8cc23.webp
+Pridestalker|183/219|Regular|183-219-pridestalker-d54feec5.webp
+Thrill of the Hunt|184/219|Regular|184-219-thrill-of-the-hunt-3cdefb63.webp
+Bloodharbor Ripper|185/219|Regular|185-219-bloodharbor-ripper-a32a9927.webp
+Death from Below|186/219|Regular|186-219-death-from-below-13b76d8d.webp
+Piltover Enforcer|187/219|Regular|187-219-piltover-enforcer-8dde2d64.webp
+Hextech Gauntlets|188/219|Regular|188-219-hextech-gauntlets-e5a5f3a9.webp
+Bashful Bloom|189/219|Regular|189-219-bashful-bloom-be2da1b0.webp
+Lilting Lullaby|190/219|Regular|190-219-lilting-lullaby-726c72f5.webp
+Wuju Master|191/219|Regular|191-219-wuju-master-79fec74d.webp
+Alpha Strike|192/219|Regular|192-219-alpha-strike-5f3280e2.webp
+Gloomist|193/219|Regular|193-219-gloomist-c0bf9284.webp
+Shadow|194/219|Regular|194-219-shadow-b0d0539a.webp
+Green Father|195/219|Regular|195-219-green-father-c131a948.webp
+Daisy!|196/219|Regular|196-219-daisy-36910068.webp
+Scorn of the Moon|197/219|Regular|197-219-scorn-of-the-moon-ac3a1c23.webp
+Moonfall|198/219|Regular|198-219-moonfall-2934e544.webp
+Deceiver|199/219|Regular|199-219-deceiver-6b59419f.webp
+Mirror Image|200/219|Regular|200-219-mirror-image-6bdbd2fd.webp
+Voidreaver|201/219|Regular|201-219-voidreaver-54001bc0.webp
+Void Assault|202/219|Regular|202-219-void-assault-9e875ff9.webp
+Keeper of the Hammer|203/219|Regular|203-219-keeper-of-the-hammer-2a65e6e9.webp
+Keeper's Verdict|204/219|Regular|204-219-keeper-s-verdict-f0c27a3a.webp
+Abandoned Hall|205/219|Regular|205-219-abandoned-hall-36a8d0f5.webp
+Altar of Blood|206/219|Regular|206-219-altar-of-blood-ab7585f5.webp
+Amateur Recital|207/219|Regular|207-219-amateur-recital-411fdd43.webp
+Black Flame Altar|208/219|Regular|208-219-black-flame-altar-476b65f7.webp
+Dusk Rose Lab|209/219|Regular|209-219-dusk-rose-lab-887db7d5.webp
+Forbidding Waste|210/219|Regular|210-219-forbidding-waste-4d2b51ed.webp
+Forgotten Library|211/219|Regular|211-219-forgotten-library-3a0d2acd.webp
+Frozen Fortress|212/219|Regular|212-219-frozen-fortress-01b2e776.webp
+Gardens of Becoming|213/219|Regular|213-219-gardens-of-becoming-6552a897.webp
+Ripper's Bay|214/219|Regular|214-219-ripper-s-bay-252dae7f.webp
+Star Spring|215/219|Regular|215-219-star-spring-c55901cf.webp
+The Academy|216/219|Regular|216-219-the-academy-a2cd378e.webp
+Trapping Grounds|217/219|Regular|217-219-trapping-grounds-290a3a59.webp
+Valley of Idols|218/219|Regular|218-219-valley-of-idols-d86c3289.webp
+Vaults of Helia|219/219|Regular|219-219-vaults-of-helia-fa6e20c2.webp
+Pouty Poro|220/219|Overnumbered|220-219-pouty-poro-21c736f3.webp
+Lonely Poro|221/219|Overnumbered|221-219-lonely-poro-9d7b5d84.webp
+Plundering Poro|222/219|Overnumbered|222-219-plundering-poro-2e02135a.webp
+Veteran Poro|223/219|Overnumbered|223-219-veteran-poro-2d77ca75.webp
+Mystic Poro|224/219|Overnumbered|224-219-mystic-poro-394e13a7.webp
+Daring Poro|225/219|Overnumbered|225-219-daring-poro-5594d55e.webp
+Virtuoso|226/219|Overnumbered|226-219-virtuoso-25f29fe7.webp
+Virtuoso|226*/219|Signature overnumbered|226-219-virtuoso-6c014d9f.webp
+Pridestalker|227*/219|Signature overnumbered|227-219-pridestalker-7ee02a77.webp
+Pridestalker|227/219|Overnumbered|227-219-pridestalker-62dcbb3d.webp
+Bloodharbor Ripper|228*/219|Signature overnumbered|228-219-bloodharbor-ripper-36af6b63.webp
+Bloodharbor Ripper|228/219|Overnumbered|228-219-bloodharbor-ripper-aa64d4f7.webp
+Piltover Enforcer|229/219|Overnumbered|229-219-piltover-enforcer-c3717e27.webp
+Piltover Enforcer|229*/219|Signature overnumbered|229-219-piltover-enforcer-c575bc6d.webp
+Bashful Bloom|230/219|Overnumbered|230-219-bashful-bloom-59d7e6ce.webp
+Bashful Bloom|230*/219|Signature overnumbered|230-219-bashful-bloom-5ba07760.webp
+Wuju Master|231*/219|Signature overnumbered|231-219-wuju-master-b7cf94de.webp
+Wuju Master|231/219|Overnumbered|231-219-wuju-master-3e1995cb.webp
+Gloomist|232*/219|Signature overnumbered|232-219-gloomist-7cd41b04.webp
+Gloomist|232/219|Overnumbered|232-219-gloomist-eed27518.webp
+Green Father|233/219|Overnumbered|233-219-green-father-b9d26245.webp
+Green Father|233*/219|Signature overnumbered|233-219-green-father-78fd3a8f.webp
+Scorn of the Moon|234*/219|Signature overnumbered|234-219-scorn-of-the-moon-8b9b7ac9.webp
+Scorn of the Moon|234/219|Overnumbered|234-219-scorn-of-the-moon-a34e142f.webp
+Deceiver|235*/219|Signature overnumbered|235-219-deceiver-fd4bba53.webp
+Deceiver|235/219|Overnumbered|235-219-deceiver-0c266553.webp
+Voidreaver|236*/219|Signature overnumbered|236-219-voidreaver-623b56b9.webp
+Voidreaver|236/219|Overnumbered|236-219-voidreaver-b47c6748.webp
+Keeper of the Hammer|237*/219|Signature overnumbered|237-219-keeper-of-the-hammer-12441fd4.webp
+Keeper of the Hammer|237/219|Overnumbered|237-219-keeper-of-the-hammer-94407223.webp
+Baron Nashor|238/219|Overnumbered|238-219-baron-nashor-f0173066.webp

@@ -1,0 +1,288 @@
+Against the Odds|001/221|Regular|001-221-against-the-odds-fc20f10c.webp
+Armed Assailant|002/221|Regular|002-221-armed-assailant-32aaba7b.webp
+Blood Rush|003/221|Regular|003-221-blood-rush-48ce4ad1.webp
+Gold|T03|Token|t03-gold-55fc1de3.webp
+Bushwhack|004/221|Regular|004-221-bushwhack-dea262be.webp
+Detonate|005/221|Regular|005-221-detonate-51b973b3.webp
+Eager Drakehound|006/221|Regular|006-221-eager-drakehound-3122ef8c.webp
+Gem Jammer|007/221|Regular|007-221-gem-jammer-22811e72.webp
+Sentinel Adept|008/221|Regular|008-221-sentinel-adept-b0f68ff5.webp
+Serrated Dirk|009/221|Regular|009-221-serrated-dirk-34e032ab.webp
+Void Drone|010/221|Regular|010-221-void-drone-e906ab7d.webp
+Angle Shot|011/221|Regular|011-221-angle-shot-85f7d216.webp
+Battering Ram|012/221|Regular|012-221-battering-ram-33448ce9.webp
+Blast Corps Cadet|013/221|Regular|013-221-blast-corps-cadet-3fc4f9be.webp
+Minotaur Reckoner|014/221|Regular|014-221-minotaur-reckoner-716bbd43.webp
+Perched Grimwyrm|015/221|Regular|015-221-perched-grimwyrm-bf4e3c63.webp
+Recurve Bow|016/221|Regular|016-221-recurve-bow-054fed08.webp
+Sudden Storm|017/221|Regular|017-221-sudden-storm-177fdae3.webp
+Void Hatchling|018/221|Regular|018-221-void-hatchling-99960521.webp
+Assembly Rig|019/221|Regular|019-221-assembly-rig-2fe37c73.webp
+Draven, Vanquisher|020/221|Regular|020-221-draven-vanquisher-2782fe83.webp
+Draven, Vanquisher|020a/221|Alternate art|020a-221-draven-vanquisher-259b0073.webp
+Ferrous Forerunner|021/221|Regular|021-221-ferrous-forerunner-284027d7.webp
+Long Sword|022/221|Regular|022-221-long-sword-f6fb65f8.webp
+Piercing Light|023/221|Regular|023-221-piercing-light-85f607b4.webp
+Rell, Magnetic|024/221|Regular|024-221-rell-magnetic-71b81b0c.webp
+Rengar, Pouncing|025/221|Regular|025-221-rengar-pouncing-11a7077a.webp
+Rumble, Hotheaded|026/221|Regular|026-221-rumble-hotheaded-069db886.webp
+Rumble, Hotheaded|026a/221|Alternate art|026a-221-rumble-hotheaded-c18de952.webp
+Dunebreaker|027/221|Regular|027-221-dunebreaker-3d2e93b7.webp
+Lucian, Gunslinger|028a/221|Alternate art|028a-221-lucian-gunslinger-94e99858.webp
+Lucian, Gunslinger|028/221|Regular|028-221-lucian-gunslinger-312a6062.webp
+Rek'Sai, Breacher|029/221|Regular|029-221-rek-sai-breacher-3cf7a3b2.webp
+Rek'Sai, Breacher|029a/221|Alternate art|029a-221-rek-sai-breacher-59c22e00.webp
+Skyfall of Areion|030/221|Regular|030-221-skyfall-of-areion-0bb2b9e9.webp
+Desert's Call|031/221|Regular|031-221-desert-s-call-426fb065.webp
+Disarming Rake|032/221|Regular|032-221-disarming-rake-ecbf8c59.webp
+Doran's Shield|033/221|Regular|033-221-doran-s-shield-6abfbb64.webp
+Feral Strength|034/221|Regular|034-221-feral-strength-00f563b4.webp
+Guardian of the Passage|035/221|Regular|035-221-guardian-of-the-passage-7c9bd7eb.webp
+Lonely Poro|036/221|Regular|036-221-lonely-poro-471cf280.webp
+Navori Scout|037/221|Regular|037-221-navori-scout-61dfc8f3.webp
+Ribbon Dancer|038/221|Regular|038-221-ribbon-dancer-76270c5a.webp
+Royal Entourage|039/221|Regular|039-221-royal-entourage-0a72396b.webp
+Thwonk!|040/221|Regular|040-221-thwonk-78fe4ab6.webp
+Apprentice Smith|041/221|Regular|041-221-apprentice-smith-a63cc83f.webp
+Brutalizer|042/221|Regular|042-221-brutalizer-897b5cca.webp
+Emperor's Divide|043/221|Regular|043-221-emperor-s-divide-fa900c0c.webp
+Legion Quartermaster|044/221|Regular|044-221-legion-quartermaster-df45e34f.webp
+Not So Fast|045/221|Regular|045-221-not-so-fast-4345a0ff.webp
+Poro Snax|046/221|Regular|046-221-poro-snax-623abc36.webp
+Simian Ancestor|047/221|Regular|047-221-simian-ancestor-f87d7dff.webp
+Stellacorn Herder|048/221|Regular|048-221-stellacorn-herder-8a4d8dbf.webp
+Aphelios, Exalted|049/221|Regular|049-221-aphelios-exalted-c41af837.webp
+Azir, Ascendant|050a/221|Alternate art|050a-221-azir-ascendant-eb01422d.webp
+Azir, Ascendant|050/221|Regular|050-221-azir-ascendant-edc74871.webp
+Guardian Angel|051/221|Regular|051-221-guardian-angel-de38510f.webp
+Heart of Dark Ice|052/221|Regular|052-221-heart-of-dark-ice-0410d01e.webp
+Janna, Savior|053/221|Regular|053-221-janna-savior-ddef4e88.webp
+Jax, Unmatched|054/221|Regular|054-221-jax-unmatched-a5d0accc.webp
+Jax, Unmatched|054a/221|Alternate art|054a-221-jax-unmatched-24302501.webp
+Needlessly Large Yordle|055/221|Regular|055-221-needlessly-large-yordle-a54387bb.webp
+Sterak's Gage|056/221|Regular|056-221-sterak-s-gage-5ba3a28e.webp
+Irelia, Fervent|057a/221|Alternate art|057a-221-irelia-fervent-caa16396.webp
+Irelia, Fervent|057/221|Regular|057-221-irelia-fervent-2a258071.webp
+Ornn, Blacksmith|058a/221|Alternate art|058a-221-ornn-blacksmith-c1ed2d94.webp
+Ornn, Blacksmith|058/221|Regular|058-221-ornn-blacksmith-17fe4b08.webp
+Svellsongur|059/221|Regular|059-221-svellsongur-312b5b75.webp
+Tianna Crownguard|060/221|Regular|060-221-tianna-crownguard-f346e631.webp
+Aspiring Engineer|061/221|Regular|061-221-aspiring-engineer-16d3ed2a.webp
+Bubble Bot|062/221|Regular|062-221-bubble-bot-5599c47a.webp
+Chemtech Cask|063/221|Regular|063-221-chemtech-cask-fa0379a1.webp
+Cloth Armor|064/221|Regular|064-221-cloth-armor-4744f9ec.webp
+Forecaster|065/221|Regular|065-221-forecaster-8f98ffd5.webp
+Frigid Touch|066/221|Regular|066-221-frigid-touch-d42a2a22.webp
+Frostcoat Cub|067/221|Regular|067-221-frostcoat-cub-6dabcf9d.webp
+Gearhead|068/221|Regular|068-221-gearhead-00a5bc17.webp
+Plundering Poro|069/221|Regular|069-221-plundering-poro-28998a00.webp
+Wages of Pain|070/221|Regular|070-221-wages-of-pain-4cc5c93d.webp
+Breakneck Mech|071/221|Regular|071-221-breakneck-mech-9fefed4a.webp
+Dropboarder|072/221|Regular|072-221-dropboarder-d7964d78.webp
+Experimental Hexplate|073/221|Regular|073-221-experimental-hexplate-7f83310b.webp
+Pickpocket|074/221|Regular|074-221-pickpocket-3b2f3b7c.webp
+Prize of Progress|075/221|Regular|075-221-prize-of-progress-c7d6c592.webp
+Production Surge|076/221|Regular|076-221-production-surge-233aada3.webp
+Rocket Barrage|077/221|Regular|077-221-rocket-barrage-22b977b3.webp
+Temporal Portal|078/221|Regular|078-221-temporal-portal-6b9259df.webp
+Bard, Mercurial|079/221|Regular|079-221-bard-mercurial-08289ff3.webp
+Bellows Breath|080/221|Regular|080-221-bellows-breath-33d0473e.webp
+Card Sharp|081/221|Regular|081-221-card-sharp-bbe58586.webp
+Ezreal, Dashing|082a/221|Alternate art|082a-221-ezreal-dashing-59e90a64.webp
+Ezreal, Dashing|082/221|Regular|082-221-ezreal-dashing-744ebfa0.webp
+Hextech Anomaly|083/221|Regular|083-221-hextech-anomaly-38164683.webp
+Jayce, Man of Progress|084/221|Regular|084-221-jayce-man-of-progress-7bb8f43a.webp
+Ornn, Forge God|085/221|Regular|085-221-ornn-forge-god-2d5564e1.webp
+Ornn, Forge God|085a/221|Alternate art|085a-221-ornn-forge-god-9f11f861.webp
+World Atlas|086/221|Regular|086-221-world-atlas-6a53f20f.webp
+Premonition|087/221|Regular|087-221-premonition-978ca001.webp
+Renata Glasc, Mastermind|088/221|Regular|088-221-renata-glasc-mastermind-4d3df5dd.webp
+Renata Glasc, Mastermind|088a/221|Alternate art|088a-221-renata-glasc-mastermind-a011e602.webp
+Rumble, Scrapper|089/221|Regular|089-221-rumble-scrapper-e44b630d.webp
+Rumble, Scrapper|089a/221|Alternate art|089a-221-rumble-scrapper-c00794e1.webp
+The Zero Drive|090/221|Regular|090-221-the-zero-drive-93af5ba3.webp
+Buhru Captain|091/221|Regular|091-221-buhru-captain-d3812c63.webp
+Combat Chef|092/221|Regular|092-221-combat-chef-b5d4e343.webp
+Dauntless Vanguard|093/221|Regular|093-221-dauntless-vanguard-df3c560f.webp
+Direwing|094/221|Regular|094-221-direwing-4f16b653.webp
+Doran's Blade|095/221|Regular|095-221-doran-s-blade-6f2f5f65.webp
+Laurent Bladekeeper|096/221|Regular|096-221-laurent-bladekeeper-454ba92c.webp
+Punch First|097/221|Regular|097-221-punch-first-5740ec26.webp
+Sea Monkey|098/221|Regular|098-221-sea-monkey-158a8d77.webp
+Veteran Poro|099/221|Regular|099-221-veteran-poro-ee8d0c30.webp
+Yordle Explorer|100/221|Regular|100-221-yordle-explorer-268e66ac.webp
+Fae Dragon|101/221|Regular|101-221-fae-dragon-f0c571a7.webp
+Hexdrinker|102/221|Regular|102-221-hexdrinker-9098545a.webp
+Jaull-Fish|103/221|Regular|103-221-jaull-fish-372e5c73.webp
+Petricite Monument|104/221|Regular|104-221-petricite-monument-8b08290c.webp
+Ruin Runner|105/221|Regular|105-221-ruin-runner-9c866862.webp
+Show of Strength|106/221|Regular|106-221-show-of-strength-68bcfe8b.webp
+Strike Down|107/221|Regular|107-221-strike-down-8a8a1c5e.webp
+Warmog's Armor|108/221|Regular|108-221-warmog-s-armor-0531d19a.webp
+Akshan, Mischievous|109/221|Regular|109-221-akshan-mischievous-33d081cd.webp
+Fiora, Peerless|110a/221|Alternate art|110a-221-fiora-peerless-9d518ed5.webp
+Fiora, Peerless|110/221|Regular|110-221-fiora-peerless-dd4d0f7f.webp
+Here to Help|111/221|Regular|111-221-here-to-help-34eba9ab.webp
+Kato the Arm|112/221|Regular|112-221-kato-the-arm-cb03d2bd.webp
+Lucian, Merciless|113/221|Regular|113-221-lucian-merciless-a8d901a5.webp
+Lucian, Merciless|113a/221|Alternate art|113a-221-lucian-merciless-e4b7a421.webp
+Marching Orders|114/221|Regular|114-221-marching-orders-72dcd1cc.webp
+Trinity Force|115/221|Regular|115-221-trinity-force-de019bf1.webp
+Yone, Blademaster|116/221|Regular|116-221-yone-blademaster-443df440.webp
+Ancient Henge|117/221|Regular|117-221-ancient-henge-3f164507.webp
+Boneshiver|118/221|Regular|118-221-boneshiver-c6e281ec.webp
+Jax, Unrelenting|119/221|Regular|119-221-jax-unrelenting-d0c39e8f.webp
+Jax, Unrelenting|119a/221|Alternate art|119a-221-jax-unrelenting-199a1f26.webp
+Sivir, Ambitious|120a/221|Alternate art|120a-221-sivir-ambitious-137a9c09.webp
+Sivir, Ambitious|120/221|Regular|120-221-sivir-ambitious-3029d0d7.webp
+Black Market Broker|121/221|Regular|121-221-black-market-broker-37fdfac9.webp
+Called Shot|122/221|Regular|122-221-called-shot-18ec0f64.webp
+Corrupt Enforcer|123/221|Regular|123-221-corrupt-enforcer-9317ea2b.webp
+Doran's Ring|124/221|Regular|124-221-doran-s-ring-c9cd7adf.webp
+Fae Porter|125/221|Regular|125-221-fae-porter-ea96d59c.webp
+Loyal Pup|126/221|Regular|126-221-loyal-pup-ca30645d.webp
+Master Bingwen|127/221|Regular|127-221-master-bingwen-92c40b57.webp
+Overzealous Fan|128/221|Regular|128-221-overzealous-fan-5bfae12d.webp
+Temptation|129/221|Regular|129-221-temptation-f81de1c3.webp
+Treasure Hunter|130/221|Regular|130-221-treasure-hunter-10f2a0eb.webp
+Ancient Warmonger|131/221|Regular|131-221-ancient-warmonger-d8186352.webp
+Beast Below|132/221|Regular|132-221-beast-below-6e8baa13.webp
+Boots of Swiftness|133/221|Regular|133-221-boots-of-swiftness-d1bd8462.webp
+Cull|134/221|Regular|134-221-cull-f76b471b.webp
+Factory Recall|135/221|Regular|135-221-factory-recall-c3e44e17.webp
+Hard Bargain|136/221|Regular|136-221-hard-bargain-9d0ad369.webp
+Harpoon Squad|137/221|Regular|137-221-harpoon-squad-ecbe7753.webp
+Windsinger|138/221|Regular|138-221-windsinger-2898657f.webp
+Edge of Night|139/221|Regular|139-221-edge-of-night-73741cea.webp
+Fizz, Trickster|140/221|Regular|140-221-fizz-trickster-c3c399c8.webp
+Irelia, Graceful|141a/221|Alternate art|141a-221-irelia-graceful-56f1206b.webp
+Irelia, Graceful|141/221|Regular|141-221-irelia-graceful-776f144a.webp
+Jae Medarda|142/221|Regular|142-221-jae-medarda-177bdd40.webp
+Sivir, Mercenary|143a/221|Alternate art|143a-221-sivir-mercenary-0bc1adfa.webp
+Sivir, Mercenary|143/221|Regular|143-221-sivir-mercenary-88e871ba.webp
+Spirit Wheel|144/221|Regular|144-221-spirit-wheel-5738188f.webp
+Switcheroo|145/221|Regular|145-221-switcheroo-2cf925e9.webp
+Vex, Cheerless|146/221|Regular|146-221-vex-cheerless-8c0f5a77.webp
+Downwell|147/221|Regular|147-221-downwell-040c185c.webp
+Draven, Audacious|148/221|Regular|148-221-draven-audacious-41feff31.webp
+Draven, Audacious|148a/221|Alternate art|148a-221-draven-audacious-5cc46da5.webp
+Ezreal, Prodigy|149a/221|Alternate art|149a-221-ezreal-prodigy-070e596d.webp
+Ezreal, Prodigy|149/221|Regular|149-221-ezreal-prodigy-e3ec3812.webp
+Last Rites|150/221|Regular|150-221-last-rites-f8f61861.webp
+Bonds of Strength|151/221|Regular|151-221-bonds-of-strength-127db50d.webp
+Eminent Benefactor|152/221|Regular|152-221-eminent-benefactor-e9faa30e.webp
+Eye of the Herald|153/221|Regular|153-221-eye-of-the-herald-2a90ae42.webp
+Guards!|154/221|Regular|154-221-guards-0da6fb73.webp
+Honest Broker|155/221|Regular|155-221-honest-broker-d08a832f.webp
+Laurent Duelist|156/221|Regular|156-221-laurent-duelist-3b70b1e7.webp
+Royal Guard|157/221|Regular|157-221-royal-guard-9b6c18fd.webp
+Sandshifter|158/221|Regular|158-221-sandshifter-609efbf2.webp
+Trusty Ramhound|159/221|Regular|159-221-trusty-ramhound-cdad407e.webp
+Zaun Punk|160/221|Regular|160-221-zaun-punk-e3324b0b.webp
+B.F. Sword|161/221|Regular|161-221-b-f-sword-1dea35c3.webp
+Blood Money|162/221|Regular|162-221-blood-money-a4fdf262.webp
+Deathgrip|163/221|Regular|163-221-deathgrip-e725fd68.webp
+Drag Under|164/221|Regular|164-221-drag-under-f33ae72b.webp
+Glasc Mixologist|165/221|Regular|165-221-glasc-mixologist-605b999b.webp
+Rally the Troops|166/221|Regular|166-221-rally-the-troops-5abe4f58.webp
+Unsung Hero|167/221|Regular|167-221-unsung-hero-199c9ffc.webp
+Vanguard Armory|168/221|Regular|168-221-vanguard-armory-6d41f041.webp
+Altar of Memories|169/221|Regular|169-221-altar-of-memories-55b97e19.webp
+Rek'Sai, Swarm Queen|170/221|Regular|170-221-rek-sai-swarm-queen-448b5737.webp
+Rek'Sai, Swarm Queen|170a/221|Alternate art|170a-221-rek-sai-swarm-queen-db49a655.webp
+Renata Glasc, Industrialist|171/221|Regular|171-221-renata-glasc-industrialist-ff602fd0.webp
+Renata Glasc, Industrialist|171a/221|Alternate art|171a-221-renata-glasc-industrialist-d78955fb.webp
+Sacred Shears|172/221|Regular|172-221-sacred-shears-f908ae18.webp
+Soraka, Wanderer|173/221|Regular|173-221-soraka-wanderer-c1810922.webp
+Trove Golem|174/221|Regular|174-221-trove-golem-79a48b46.webp
+Undertitan|175/221|Regular|175-221-undertitan-faac977b.webp
+Xin Zhao, Vigilant|176/221|Regular|176-221-xin-zhao-vigilant-7db3d97d.webp
+Azir, Sovereign|177/221|Regular|177-221-azir-sovereign-9e3a0803.webp
+Azir, Sovereign|177a/221|Alternate art|177a-221-azir-sovereign-cd7e5eab.webp
+Blade of the Ruined King|178/221|Regular|178-221-blade-of-the-ruined-king-929f2024.webp
+Corina Veraza|179/221|Regular|179-221-corina-veraza-ff917ec6.webp
+Fiora, Worthy|180a/221|Alternate art|180a-221-fiora-worthy-ec8f6f7f.webp
+Fiora, Worthy|180/221|Regular|180-221-fiora-worthy-16492318.webp
+Mechanized Menace|181/221|Regular|181-221-mechanized-menace-ac73613d.webp
+Danger Zone|182/221|Regular|182-221-danger-zone-40f688e9.webp
+Purifier|183/221|Regular|183-221-purifier-ced08160.webp
+Relentless Pursuit|184/221|Regular|184-221-relentless-pursuit-64a0db21.webp
+Glorious Executioner|185/221|Regular|185-221-glorious-executioner-7d53dff2.webp
+Spinning Axe|186/221|Regular|186-221-spinning-axe-9d40908b.webp
+Void Burrower|187/221|Regular|187-221-void-burrower-f6836b88.webp
+Void Rush|188/221|Regular|188-221-void-rush-ea3d4833.webp
+Fire Below the Mountain|189/221|Regular|189-221-fire-below-the-mountain-3ac31ebe.webp
+Forgefire Cape|190/221|Regular|190-221-forgefire-cape-df4d53b3.webp
+Rabadon's Deathcrown|191/221|Regular|191-221-rabadon-s-deathcrown-ac0f0ce9.webp
+Shurelya's Requiem|192/221|Regular|192-221-shurelya-s-requiem-d82f0f96.webp
+Grandmaster at Arms|193/221|Regular|193-221-grandmaster-at-arms-528fabc5.webp
+Counter Strike|194/221|Regular|194-221-counter-strike-eeb7864c.webp
+Blade Dancer|195/221|Regular|195-221-blade-dancer-9d3c3819.webp
+Defiant Dance|196/221|Regular|196-221-defiant-dance-81d1d3ba.webp
+Emperor of the Sands|197/221|Regular|197-221-emperor-of-the-sands-871e2a71.webp
+Arise!|198/221|Regular|198-221-arise-619ca586.webp
+Prodigal Explorer|199/221|Regular|199-221-prodigal-explorer-4aa7bc92.webp
+Arcane Shift|200/221|Regular|200-221-arcane-shift-50ca86d1.webp
+Chem-Baroness|201/221|Regular|201-221-chem-baroness-64245436.webp
+Hostile Takeover|202/221|Regular|202-221-hostile-takeover-9b38f044.webp
+Battle Mistress|203/221|Regular|203-221-battle-mistress-bc39c3c6.webp
+On the Hunt|204/221|Regular|204-221-on-the-hunt-908d7b72.webp
+Grand Duelist|205/221|Regular|205-221-grand-duelist-1fe516b8.webp
+Riposte|206/221|Regular|206-221-riposte-d1e46448.webp
+Emperor's Dais|207/221|Regular|207-221-emperor-s-dais-233d1c7d.webp
+Forge of the Fluft|208/221|Regular|208-221-forge-of-the-fluft-6f3d266a.webp
+Forgotten Monument|209/221|Regular|209-221-forgotten-monument-6657141b.webp
+Hall of Legends|210/221|Regular|210-221-hall-of-legends-82600f03.webp
+Marai Spire|211/221|Regular|211-221-marai-spire-b116a93b.webp
+Minefield|212/221|Regular|212-221-minefield-140ab442.webp
+Ornn's Forge|213/221|Regular|213-221-ornn-s-forge-29084ae4.webp
+Power Nexus|214/221|Regular|214-221-power-nexus-203cac27.webp
+Ravenbloom Conservatory|215/221|Regular|215-221-ravenbloom-conservatory-e4f3064c.webp
+Rockfall Path|216/221|Regular|216-221-rockfall-path-bc49d9b6.webp
+Seat of Power|217/221|Regular|217-221-seat-of-power-7edbc1c8.webp
+Sunken Temple|218/221|Regular|218-221-sunken-temple-163e920a.webp
+The Papertree|219/221|Regular|219-221-the-papertree-bf0b9985.webp
+Treasure Hoard|220/221|Regular|220-221-treasure-hoard-4576193e.webp
+Veiled Temple|221/221|Regular|221-221-veiled-temple-1717457a.webp
+Seal of Rage|222/221|Overnumbered|222-221-seal-of-rage-368f0126.webp
+Vayne, Hunter|223*/221|Signature overnumbered|223-221-vayne-hunter-d327c2e7.webp
+Vayne, Hunter|223/221|Overnumbered|223-221-vayne-hunter-9577264e.webp
+Aphelios, Exalted|224/221|Overnumbered|224-221-aphelios-exalted-64c07a2d.webp
+Aphelios, Exalted|224*/221|Signature overnumbered|224-221-aphelios-exalted-c601130e.webp
+Irelia, Fervent|225*/221|Signature overnumbered|225-221-irelia-fervent-c410bf70.webp
+Irelia, Fervent|225/221|Overnumbered|225-221-irelia-fervent-840960fe.webp
+Seal of Focus|226/221|Overnumbered|226-221-seal-of-focus-e6ee39c1.webp
+Ahri, Inquisitive|227*/221|Signature overnumbered|227-221-ahri-inquisitive-4f114feb.webp
+Ahri, Inquisitive|227/221|Overnumbered|227-221-ahri-inquisitive-f9550fa1.webp
+Bard, Mercurial|228*/221|Signature overnumbered|228-221-bard-mercurial-55f6086a.webp
+Bard, Mercurial|228/221|Overnumbered|228-221-bard-mercurial-20622941.webp
+Seal of Insight|229/221|Overnumbered|229-221-seal-of-insight-14c0fe0c.webp
+Teemo, Strategist|230/221|Overnumbered|230-221-teemo-strategist-c3f24a77.webp
+Teemo, Strategist|230*/221|Signature overnumbered|230-221-teemo-strategist-aa4207bb.webp
+Seal of Strength|231/221|Overnumbered|231-221-seal-of-strength-0d4327c5.webp
+Sett, Brawler|232*/221|Signature overnumbered|232-221-sett-brawler-2f1671d9.webp
+Sett, Brawler|232/221|Overnumbered|232-221-sett-brawler-72bc8d5a.webp
+Yone, Blademaster|233/221|Overnumbered|233-221-yone-blademaster-5895bd21.webp
+Yone, Blademaster|233*/221|Signature overnumbered|233-221-yone-blademaster-c74d85d5.webp
+Seal of Discord|234/221|Overnumbered|234-221-seal-of-discord-ed91f325.webp
+Yasuo, Windrider|235/221|Overnumbered|235-221-yasuo-windrider-c9adeef0.webp
+Yasuo, Windrider|235*/221|Signature overnumbered|235-221-yasuo-windrider-a5b19e2c.webp
+Darius, Executioner|236*/221|Signature overnumbered|236-221-darius-executioner-6f9fbd2d.webp
+Darius, Executioner|236/221|Overnumbered|236-221-darius-executioner-5c1e06fd.webp
+Karma, Channeler|237/221|Overnumbered|237-221-karma-channeler-434f3ef8.webp
+Karma, Channeler|237*/221|Signature overnumbered|237-221-karma-channeler-90e3dca9.webp
+Seal of Unity|238/221|Overnumbered|238-221-seal-of-unity-21f792fe.webp
+Soraka, Wanderer|239/221|Overnumbered|239-221-soraka-wanderer-8f56fd59.webp
+Soraka, Wanderer|239*/221|Signature overnumbered|239-221-soraka-wanderer-7a86643d.webp
+Mechanized Menace|240/221|Overnumbered|240-221-mechanized-menace-b4271824.webp
+Purifier|241/221|Overnumbered|241-221-purifier-aad9fb9d.webp
+Glorious Executioner|242/221|Overnumbered|242-221-glorious-executioner-ce597144.webp
+Void Burrower|243/221|Overnumbered|243-221-void-burrower-6178aaf7.webp
+Fire Below the Mountain|244/221|Overnumbered|244-221-fire-below-the-mountain-2d368097.webp
+Grandmaster at Arms|245/221|Overnumbered|245-221-grandmaster-at-arms-77a30a87.webp
+Blade Dancer|246/221|Overnumbered|246-221-blade-dancer-a2999e65.webp
+Emperor of the Sands|247/221|Overnumbered|247-221-emperor-of-the-sands-29a9d5e9.webp
+Prodigal Explorer|248/221|Overnumbered|248-221-prodigal-explorer-ba8a9c2a.webp
+Chem-Baroness|249/221|Overnumbered|249-221-chem-baroness-a71b9df5.webp
+Battle Mistress|250/221|Overnumbered|250-221-battle-mistress-792d69b8.webp
+Grand Duelist|251/221|Overnumbered|251-221-grand-duelist-9a3911f2.webp
