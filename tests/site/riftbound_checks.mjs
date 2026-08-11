@@ -6,6 +6,19 @@ for (const file of required) {
   if (!fs.existsSync(`public/${file}`)) throw new Error(`Missing public/${file}`);
 }
 
+const manifest = JSON.parse(fs.readFileSync('public/manifest.json', 'utf8'));
+for (const icon of [
+  ['assets/icon-192.png', '192x192', 'any'],
+  ['assets/icon-512.png', '512x512', 'any'],
+  ['assets/icon-maskable-512.png', '512x512', 'maskable'],
+]) {
+  const [src, sizes, purpose] = icon;
+  if (!manifest.icons?.some(item => item.src === src && item.sizes === sizes && item.purpose === purpose)) {
+    throw new Error(`Manifest icon is missing or misconfigured: ${src}`);
+  }
+  if (!fs.existsSync(`public/${src}`)) throw new Error(`PWA icon is missing: ${src}`);
+}
+
 const source = fs.readFileSync('public/sets.js', 'utf8');
 const context = {};
 vm.runInNewContext(`${source}; globalThis.registry = SETS`, context);
@@ -19,6 +32,10 @@ for (const [id, code] of Object.entries(expected)) {
     throw new Error(`${id} is not connected to its published CSV tab`);
   }
   if (!fs.existsSync(`public/data/${id}.csv`)) throw new Error(`${id} fallback CSV is missing`);
+  const logoPath = `public/assets/logos/${id}.png`;
+  if (!fs.existsSync(logoPath)) throw new Error(`${id} logo is missing`);
+  const logoSignature = fs.readFileSync(logoPath).subarray(0, 8).toString('hex');
+  if (logoSignature !== '89504e470d0a1a0a') throw new Error(`${id} logo is not a valid PNG`);
 }
 
 const combined = required.map(file => fs.readFileSync(`public/${file}`, 'utf8')).join('\n');
