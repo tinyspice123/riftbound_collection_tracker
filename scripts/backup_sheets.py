@@ -1,4 +1,4 @@
-"""Back up every configured published sheet tab and refresh site fallbacks."""
+"""Back up every configured published sheet tab for deployment as a fallback."""
 
 from __future__ import annotations
 
@@ -14,7 +14,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SETS_JS = ROOT / "public" / "sets.js"
 BACKUPS = ROOT / "backups"
-FALLBACKS = ROOT / "public" / "data"
 
 BASE_RE = re.compile(r'const\s+SHEET_BASE_URL\s*=\s*"([^"]+)"')
 ENTRY_RE = re.compile(
@@ -88,9 +87,8 @@ def main() -> int:
         text = fetch(url)
         count = validate(text, set_id)
         backup_changed = write_if_changed(BACKUPS / f"{set_id}.csv", text)
-        fallback_changed = write_if_changed(FALLBACKS / f"{set_id}.csv", text)
-        changed += int(backup_changed or fallback_changed)
-        print(f"{set_id}: {count} cards ({'updated' if backup_changed or fallback_changed else 'unchanged'})")
+        changed += int(backup_changed)
+        print(f"{set_id}: {count} cards ({'updated' if backup_changed else 'unchanged'})")
     print(f"Backup complete: {changed} set(s) changed")
     return 0
 

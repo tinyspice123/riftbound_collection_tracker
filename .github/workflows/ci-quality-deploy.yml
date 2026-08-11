@@ -262,9 +262,9 @@ jobs:
         id: package-backups
         shell: bash
         run: |
-          mkdir -p public/data
-          cp backups/*.csv public/data/
-          backup_count="$(find public/data -maxdepth 1 -type f -name '*.csv' | wc -l)"
+          mkdir -p public/backups
+          cp backups/*.csv public/backups/
+          backup_count="$(find public/backups -maxdepth 1 -type f -name '*.csv' | wc -l)"
           if [[ "$backup_count" -eq 0 ]]; then
             echo "No backup CSV files were packaged" >&2
             exit 1
@@ -329,7 +329,7 @@ jobs:
           smoke "$site_root/tracker.html" /tmp/tracker.html & tracker_pid=$!
           smoke "$site_root/manifest.json" /dev/null & manifest_pid=$!
           smoke "$site_root/sw.js" /dev/null & worker_pid=$!
-          smoke "$site_root/data/origins.csv" /dev/null & backup_pid=$!
+          smoke "$site_root/backups/origins.csv" /dev/null & backup_pid=$!
           smoke "$site_root/img/origins/manifest.txt" /dev/null & image_manifest_pid=$!
           wait "$index_pid"
           wait "$tracker_pid"

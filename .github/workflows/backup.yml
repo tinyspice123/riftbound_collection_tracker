@@ -28,13 +28,13 @@ jobs:
         run: python scripts/backup_sheets.py
       - name: Validate backups and local image manifests
         run: python scripts/validate_data.py
-      - name: Commit changed snapshots and fallbacks
+      - name: Commit changed snapshots
         id: commit
         shell: bash
         run: |
           git config user.name "riftbound-backup[bot]"
           git config user.email "actions@github.com"
-          git add backups/ public/data/
+          git add backups/
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No sheet changes"

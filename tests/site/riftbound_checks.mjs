@@ -31,7 +31,7 @@ for (const [id, code] of Object.entries(expected)) {
   if (!set.sheet?.includes(`gid=${set.sheetGid}&single=true&output=csv`)) {
     throw new Error(`${id} is not connected to its published CSV tab`);
   }
-  if (!fs.existsSync(`public/data/${id}.csv`)) throw new Error(`${id} fallback CSV is missing`);
+  if (!fs.existsSync(`backups/${id}.csv`)) throw new Error(`${id} backup CSV is missing`);
   const logoPath = `public/assets/logos/${id}.png`;
   if (!fs.existsSync(logoPath)) throw new Error(`${id} logo is missing`);
   const logoSignature = fs.readFileSync(logoPath).subarray(0, 8).toString('hex');
@@ -48,7 +48,7 @@ for (const policy of [
   'cron: "0 9 * * *"',
   'contents: write',
   'python scripts/backup_sheets.py',
-  'git add backups/ public/data/',
+  'git add backups/',
   'gh workflow run ci-quality-deploy.yml --ref main',
 ]) {
   if (!backupWorkflow.includes(policy)) throw new Error(`Backup workflow is missing: ${policy}`);

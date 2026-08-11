@@ -4,7 +4,7 @@ const params = new URLSearchParams(location.search);
 const SET_ID = (typeof SETS!=="undefined" && SETS[params.get('set')]) ? params.get('set') : Object.keys(SETS)[0];
 const cfg = SETS[SET_ID];
 const SHEET_URL = cfg.sheet || "";
-const BACKUP_URL = `data/${encodeURIComponent(SET_ID)}.csv`;
+const BACKUP_URL = `backups/${encodeURIComponent(SET_ID)}.csv`;
 
 // header branding from config
 document.title = cfg.name + " — Riftbound Collection Tracker";

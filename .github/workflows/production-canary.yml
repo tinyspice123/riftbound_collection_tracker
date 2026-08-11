@@ -19,7 +19,6 @@ jobs:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /backups/
-            /public/data/
             /public/img/
             /public/sets.js
             /scripts/backup_sheets.py
@@ -31,4 +30,4 @@ jobs:
         run: |
           python scripts/backup_sheets.py
           python scripts/validate_data.py
-          git diff --exit-code -- public/data/
+          git diff --exit-code -- backups/
