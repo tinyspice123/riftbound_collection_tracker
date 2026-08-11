@@ -56,6 +56,11 @@ daily at 09:00 UTC. Changed CSVs are committed under `backups/` and mirrored to
 the normal test-and-deploy workflow because GitHub does not recursively trigger
 workflows from commits made with its built-in token.
 
+The main pipeline mirrors the Pokémon tracker: static and JavaScript coverage,
+Python validation and coverage, desktop/mobile browser tests, SonarQube Quality
+Gate, Pages packaging, deployment smoke tests, maintenance mode, and a weekly
+production dependency canary.
+
 Run the same operation locally with:
 
 ```bash

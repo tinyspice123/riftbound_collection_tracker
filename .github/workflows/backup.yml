@@ -26,6 +26,8 @@ jobs:
           python-version: "3.14"
       - name: Download and validate all published tabs
         run: python scripts/backup_sheets.py
+      - name: Validate backups and local image manifests
+        run: python scripts/validate_data.py
       - name: Commit changed snapshots and fallbacks
         id: commit
         shell: bash
@@ -45,4 +47,4 @@ jobs:
         if: steps.commit.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run deploy.yml --ref main
+        run: gh workflow run ci-quality-deploy.yml --ref main

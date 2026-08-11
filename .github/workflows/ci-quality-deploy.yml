@@ -1,0 +1,360 @@
+# Tests + quality analysis + deployment pipeline
+name: Tests / Security / Deploy
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - README.md
+      - backups/**
+      - docs/**
+  pull_request:
+    paths-ignore:
+      - README.md
+      - backups/**
+      - docs/**
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+
+  site-checks:
+    name: Site checks + JavaScript unit tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/
+            /public/
+            /tests/
+            /eslint.config.mjs
+            /package-lock.json
+            /package.json
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Validate workflows and embedded shell
+        env:
+          ACTIONLINT_VERSION: v1.7.12
+        run: |
+          command -v shellcheck
+          go run "github.com/rhysd/actionlint/cmd/actionlint@${ACTIONLINT_VERSION}" \
+            -shellcheck=shellcheck
+
+      - name: Install development tools
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Site checks and lint
+        run: npm run test:site
+
+      - name: lib.js unit tests with coverage
+        run: npm run test:coverage
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: javascript-coverage
+          path: coverage/lcov.info
+          if-no-files-found: error
+          retention-days: 1
+
+  python-tests:
+    name: Python tests (scripts)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /tests/
+            /backups/
+            /requirements-dev.txt
+            /public/sets.js
+            /public/img/
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install coverage tool
+        run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
+
+      - name: Byte-compile scripts
+        run: |
+          python -m py_compile \
+          scripts/backup_sheets.py \
+          scripts/validate_data.py \
+          scripts/download_card_images.py
+
+      - name: Validate collection backups and image manifests
+        run: python scripts/validate_data.py
+
+      - name: Unit tests with coverage
+        run: |
+          python -m coverage run --source=scripts -m unittest discover -s tests/python -v
+          python -m coverage xml -o coverage.xml
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: python-coverage
+          path: coverage.xml
+          if-no-files-found: error
+          retention-days: 1
+
+
+  browser-tests:
+    name: Browser tests
+    needs: [site-checks, python-tests]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /public/
+            /tests/
+            /package-lock.json
+            /package.json
+            /playwright.config.mjs
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Run browser tests
+        run: npm run test:e2e
+
+      - name: Upload Playwright failure details
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: playwright-failure
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  sonar:
+    name: SonarQube
+    needs: [site-checks, python-tests]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pull-requests: read
+      id-token: write
+    env:
+      SONAR_SCANNER_ARGS: >-
+        -Dsonar.projectKey=tinyspice123_riftbound_collection_tracker
+        -Dsonar.organization=tinyspice123
+        -Dsonar.scm.provider=git
+        -Dsonar.python.file.suffixes=.py
+        -Dsonar.python.coverage.reportPaths=coverage.xml
+        -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+        -Dsonar.qualitygate.wait=true
+        -Dsonar.qualitygate.timeout=300
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+
+      - name: Download JavaScript coverage
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          name: javascript-coverage
+          path: coverage
+
+      - name: Download Python coverage
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          name: python-coverage
+          path: .
+
+      - name: Analyze with SonarQube
+        id: sonar-attempt-1
+        # SonarCloud occasionally returns a transient 5xx while creating or
+        # loading an analysis. Permit one backed-off retry below; the final
+        # attempt still blocks CI.
+        continue-on-error: true
+        # v8.2.1, pinned to prevent a mutable tag from changing CI code.
+        uses: SonarSource/sonarqube-scan-action@22918119ff8e1ca75a623e15c8296b6ea4fbe28f # v8.2.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        with:
+          args: ${{ env.SONAR_SCANNER_ARGS }}
+
+      - name: Back off before SonarQube retry
+        if: steps.sonar-attempt-1.outcome == 'failure'
+        run: sleep 60
+
+      - name: Retry SonarQube analysis once
+        if: steps.sonar-attempt-1.outcome == 'failure'
+        # v8.2.1, pinned to prevent a mutable tag from changing CI code.
+        uses: SonarSource/sonarqube-scan-action@22918119ff8e1ca75a623e15c8296b6ea4fbe28f # v8.2.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        with:
+          args: ${{ env.SONAR_SCANNER_ARGS }}
+
+  package-pages:
+    name: Package Pages artifact
+    needs: [browser-tests, sonar]
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    outputs:
+      backup_count: ${{ steps.package-backups.outputs.backup_count }}
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /backups/
+            /public/
+
+      - name: Inject service-worker build version
+        shell: bash
+        run: |
+          build_version="shell-${GITHUB_SHA::8}"
+          sed -i "s/shell-__BUILD_VERSION__/$build_version/" public/sw.js
+          grep -Fq "const VERSION = '$build_version'" public/sw.js
+          if grep -Fq 'shell-__BUILD_VERSION__' public/sw.js; then
+            echo "Service-worker version placeholder was not fully replaced" >&2
+            exit 1
+          fi
+
+      - name: Package sheet fallbacks
+        id: package-backups
+        shell: bash
+        run: |
+          mkdir -p public/data
+          cp backups/*.csv public/data/
+          backup_count="$(find public/data -maxdepth 1 -type f -name '*.csv' | wc -l)"
+          if [[ "$backup_count" -eq 0 ]]; then
+            echo "No backup CSV files were packaged" >&2
+            exit 1
+          fi
+          echo "backup_count=$backup_count" >> "$GITHUB_OUTPUT"
+
+      - name: Upload Pages artifact
+        # v5, pinned because this step is part of the trusted deployment path.
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: 'public'
+
+  deploy:
+    name: Deploy to GitHub Pages
+
+    needs: package-pages
+    timeout-minutes: 10
+
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+
+    if: github.event_name != 'pull_request'
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5
+
+      - name: Smoke test deployed site
+        id: smoke-test
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          smoke() {
+            local url="$1" output="$2"
+            for attempt in 1 2 3 4 5; do
+              if curl --fail --silent --show-error --location --max-time 20 "$url" --output "$output"; then
+                return 0
+              fi
+              sleep $((attempt * 2))
+            done
+            return 1
+          }
+          site_root="${SITE_URL%/}"
+          smoke "$site_root/index.html" /tmp/index.html & index_pid=$!
+          smoke "$site_root/tracker.html" /tmp/tracker.html & tracker_pid=$!
+          smoke "$site_root/manifest.json" /dev/null & manifest_pid=$!
+          smoke "$site_root/sw.js" /dev/null & worker_pid=$!
+          smoke "$site_root/data/origins.csv" /dev/null & backup_pid=$!
+          smoke "$site_root/img/origins/manifest.txt" /dev/null & image_manifest_pid=$!
+          wait "$index_pid"
+          wait "$tracker_pid"
+          wait "$manifest_pid"
+          wait "$worker_pid"
+          wait "$backup_pid"
+          wait "$image_manifest_pid"
+          grep -q 'id="sets"' /tmp/index.html
+          grep -q 'id="lightbox"' /tmp/tracker.html
+
+      - name: Publish deployment summary
+        if: always()
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+          BACKUP_COUNT: ${{ needs.package-pages.outputs.backup_count }}
+          DEPLOY_OUTCOME: ${{ steps.deployment.outcome }}
+          SMOKE_OUTCOME: ${{ steps.smoke-test.outcome }}
+        run: |
+          {
+            echo "## Production deployment"
+            echo
+            echo "- **Site:** ${SITE_URL:-Unavailable}"
+            echo "- **Commit:** \`${GITHUB_SHA::8}\`"
+            echo "- **Quality:** site, unit, Python, browser and SonarQube checks passed"
+            echo "- **Sheet fallbacks:** ${BACKUP_COUNT} backup CSV files packaged"
+            echo "- **Deployment:** ${DEPLOY_OUTCOME}"
+            echo "- **Smoke tests:** ${SMOKE_OUTCOME}"
+          } >> "$GITHUB_STEP_SUMMARY"

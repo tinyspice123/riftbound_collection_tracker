@@ -32,7 +32,7 @@ for (const policy of [
   'contents: write',
   'python scripts/backup_sheets.py',
   'git add backups/ public/data/',
-  'gh workflow run deploy.yml --ref main',
+  'gh workflow run ci-quality-deploy.yml --ref main',
 ]) {
   if (!backupWorkflow.includes(policy)) throw new Error(`Backup workflow is missing: ${policy}`);
 }
