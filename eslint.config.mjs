@@ -7,11 +7,11 @@ const browserGlobals={
   setInterval:'readonly', setTimeout:'readonly', clearTimeout:'readonly', window:'readonly',
   Event:'readonly', IntersectionObserver:'readonly', Map:'readonly', Set:'readonly',
   Object:'readonly', Date:'readonly', console:'readonly', Response:'readonly',
-  SETS:'readonly', csvToRows:'readonly', rowsToItems:'readonly', esc:'readonly',
+  SETS:'readonly', RiftboundDb:'readonly', csvToRows:'readonly', rowsToItems:'readonly', esc:'readonly',
   detectColumns:'readonly',
   setSafeImageSource:'readonly', imgCandidatesPure:'readonly', manifestKey:'readonly',
   sortItems:'readonly', marketplaceSearchUrls:'readonly', priceMid:'readonly',
-  matchesQuery:'readonly', exportText:'readonly', exportCsv:'readonly',
+  matchesQuery:'readonly', exportText:'readonly', exportCsv:'readonly', csvEscape:'readonly',
   parseHaveQty:'readonly',
 };
 
