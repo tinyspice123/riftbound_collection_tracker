@@ -650,8 +650,9 @@ document.getElementById('liveCsv').addEventListener('click',async ()=>{
     const lines=rows.map(card=>[
       card.id,card.set_id,card.group_name,card.card_name,card.collector_number,
       card.variant,card.source,card.status,card.price,card.quantity,card.image_url,
-    ].map(csvEscape).join(','));
-    downloadCsv(`${SET_ID}-live-${new Date().toISOString().slice(0,10)}.csv`,[header.map(csvEscape).join(','),...lines].join('\n')+'\n');
+    ].map(value=>csvEscape(value)).join(','));
+    const csvHeader=header.map(value=>csvEscape(value)).join(',');
+    downloadCsv(`${SET_ID}-live-${new Date().toISOString().slice(0,10)}.csv`,[csvHeader,...lines].join('\n')+'\n');
     toast(`Downloaded ${rows.length} live database card${rows.length===1?'':'s'}`);
   }catch(error){ toast(`Could not download live data: ${String(error.message||error)}`); }
   finally{ button.disabled=false; }

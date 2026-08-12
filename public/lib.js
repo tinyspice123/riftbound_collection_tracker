@@ -203,7 +203,7 @@ function exportCsv(kind, list){
   const rows=[["Card","Number","Variant","Group","Price"].concat(withQty?["Have"]:[])];
   list.forEach(it=>rows.push(
     [it.card,it.num,it.variant,it.group,it.price].concat(withQty?[it.qty]:[])));
-  return rows.map(r=>r.map(csvEscape).join(",")).join("\n");
+  return rows.map(r=>r.map(value=>csvEscape(value)).join(",")).join("\n");
 }
 
 // Marketplace search URLs stay useful when listings change, unlike links to
