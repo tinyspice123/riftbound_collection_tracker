@@ -89,8 +89,8 @@ class DataValidationTests(unittest.TestCase):
         (root / 'public' / 'img' / 'origins').mkdir(parents=True)
         with (root / 'backups' / 'origins.csv').open('w', encoding='utf-8', newline='') as handle:
             writer=csv.writer(handle)
-            writer.writerow(['Group','Card','Number','Variant / Stamp','Have'])
-            writer.writerow(['Fury','Test Card','001/166','Regular','1'])
+            writer.writerow(['Group','Card','Number','Variant / Stamp','Have','Image'])
+            writer.writerow(['Fury','Test Card','001/166','Regular','1','https://example.com/card.webp'])
         (root / 'public' / 'img' / 'origins' / 'manifest.txt').write_text(
             '\n'.join(manifest_lines)+'\n', encoding='utf-8')
         for name in image_names:

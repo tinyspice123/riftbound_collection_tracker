@@ -22,6 +22,8 @@ def validate_set(set_id: str, root: Path = ROOT) -> list[str]:
                 for row in rows if row.get("Card") and row.get("Image")}
     manifest: dict[tuple[str, str, str], str] = {}
     for line in manifest_path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
         parts = line.split("|", 3)
         if len(parts) != 4:
             errors.append(f"{set_id}: malformed manifest line")

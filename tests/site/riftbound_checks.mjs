@@ -67,6 +67,9 @@ if (/docs\.google\.com|googleusercontent\.com/.test(combined)) {
 if (!combined.includes('riftbound_card_main') || !combined.includes('riftbound-tracker:supabase-session')) {
   throw new Error('Supabase Riftbound client configuration is incomplete');
 }
+if (!combined.includes('collapsed.has(g) && !hasActiveFilters')) {
+  throw new Error('Filtered results can remain hidden inside collapsed groups');
+}
 
 const backupWorkflow = fs.readFileSync('.github/workflows/backup.yml', 'utf8');
 for (const policy of [

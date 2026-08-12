@@ -318,7 +318,8 @@ function render(){
   [...new Set(shown.map(i=>i.group))].forEach(g=>{
     const list=sortItems(shown.filter(i=>i.group===g), document.getElementById('sortSel').value);
     const own=list.filter(i=>i.qty>0).length;
-    const folded=collapsed.has(g);
+    const hasActiveFilters=Boolean(q || gsel || missOnly);
+    const folded=collapsed.has(g) && !hasActiveFilters;
     const gh=document.createElement('div'); gh.className='grouphead'+(folded?' folded':'');
     gh.setAttribute('role','button'); gh.setAttribute('tabindex','0');
     gh.setAttribute('aria-expanded', String(!folded));
