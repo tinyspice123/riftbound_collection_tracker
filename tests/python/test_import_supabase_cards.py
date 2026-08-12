@@ -6,7 +6,7 @@ from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 import import_supabase_cards
-from import_supabase_cards import quantity, rows_for_set, value
+from import_supabase_cards import REINDEX_OFFSET, quantity, rows_for_set, value
 
 
 class SupabaseImportTests(unittest.TestCase):
@@ -58,7 +58,10 @@ class SupabaseImportTests(unittest.TestCase):
                 },clear=True),
             ):
                 self.assertEqual(import_supabase_cards.main(),0)
-        request=opener.call_args.args[0]
+        self.assertEqual(opener.call_count,2)
+        staged_request=opener.call_args_list[0].args[0]
+        self.assertIn(f'"sort_order": {REINDEX_OFFSET}'.encode(),staged_request.data)
+        request=opener.call_args_list[1].args[0]
         self.assertEqual(request.full_url,'https://example.supabase.co/rest/v1/riftbound_card_main?on_conflict=id')
         self.assertIn(b'"card_name": "Test"',request.data)
 

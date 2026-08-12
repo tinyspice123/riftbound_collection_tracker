@@ -9,7 +9,12 @@ Brittle Steel|003/166|Regular|003-166-brittle-steel-14d4fcfc.webp
 Mind Rune|R03|Rune|r03-mind-rune-29748066.webp
 Body Rune|R04|Rune|r04-body-rune-747d996e.webp
 Dune Surfer|004/166|Regular|004-166-dune-surfer-7ceaf615.webp
+Empowered|T01|Token|t01-empowered-gallery.jpg
+Gold|T02|Token|t02-gold-openrift.webp
+Mech|T03|Token|t03-mech-openrift.webp
 Recruit (NX)|T04|Token|t04-recruit-nx-25f106ac.webp
+Shadow Clone|T05|Token|t05-shadow-clone-gallery.jpg
+Tentacle|T06|Token|t06-tentacle-gallery.jpg
 Sett, Brawler|SP4/006|Special collection|sp4-006-sett-brawler-44560cb3.webp
 Chaos Rune|R05|Rune|r05-chaos-rune-16abed4f.webp
 Ezreal, Prodigy|SP5/006|Special collection|sp5-006-ezreal-prodigy-8ffd13c3.webp
@@ -173,6 +178,7 @@ Butcher of the Sands|141/166|Regular|141-166-butcher-of-the-sands-e7400d71.webp
 Dominus|142/166|Regular|142-166-dominus-b7615605.webp
 Master of Shadows|143/166|Regular|143-166-master-of-shadows-ba4f8928.webp
 Death Mark|144/166|Regular|144-166-death-mark-7c1118da.webp
+Curator of the Sands|145/166|Regular|145-166-curator-of-the-sands-official.webp
 Siphoning Strike|146/166|Regular|146-166-siphoning-strike-1b032d5e.webp
 Eye of Twilight|147/166|Regular|147-166-eye-of-twilight-625c2571.webp
 Shadow Dash|148/166|Regular|148-166-shadow-dash-a2c7178e.webp

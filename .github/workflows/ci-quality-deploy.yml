@@ -204,9 +204,8 @@ jobs:
 
       - name: Analyze with SonarQube
         id: sonar-attempt-1
-        # SonarCloud occasionally returns a transient 5xx while creating or
-        # loading an analysis. Permit one backed-off retry below; the final
-        # attempt still blocks CI.
+        # Preserve the outcome long enough to distinguish a polling timeout
+        # from a completed analysis that legitimately failed its Quality Gate.
         continue-on-error: true
         # v8.2.1, pinned to prevent a mutable tag from changing CI code.
         uses: SonarSource/sonarqube-scan-action@22918119ff8e1ca75a623e15c8296b6ea4fbe28f # v8.2.1
@@ -217,12 +216,33 @@ jobs:
         with:
           args: ${{ env.SONAR_SCANNER_ARGS }}
 
-      - name: Back off before SonarQube retry
+      - name: Classify SonarQube failure
+        id: sonar-failure
         if: steps.sonar-attempt-1.outcome == 'failure'
+        shell: bash
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          timed_out=false
+          report=.scannerwork/report-task.txt
+          if [[ -f "$report" ]]; then
+            ce_task_url="$(sed -n 's/^ceTaskUrl=//p' "$report")"
+            if [[ -n "$ce_task_url" ]]; then
+              task_status="$(curl --fail --silent --show-error \
+                --user "${SONAR_TOKEN}:" "$ce_task_url" | jq -r '.task.status // empty')"
+              if [[ "$task_status" == "PENDING" || "$task_status" == "IN_PROGRESS" ]]; then
+                timed_out=true
+              fi
+            fi
+          fi
+          echo "timed_out=$timed_out" >> "$GITHUB_OUTPUT"
+
+      - name: Back off after SonarQube timeout
+        if: steps.sonar-failure.outputs.timed_out == 'true'
         run: sleep 60
 
-      - name: Retry SonarQube analysis once
-        if: steps.sonar-attempt-1.outcome == 'failure'
+      - name: Retry SonarQube analysis after timeout
+        if: steps.sonar-failure.outputs.timed_out == 'true'
         # v8.2.1, pinned to prevent a mutable tag from changing CI code.
         uses: SonarSource/sonarqube-scan-action@22918119ff8e1ca75a623e15c8296b6ea4fbe28f # v8.2.1
         env:
@@ -231,6 +251,12 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           args: ${{ env.SONAR_SCANNER_ARGS }}
+
+      - name: Fail completed SonarQube analysis
+        if: steps.sonar-attempt-1.outcome == 'failure' && steps.sonar-failure.outputs.timed_out != 'true'
+        run: |
+          echo "SonarQube failed without a polling timeout; the analysis will not be retried." >&2
+          exit 1
 
   package-pages:
     name: Package Pages artifact

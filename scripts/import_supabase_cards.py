@@ -10,6 +10,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 BACKUPS = ROOT / "backups"
+REINDEX_OFFSET = 1_000_000
 
 
 def value(row: dict[str, str], needle: str) -> str:
@@ -55,13 +56,7 @@ def rows_for_set(set_id: str, path: Path) -> list[dict[str, object]]:
     return cards
 
 
-def main() -> int:
-    base = os.environ.get("SUPABASE_URL", "").rstrip("/")
-    secret = os.environ.get("SUPABASE_SECRET_KEY", "")
-    if not base or not secret:
-        raise SystemExit("Set SUPABASE_URL and SUPABASE_SECRET_KEY first")
-    cards = [card for path in sorted(BACKUPS.glob("*.csv"))
-             for card in rows_for_set(path.stem, path)]
+def upsert_cards(base: str, secret: str, cards: list[dict[str, object]]) -> None:
     for start in range(0, len(cards), 250):
         payload = json.dumps(cards[start:start + 250]).encode()
         request = Request(base + "/rest/v1/riftbound_card_main?on_conflict=id", data=payload,
@@ -70,6 +65,21 @@ def main() -> int:
         with urlopen(request, timeout=60) as response:
             if response.status not in (200, 201):
                 raise RuntimeError(f"Import failed with HTTP {response.status}")
+
+
+def main() -> int:
+    base = os.environ.get("SUPABASE_URL", "").rstrip("/")
+    secret = os.environ.get("SUPABASE_SECRET_KEY", "")
+    if not base or not secret:
+        raise SystemExit("Set SUPABASE_URL and SUPABASE_SECRET_KEY first")
+    cards = []
+    for path in sorted(BACKUPS.glob("*.csv")):
+        set_cards = rows_for_set(path.stem, path)
+        staged = [{**card, "sort_order": int(card["sort_order"]) + REINDEX_OFFSET}
+                  for card in set_cards]
+        upsert_cards(base, secret, staged)
+        upsert_cards(base, secret, set_cards)
+        cards.extend(set_cards)
     print(f"Imported {len(cards)} cards")
     return 0
 

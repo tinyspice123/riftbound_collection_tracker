@@ -1,6 +1,8 @@
 Against the Odds|001/221|Regular|001-221-against-the-odds-fc20f10c.webp
 Armed Assailant|002/221|Regular|002-221-armed-assailant-32aaba7b.webp
 Blood Rush|003/221|Regular|003-221-blood-rush-48ce4ad1.webp
+Mech|T01|Token|t01-mech-openrift.jpg
+Sand Soldier|T02|Token|t02-sand-soldier-openrift.webp
 Gold|T03|Token|t03-gold-55fc1de3.webp
 Bushwhack|004/221|Regular|004-221-bushwhack-dea262be.webp
 Detonate|005/221|Regular|005-221-detonate-51b973b3.webp

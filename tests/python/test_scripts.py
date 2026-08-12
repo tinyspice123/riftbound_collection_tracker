@@ -106,6 +106,16 @@ class DataValidationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             self.assertIn('backup or manifest missing',validate_set('origins',Path(directory))[0])
 
+    def test_card_without_source_image_does_not_require_manifest_mapping(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            self.make_set(root,[],())
+            csv_path=root/'backups'/'origins.csv'
+            csv_path.write_text(
+                'Group,Card,Number,Variant / Stamp,Have,Image\nFury,Test Card,001/166,Regular,0,\n',
+                encoding='utf-8')
+            self.assertEqual(validate_set('origins',root),[])
+
     def test_reports_manifest_drift_and_invalid_image(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)

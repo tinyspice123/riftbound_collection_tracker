@@ -59,6 +59,8 @@ def process_set(set_id: str) -> tuple[int, int]:
     jobs: list[tuple[str, Path]] = []
     manifest: list[str] = []
     for row in rows:
+        if not row.get("Card") or not row.get("Image"):
+            continue
         filename = filename_for(row)
         jobs.append((compressed_url(row["Image"]), target / filename))
         manifest.append("|".join((row["Card"], row["Number"], row["Variant / Stamp"], filename)))

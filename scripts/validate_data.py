@@ -18,7 +18,8 @@ def validate_set(set_id: str, root: Path = ROOT) -> list[str]:
         return [f"{set_id}: backup or manifest missing"]
     with csv_path.open(encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle))
-    expected = {(row["Card"], row["Number"], row["Variant / Stamp"]) for row in rows if row.get("Card")}
+    expected = {(row["Card"], row["Number"], row["Variant / Stamp"])
+                for row in rows if row.get("Card") and row.get("Image")}
     manifest: dict[tuple[str, str, str], str] = {}
     for line in manifest_path.read_text(encoding="utf-8").splitlines():
         parts = line.split("|", 3)
