@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self' https://docs.google.com https://*.googleusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests">
-<title>Riftbound — Collection Tracker</title>
-<meta name="description" content="Browse a Riftbound set checklist, filter missing cards and track collection progress.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self' https://ekyngjwtoxvkqfalxebm.supabase.co; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests">
+<title>Riftbound Collection Tracker</title>
+<meta name="description" content="Browse a Riftbound card set checklist, filter missing cards and track collection progress.">
 <meta name="robots" content="noindex,follow">
-<link rel="preconnect" href="https://docs.google.com" crossorigin>
 <script src="sets.js"></script>
 <script src="lib.js"></script>
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="tracker.css">
 <link rel="stylesheet" href="pwa.css">
 <link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="assets/icon-192.png">
 <meta name="theme-color" content="#0b0920">
+<link rel="icon" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
 </head>
 <body>
 
@@ -31,6 +31,25 @@
   <div class="inner"></div>
 </div>
 <output class="data-banner" id="dataBanner" aria-live="polite"></output>
+
+<section class="account" id="account" aria-label="Collection editor account">
+  <button type="button" id="googleSignIn">Sign in with Google to edit</button>
+  <div id="signedIn" class="initially-hidden">
+    <span>Signed in as <b id="accountEmail"></b></span>
+    <span id="viewerOnly" class="initially-hidden">This account has view-only access.</span>
+    <button type="button" id="signOut">Sign out</button>
+  </div>
+  <output id="authMessage" aria-live="polite"></output>
+</section>
+<details class="history initially-hidden" id="history">
+  <summary>Recent changes</summary>
+  <div class="historyfilters">
+    <label>From <input type="date" id="historyFrom"></label>
+    <label>To <input type="date" id="historyTo"></label>
+    <button type="button" id="historyApply">Apply</button>
+  </div>
+  <ol id="historyList"></ol>
+</details>
 
 <section class="stats" id="stats">
   <div class="ring">
@@ -59,7 +78,7 @@
   <input type="search" id="q" aria-label="Search cards" placeholder="Search card, number, stamp…">
   <select id="groupSel" aria-label="Filter by group"><option value="">All groups</option></select>
   <select id="sortSel" title="Sort cards" aria-label="Sort cards">
-    <option value="">Sheet order</option>
+    <option value="">Catalogue order</option>
     <option value="name">Name A–Z</option>
     <option value="price-desc">Price high → low</option>
     <option value="price-asc">Price low → high</option>
@@ -69,6 +88,12 @@
     <option value="table">Text table (data saver)</option>
   </select>
   <label class="toggle"><input type="checkbox" id="missOnly"> Missing only</label>
+  <button type="button" class="exportbtn initially-hidden" id="liveCsv">Download live CSV</button>
+  <button type="button" class="exportbtn initially-hidden" id="bulkStart">Select cards to add</button>
+  <span class="bulkactions initially-hidden" id="bulkActions">
+    <button type="button" class="exportbtn" id="bulkConfirm" disabled>Confirm 0 additions</button>
+    <button type="button" class="exportbtn" id="bulkCancel">Cancel</button>
+  </span>
   <span class="exportwrap">
     <button type="button" class="exportbtn" id="exportMissing" aria-haspopup="menu" aria-expanded="false">⤓ Missing</button>
     <div class="exportmenu" data-menu>
@@ -96,9 +121,9 @@
 <div class="empty" id="empty">Nothing matches those filters.</div>
 
 <footer id="foot" class="initially-hidden">
-  This page is read-only: edit quantities in the Google Sheet (the Have column — “x” or a number), then refresh.
+  Collection quantities are public. Only an authorized signed-in account can edit them with the + and − controls.
   Card photos come from the configured image sources; unusual variants without an image show a crystal placeholder.
-  Prices are read from the sheet's Price column.
+  Prices are read from the collection database.
 </footer>
 
 <dialog class="lightbox" id="lightbox" aria-label="Card image viewer">
@@ -109,6 +134,8 @@
   </figure>
 </dialog>
 
+<script src="supabase-config.js"></script>
+<script src="supabase-client.js"></script>
 <script src="tracker.js"></script>
 <script src="pwa.js"></script>
 

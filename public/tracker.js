@@ -3,7 +3,6 @@
 const params = new URLSearchParams(location.search);
 const SET_ID = (typeof SETS!=="undefined" && SETS[params.get('set')]) ? params.get('set') : Object.keys(SETS)[0];
 const cfg = SETS[SET_ID];
-const SHEET_URL = cfg.sheet || "";
 const BACKUP_URL = `backups/${encodeURIComponent(SET_ID)}.csv`;
 
 // header branding from config
@@ -34,9 +33,14 @@ if(cfg.subtitle){
 // ----------------------------------------------------------------------
 
 let items=[];
+let authSession=null;
+let authUser=null;
+let canEdit=false;
+const pendingCards=new Set();
+let bulkMode=false;
+const bulkSelections=new Set();
 
-// ---- "synced Xs ago" — so a reload's staleness (Google's ~5 min publish
-// cache) is visible instead of silently trusted ----
+// ---- "synced Xs ago" ------------------------------------------------
 let lastSyncedAt=null;
 function markSynced(){ lastSyncedAt=Date.now(); updateSyncedLabel(); }
 function updateSyncedLabel(){
@@ -54,76 +58,119 @@ setInterval(updateSyncedLabel, 15000);
 
 window.addEventListener('DOMContentLoaded', async ()=>{
   await loadImgManifest();
-  if(!SHEET_URL){
-    const n=document.getElementById('notice');
-    n.style.display='block';
-    n.querySelector('.inner').insertAdjacentHTML('afterbegin',
-      '<div class="notice-title">No sheet configured for this set yet — '+
-      'add its published CSV link to <b>sets.js</b> (see the commented sheet line).</div>');
-    return;
-  }
+  await initAuth();
   try{
-    parseRows(await fetchCsvRows(SHEET_URL,'live'));
+    const cards=await RiftboundDb.cards(SET_ID);
+    if(!cards.length) throw new Error('The database has no cards for this set yet.');
+    items=cards.map(card=>({
+      id:card.id,group:card.group_name,card:card.card_name,num:card.collector_number,
+      variant:card.variant,src:card.source,price:card.price,status:card.status,
+      qty:Number(card.quantity)||0,img:card.image_url,
+    }));
+    finishLoad();
     markSynced();
-  }catch(liveError){
+  }catch(databaseError){
     try{
-      parseRows(await fetchCsvRows(BACKUP_URL,'backup'));
-      showBackupBanner(liveError);
+      parseRows(await fetchCsvRows(BACKUP_URL));
+      showDatabaseFallback(databaseError);
     }catch(backupError){
-      showDataFailure(liveError,backupError);
+      showDataFailure(databaseError,backupError);
     }
   }
 });
-async function fetchCsvRows(url,source){
-  const res=await fetchCsvResponse(url,source);
-  ensureCsvResponse(res,source);
+
+async function initAuth(){
+  authSession=await RiftboundDb.currentSession();
+  authUser=await RiftboundDb.currentUser(authSession);
+  canEdit=await RiftboundDb.isEditor(authSession);
+  document.getElementById('googleSignIn').style.display=authUser?'none':'block';
+  document.getElementById('signedIn').style.display=authUser?'flex':'none';
+  document.getElementById('accountEmail').textContent=authUser?.email||'';
+  document.getElementById('viewerOnly').style.display=authUser&&!canEdit?'inline':'none';
+  document.getElementById('liveCsv').style.display=canEdit?'inline-block':'none';
+  document.getElementById('bulkStart').style.display=canEdit?'inline-block':'none';
+  if(canEdit) loadQuantityHistory();
+}
+
+async function loadQuantityHistory(){
+  const section=document.getElementById('history'), list=document.getElementById('historyList');
+  try{
+    const entries=await RiftboundDb.quantityHistory(authSession,SET_ID,
+      document.getElementById('historyFrom').value,document.getElementById('historyTo').value);
+    const rows=entries.length?entries.map(entry=>{
+      const item=document.createElement('li'), time=document.createElement('time');
+      const when=new Date(entry.changed_at);
+      time.dateTime=when.toISOString(); time.textContent=when.toLocaleString();
+      item.append(time,`${entry.card_name} · ${entry.collector_number||'no number'} · ${entry.set_id}: ${entry.previous_quantity} → ${entry.new_quantity}`);
+      return item;
+    }):[Object.assign(document.createElement('li'),{textContent:'No changes in this date range.'})];
+    list.replaceChildren(...rows);
+    section.style.display='block';
+  }catch{ /* History is optional until its migration has been applied. */ }
+}
+function localDate(daysAgo=0){
+  const date=new Date(); date.setDate(date.getDate()-daysAgo);
+  const pad=value=>String(value).padStart(2,'0');
+  return `${date.getFullYear()}-${pad(date.getMonth()+1)}-${pad(date.getDate())}`;
+}
+document.getElementById('historyFrom').value=localDate(1);
+document.getElementById('historyTo').value=localDate();
+document.getElementById('historyApply').addEventListener('click',()=>{
+  const from=document.getElementById('historyFrom').value, to=document.getElementById('historyTo').value;
+  if(!from||!to||from>to){ toast('Choose a valid history date range.'); return; }
+  loadQuantityHistory();
+});
+
+document.getElementById('googleSignIn').addEventListener('click',()=>RiftboundDb.signInWithGoogle());
+document.getElementById('signOut').addEventListener('click',async ()=>{
+  await RiftboundDb.signOut(authSession);
+  location.reload();
+});
+
+function finishLoad(){
+  buildGroupSel(); applyFilterParams(); render();
+  document.getElementById('stats').style.display='grid';
+  document.getElementById('controls').style.display='flex';
+  document.getElementById('foot').style.display='block';
+}
+async function fetchCsvRows(url){
+  const res=await fetchCsvResponse(url);
+  ensureCsvResponse(res);
   const text=await res.text();
-  ensureCsvText(text,source);
+  ensureCsvText(text);
   const rows=csvToRows(text);
-  ensureCsvColumns(rows,source);
+  ensureCsvColumns(rows);
   return rows;
 }
 
-async function fetchCsvResponse(url,source){
+async function fetchCsvResponse(url){
   try{
     return await fetch(url,{cache:"no-store"});
   }catch(error){
-    throw new Error(source==='live'
-      ? 'Google Sheets could not be reached. Check your connection and try again.'
-      : 'The local backup could not be reached.',{cause:error});
+    throw new Error('The database snapshot could not be reached.',{cause:error});
   }
 }
 
-function ensureCsvResponse(res,source){
+function ensureCsvResponse(res){
   if(res.ok) return;
-  const liveErrors={
-    403:'Google Sheets denied access. Check that the document is published to the web.',
-    404:'The published Google Sheet could not be found.',
-  };
-  if(source==='live' && liveErrors[res.status])
-    throw new Error(liveErrors[res.status]);
-  const label=source==='live'?'Google Sheets':'The local backup';
-  throw new Error(`${label} returned HTTP ${res.status}.`);
+  throw new Error(`The database snapshot returned HTTP ${res.status}.`);
 }
 
-function ensureCsvText(text,source){
+function ensureCsvText(text){
   if(!/^\s*</.test(text)) return;
-  throw new Error(source==='live'
-    ? 'Google Sheets returned a webpage instead of published CSV data.'
-    : 'The local backup is not valid CSV data.');
+  throw new Error('The database snapshot is not valid CSV data.');
 }
 
-function ensureCsvColumns(rows,source){
+function ensureCsvColumns(rows){
   const columns=detectColumns(rows[0]);
   if(columns.cCard>=0 && columns.cHave>=0) return;
-  const label=source==='live'?'The Google Sheet':'The local backup';
-  throw new Error(`${label} is missing required Card or Have columns.`);
+  throw new Error('The database snapshot is missing required Card or Have columns.');
 }
 
-function showBackupBanner(liveError){
+function showDatabaseFallback(error){
   const banner=document.getElementById('dataBanner');
-  banner.textContent='Live Google Sheet unavailable — showing the latest backup. Recent collection changes may not appear.';
-  banner.title=String(liveError.message||liveError);
+  banner.textContent='Database unavailable — showing the latest read-only repository snapshot.';
+  banner.title=String(error.message||error);
   banner.classList.add('show');
 }
 
@@ -144,11 +191,7 @@ function showDataFailure(liveError,backupError){
 
 function parseRows(rows){
   items=rowsToItems(rows);
-  buildGroupSel(); applyFilterParams(); render();
-  document.getElementById('stats').style.display='grid';
-  document.getElementById('controls').style.display='flex';
-  const foot=document.getElementById('foot');
-  foot.style.display='block';
+  finishLoad();
 }
 
 // ---- img folder manifest (downloaded copies of sheet Image URLs)
@@ -252,7 +295,8 @@ let toastTimer=null;
 function toast(msg){
   let el=document.getElementById('saveToast');
   if(!el){ el=document.createElement('div'); el.id='saveToast'; document.body.appendChild(el); }
-  el.textContent=msg; el.classList.add('show');
+  el.replaceChildren(document.createTextNode(msg));
+  el.classList.add('show');
   clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.classList.remove('show'),1600);
 }
 function render(){
@@ -338,14 +382,82 @@ function __imgFallback(img){
     {className:'ph',innerHTML:'<b>'+(img.dataset.ph||'?')+'</b><span>no image</span>'}));
 }
 
+function quantityHtml(it){
+  if(bulkMode&&canEdit&&it.id) return `<label class="bulkpick"><input type="checkbox" data-bulk-id="${esc(it.id)}"${bulkSelections.has(it.id)?' checked':''}> Add one</label>`;
+  if(!canEdit||!it.id) return `<div class="qtytag ${it.qty?'':'zero'}">×${it.qty}</div>`;
+  const disabled=pendingCards.has(it.id)?' disabled':'';
+  return `<div class="qtyedit" aria-label="Quantity for ${esc(it.card)}">
+    <button type="button" data-delta="-1" aria-label="Remove one ${esc(it.card)}"${disabled}>−</button>
+    <output>${it.qty}</output>
+    <button type="button" data-delta="1" aria-label="Add one ${esc(it.card)}"${disabled}>+</button>
+  </div>`;
+}
+
+function bindQuantityControls(root,it){
+  root.querySelectorAll('[data-bulk-id]').forEach(input=>input.addEventListener('change',()=>{
+    input.checked?bulkSelections.add(it.id):bulkSelections.delete(it.id);
+    updateBulkControls();
+  }));
+  root.querySelectorAll('[data-delta]').forEach(button=>button.addEventListener('click',()=>{
+    updateQuantity(it,Number(button.dataset.delta));
+  }));
+}
+
+async function updateQuantity(it,delta){
+  if(!canEdit||!authSession||!it.id||pendingCards.has(it.id)) return;
+  const previous=it.qty, next=Math.max(0,previous+delta);
+  if(next===previous) return;
+  it.qty=next; pendingCards.add(it.id); render();
+  try{
+    await RiftboundDb.setQuantity(authSession,it.id,next);
+    markSynced();
+    toast(`${it.card}: ${previous} → ${next}`);
+    loadQuantityHistory();
+  }catch(error){
+    it.qty=previous;
+    toast(`Could not save quantity: ${String(error.message||error)}`);
+  }finally{
+    pendingCards.delete(it.id); render();
+  }
+}
+
+function updateBulkControls(){
+  const confirm=document.getElementById('bulkConfirm');
+  confirm.disabled=!bulkSelections.size;
+  confirm.textContent=`Confirm ${bulkSelections.size} addition${bulkSelections.size===1?'':'s'}`;
+}
+function setBulkMode(enabled){
+  bulkMode=enabled;
+  if(!enabled) bulkSelections.clear();
+  document.getElementById('bulkStart').style.display=enabled?'none':(canEdit?'inline-block':'none');
+  document.getElementById('bulkActions').style.display=enabled?'inline-flex':'none';
+  updateBulkControls(); render();
+}
+document.getElementById('bulkStart').addEventListener('click',()=>setBulkMode(true));
+document.getElementById('bulkCancel').addEventListener('click',()=>setBulkMode(false));
+document.getElementById('bulkConfirm').addEventListener('click',async ()=>{
+  const selected=items.filter(item=>bulkSelections.has(item.id));
+  if(!selected.length||!window.confirm(`Add one copy to ${selected.length} selected card${selected.length===1?'':'s'}?`)) return;
+  selected.forEach(item=>{ item.qty+=1; pendingCards.add(item.id); });
+  render();
+  const results=await Promise.allSettled(selected.map(item=>RiftboundDb.setQuantity(authSession,item.id,item.qty)));
+  let failures=0;
+  results.forEach((result,index)=>{
+    const item=selected[index]; pendingCards.delete(item.id);
+    if(result.status==='rejected'){ item.qty-=1; failures+=1; }
+  });
+  if(failures) toast(`${failures} addition${failures===1?'':'s'} could not be saved.`);
+  else { markSynced(); toast(`${selected.length} addition${selected.length===1?'':'s'} saved.`); loadQuantityHistory(); }
+  setBulkMode(false);
+});
+
 function cardEl(it){
   const d=document.createElement('div');
   d.className='item'+(it.qty>0?' owned':'');
   const cands=imgCandidates(it);
   const url=cands[0]||null, alts=cands.slice(1);
   const initial=esc(it.card.replace(/[^A-Za-z]/g,'').slice(0,2)||'?');
-  const zeroCls = it.qty ? '' : 'zero';
-  const qtyHtml=`<div class="qtytag ${zeroCls}">×${it.qty}</div>`;
+  const qtyHtml=quantityHtml(it);
   d.innerHTML=`
     <div class="imgwrap${/reverse\s*holo/i.test(it.variant)?' rh':''}">
       ${url?`<img loading="lazy" decoding="async" fetchpriority="low" alt="${esc(it.card)}" data-src="${esc(url)}"
@@ -369,6 +481,7 @@ function cardEl(it){
     img.addEventListener('error',()=>__imgFallback(img));
     img.addEventListener('click',()=>openLightbox(it,img.src));
   }
+  bindQuantityControls(d,it);
   d.__item=it;
   return d;
 }
@@ -387,8 +500,7 @@ function marketplaceLinks(it){
 function rowEl(it){
   const row=document.createElement('tr');
   row.className=it.qty>0?'owned':'';
-  const zeroCls=it.qty?'':'zero';
-  const qtyHtml=`<div class="qtytag ${zeroCls}">×${it.qty}</div>`;
+  const qtyHtml=quantityHtml(it);
   row.innerHTML=`
     <td class="cardname">${esc(it.card)}</td>
     <td class="cardnum">${esc(it.num)}</td>
@@ -398,6 +510,7 @@ function rowEl(it){
     <td>${marketplaceLinks(it)}</td>
     <td><span class="havechip ${it.qty>0?'y':'n'}">${it.qty>0?'OWNED':'NEED'}</span></td>
     <td>${qtyHtml}</td>`;
+  bindQuantityControls(row,it);
   return row;
 }
 
@@ -523,6 +636,26 @@ function doExport(kind,act){
     toast(`Downloaded ${list.length} ${kind} card${list.length===1?'':'s'}`);
   }
 }
+function downloadCsv(filename,text){
+  const blob=new Blob([text],{type:'text/csv'}), link=document.createElement('a');
+  link.href=URL.createObjectURL(blob); link.download=filename; link.click();
+  URL.revokeObjectURL(link.href);
+}
+document.getElementById('liveCsv').addEventListener('click',async ()=>{
+  if(!canEdit) return;
+  const button=document.getElementById('liveCsv'); button.disabled=true;
+  try{
+    const rows=await RiftboundDb.cards(SET_ID);
+    const header=['ID','Set ID','Group','Card','Number','Variant / Stamp','Source','Status','Price','Have','Image URL'];
+    const lines=rows.map(card=>[
+      card.id,card.set_id,card.group_name,card.card_name,card.collector_number,
+      card.variant,card.source,card.status,card.price,card.quantity,card.image_url,
+    ].map(csvEscape).join(','));
+    downloadCsv(`${SET_ID}-live-${new Date().toISOString().slice(0,10)}.csv`,[header.map(csvEscape).join(','),...lines].join('\n')+'\n');
+    toast(`Downloaded ${rows.length} live database card${rows.length===1?'':'s'}`);
+  }catch(error){ toast(`Could not download live data: ${String(error.message||error)}`); }
+  finally{ button.disabled=false; }
+});
 function closeExportMenus(){
   document.querySelectorAll('.exportmenu.open').forEach(m=>m.classList.remove('open'));
   document.querySelectorAll('.exportbtn[aria-expanded="true"]').forEach(b=>b.setAttribute('aria-expanded','false'));

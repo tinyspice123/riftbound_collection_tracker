@@ -1,4 +1,4 @@
-name: Backup collection sheets
+name: Backup Supabase collection
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: sheet-backup
+  group: supabase-backup
   cancel-in-progress: false
 
 jobs:
@@ -24,8 +24,8 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
           python-version: "3.14"
-      - name: Download and validate all published tabs
-        run: python scripts/backup_sheets.py
+      - name: Export Supabase collection
+        run: python scripts/backup_supabase.py
       - name: Validate backups and local image manifests
         run: python scripts/validate_data.py
       - name: Commit changed snapshots
@@ -37,7 +37,7 @@ jobs:
           git add backups/
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No sheet changes"
+            echo "No database changes"
           else
             git commit -m "Daily collection backup [skip ci]"
             git push

@@ -1,7 +1,7 @@
 {
   "name": "Riftbound Collection Tracker",
   "short_name": "Riftbound Tracker",
-  "description": "Riftbound set and variant checklists fed live from Google Sheets",
+  "description": "Riftbound set and variant checklists backed by Supabase",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

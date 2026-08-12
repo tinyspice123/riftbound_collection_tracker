@@ -1,7 +1,7 @@
 # Riftbound Collection Tracker
 
-A static, mobile-friendly Riftbound TCG collection tracker backed by published
-Google Sheets. The home page lists Origins, Spiritforged, Unleashed, and
+A static, mobile-friendly Riftbound TCG collection tracker backed by Supabase.
+The home page lists Origins, Spiritforged, Unleashed, and
 Vendetta; each set opens the shared tracker with filtering, quantities,
 completion totals, exports, local card images, marketplace searches, and
 offline caching.
@@ -27,8 +27,8 @@ node tests/e2e/static-server.mjs public
 ```
 
 Open <http://127.0.0.1:4173/>. The small development server exposes only the
-checked-in files under `public/`. Playwright mocks the deployed backup endpoint
-when testing the Google Sheets outage path.
+checked-in files under `public/`. Playwright mocks the Supabase REST and Auth
+endpoints for browser tests.
 
 Run all test layers from the repository root:
 
@@ -51,11 +51,11 @@ worker for offline shell and image caching.
 Remove and reinstall an existing shortcut after an icon change so the phone
 refreshes its cached launcher artwork.
 
-## Sets and Google Sheets
+## Sets and Supabase
 
-Set configuration lives in `public/sets.js`. Each entry contains a display
-name, set code, numeric Google Sheet tab ID, and optional presentation fields.
-The shared published document URL is stored once in `SHEET_BASE_URL`.
+Presentation configuration lives in `public/sets.js`. Card rows and quantities
+live in `public.riftbound_card_main`; quantity changes are audited in
+`public.riftbound_card_quantity_history`.
 
 The four configured sets are:
 
@@ -66,8 +66,7 @@ The four configured sets are:
 | `unleashed` | Unleashed | UNL |
 | `vendetta` | Vendetta | VEN |
 
-Import `docs/template.csv` when creating another tab. The tracker recognises
-these columns:
+The import and backup scripts preserve these CSV columns:
 
 | Column | Purpose |
 | --- | --- |
@@ -75,15 +74,15 @@ these columns:
 | Card | Displayed card name |
 | Number | Collector number |
 | Variant / Stamp | Finish, promo source, stamp, or other distinction |
-| Source | Optional product or source note |
+| Source & Distribution | Optional product or source note |
 | Status | Optional checklist status |
-| Price | Estimated value of one copy |
 | Have | Owned quantity, `x`, or `TRUE` |
-| Image URL | Exact official-gallery image URL |
+| Image | Exact official-gallery image URL |
+| Price Estimate | Estimated value of one copy |
 
-Publish the document with **File → Share → Publish to web**, select CSV output,
-and store each tab's numeric `gid` in `public/sets.js`. Sheet edits appear on
-the site without a code deployment.
+Apply the consolidated migration under `supabase/migrations/`, then import the
+checked-in snapshots with `python scripts/import_supabase_cards.py` using
+`SUPABASE_URL` and `SUPABASE_SECRET_KEY`.
 
 ## Logos and local card images
 
@@ -101,7 +100,7 @@ Card|Number|Variant / Stamp|filename.webp
 Refresh the sheet backups first, then download missing official-gallery images:
 
 ```bash
-python scripts/backup_sheets.py
+python scripts/backup_supabase.py
 python scripts/download_card_images.py
 ```
 
@@ -120,21 +119,21 @@ sheet's Image URL remains available as a network fallback.
 Run the backup operation manually with:
 
 ```bash
-python scripts/backup_sheets.py
+python scripts/backup_supabase.py
 python scripts/validate_data.py
 ```
 
-`backup_sheets.py` downloads and validates every configured published tab and
-writes the latest snapshots to the single canonical `backups/` directory. The
+`backup_supabase.py` exports every configured set and writes the latest
+snapshots to the single canonical `backups/` directory. The
 validator checks the CSVs, exact manifest mappings, and local image files.
 
-The scheduled **Backup collection sheets** workflow runs daily at 09:00 UTC and
+The scheduled **Backup Supabase collection** workflow runs daily at 09:00 UTC and
 commits only changed snapshots. When data changes, it dispatches the normal
 test-and-deploy pipeline.
 
-At runtime the tracker requests Google Sheets first. If Sheets is unreachable
-or returns invalid CSV, the tracker requests `backups/<set-id>.csv` from the
-deployed site and displays a warning. Only root `backups/` is committed; during
+At runtime the tracker requests Supabase first. If it is unreachable or returns
+no data, the tracker requests `backups/<set-id>.csv` from the deployed site and
+displays a read-only warning. Only root `backups/` is committed; during
 deployment CI copies those files into generated `public/backups/`. There is no
 committed duplicate `public/data/` directory, and older snapshots remain
 recoverable through Git history.

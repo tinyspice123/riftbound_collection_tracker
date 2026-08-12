@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self' https://docs.google.com https://*.googleusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self' https://ekyngjwtoxvkqfalxebm.supabase.co; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests">
 <title>Riftbound Collection Tracker</title>
 <meta name="description" content="Track Riftbound sets, variants, and owned quantities in one fast, mobile-friendly checklist.">
 <link rel="canonical" href="https://tinyspice123.github.io/riftbound_collection_tracker/">
-<link rel="preconnect" href="https://docs.google.com" crossorigin>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Riftbound Collection Tracker">
 <meta property="og:description" content="Track Riftbound sets, variants, and owned quantities.">
@@ -35,10 +34,12 @@
 <p class="noresults" id="noResults">No sets match — try a different name.</p>
 
 <footer>
-  Data lives in Google Sheets · add sets in <code>sets.js</code><br>
+  Collection data lives in Supabase · repository snapshots provide a read-only fallback<br>
   Fan-made collection tool · not affiliated with Riot Games
 </footer>
 
+<script src="supabase-config.js"></script>
+<script src="supabase-client.js"></script>
 <script src="index.js"></script>
 <script src="pwa.js"></script>
 

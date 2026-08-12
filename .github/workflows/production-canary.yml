@@ -9,8 +9,8 @@ permissions:
   contents: read
 
 jobs:
-  published-sheets:
-    name: Published sheets and local image fallbacks
+  supabase-export:
+    name: Supabase export and local image fallbacks
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -21,13 +21,14 @@ jobs:
             /backups/
             /public/img/
             /public/sets.js
-            /scripts/backup_sheets.py
+            /public/supabase-config.js
+            /scripts/backup_supabase.py
             /scripts/validate_data.py
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
           python-version: "3.14"
-      - name: Verify every live sheet and committed fallback
+      - name: Verify database export and committed fallback
         run: |
-          python scripts/backup_sheets.py
+          python scripts/backup_supabase.py
           python scripts/validate_data.py
           git diff --exit-code -- backups/

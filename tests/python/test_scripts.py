@@ -3,39 +3,28 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
-from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
-import backup_sheets
-from backup_sheets import configured_tabs, validate
+import backup_supabase
+from backup_supabase import parse_sets, parse_supabase_config, rows_to_csv
 from download_card_images import compressed_url, filename_for
 from validate_data import validate_set
 
 
 class BackupTests(unittest.TestCase):
-    def test_configured_tabs(self):
-        source='const SHEET_BASE_URL = "https://example.com/pub";\n  origins: {\n    sheetGid: "123",\n  },'
-        self.assertEqual(configured_tabs(source), [('origins','https://example.com/pub?gid=123&single=true&output=csv')])
+    def test_parse_sets(self):
+        self.assertEqual(parse_sets('const SETS = {\n  origins: {\n    name: "Origins",\n  },\n};'), [{'id':'origins'}])
 
-    def test_validate_rejects_empty_card_list(self):
-        with self.assertRaises(ValueError):
-            validate('Card,Number,Have\n,,\n','origins')
+    def test_parse_supabase_config(self):
+        source='const SUPABASE_CONFIG = {url: "https://example.supabase.co", publishableKey: "public"};'
+        self.assertEqual(parse_supabase_config(source), ('https://example.supabase.co','public'))
 
-    def test_main_writes_the_canonical_backup(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root=Path(directory)
-            sets_js=root/'sets.js'
-            sets_js.write_text(
-                'const SHEET_BASE_URL = "https://example.com/pub";\n'
-                '  origins: {\n    sheetGid: "123",\n  },', encoding='utf-8')
-            csv_text='Card,Number,Have\nTest Card,001/166,1\n'
-            with (
-                mock.patch.object(backup_sheets,'SETS_JS',sets_js),
-                mock.patch.object(backup_sheets,'BACKUPS',root/'backups'),
-                mock.patch.object(backup_sheets,'fetch',return_value=csv_text),
-            ):
-                self.assertEqual(backup_sheets.main(),0)
-            self.assertEqual((root/'backups'/'origins.csv').read_text(encoding='utf-8'),csv_text)
+    def test_csv_keeps_existing_riftbound_header_order(self):
+        text=rows_to_csv([{'group_name':'Fury','card_name':'Test','collector_number':'001/166',
+            'variant':'Regular','source':'Booster','status':'Released','quantity':2,
+            'image_url':'https://example.com/a.webp','price':'1.25'}])
+        self.assertTrue(text.startswith('Group,Card,Number,Variant / Stamp,Source & Distribution,Status,Have,Image,Price Estimate\n'))
+        self.assertIn(',Test,001/166,Regular,Booster,Released,2,https://example.com/a.webp,1.25',text)
 
 
 class ImageTests(unittest.TestCase):
