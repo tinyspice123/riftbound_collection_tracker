@@ -25,6 +25,11 @@ def quantity(raw: str) -> int:
     return 0 if text in {"", "false", "no", "n", "-", "–", "0"} else 1
 
 
+def standard_print_is_always_foil(source: str) -> bool:
+    """Riftbound base Rare and Epic printings are foil by default."""
+    return source.strip().casefold().startswith(("rare", "epic"))
+
+
 def rows_for_set(set_id: str, path: Path) -> list[dict[str, object]]:
     cards: list[dict[str, object]] = []
     group = "Ungrouped"
@@ -53,6 +58,26 @@ def rows_for_set(set_id: str, path: Path) -> list[dict[str, object]]:
                 "image_url": value(row, "image"),
                 "quantity": quantity(value(row, "have")),
             })
+            # Standard foils share a collector number and image with their
+            # regular printing, but are separate entries in a collection.
+            # Do not copy the owned quantity: an existing Regular copy is not
+            # evidence that its Foil counterpart is owned.
+            if variant.casefold() == "regular" and not standard_print_is_always_foil(value(row, "source")):
+                foil_identity = "\0".join((set_id, card, number, "Foil")).encode()
+                cards.append({
+                    "id": hashlib.sha256(foil_identity).hexdigest()[:32],
+                    "set_id": set_id,
+                    "sort_order": len(cards),
+                    "group_name": group,
+                    "card_name": card,
+                    "collector_number": number,
+                    "variant": "Foil",
+                    "source": value(row, "source"),
+                    "price": "",
+                    "status": value(row, "status"),
+                    "image_url": value(row, "image"),
+                    "quantity": 0,
+                })
     return cards
 
 

@@ -93,7 +93,7 @@ function rowsToItems(rows){
     if(g && !card){ group=g; continue; }
     if(!card) continue;
     items.push({
-      group, card, num:get(r,cols.cNum), variant:get(r,cols.cVar),
+      group, card, num:get(r,cols.cNum), variant:collectionVariant(get(r,cols.cVar),get(r,cols.cSrc)),
       src:get(r,cols.cSrc), price:get(r,cols.cPrice), status:get(r,cols.cStatus),
       qty:parseHaveQty(get(r,cols.cHave)), img:get(r,cols.cImg),
     });
@@ -113,12 +113,20 @@ function manifestKey(card,number,variant){
   return [card,stableNumber,variant].map(canonicalManifestText).join('|');
 }
 
+// Base Rares and Epics have a foil treatment as their only standard printing.
+function collectionVariant(variant,source){
+  return /^regular$/i.test(String(variant||'')) && /^(rare|epic)/i.test(String(source||''))
+    ? 'Foil' : variant;
+}
+
 // Ordered list of image URLs to try for a card: sheet Image column, local
 // img/<setId>/ copy, then an optional per-set image template. Sheet-provided
 // image URLs remain the preferred source for Riftbound cards.
 function imgCandidatesPure(it, cfg, setId, imgMap){
   const out=[];
-  const localFile = imgMap ? imgMap.get(manifestKey(it.card,it.num,it.variant)) : null;
+  // Foil printings deliberately reuse their corresponding Regular scan.
+  const imageVariant=/^foil$/i.test(it.variant) ? "Regular" : it.variant;
+  const localFile = imgMap ? imgMap.get(manifestKey(it.card,it.num,imageVariant)) : null;
   if(localFile) out.push("img/"+setId+"/"+localFile);
   if(it.img && /^https?:\/\//i.test(it.img)) out.push(it.img);
   const m=it.num.match(/^(\d+)\s*\//);   // any NNN/MMM number

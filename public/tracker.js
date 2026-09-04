@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
     if(!cards.length) throw new Error('The database has no cards for this set yet.');
     items=cards.map(card=>({
       id:card.id,group:card.group_name,card:card.card_name,num:card.collector_number,
-      variant:card.variant,src:card.source,price:card.price,status:card.status,
+      variant:collectionVariant(card.variant,card.source),src:card.source,price:card.price,status:card.status,
       qty:Number(card.quantity)||0,img:card.image_url,
     }));
     finishLoad();
@@ -459,14 +459,16 @@ function cardEl(it){
   const url=cands[0]||null, alts=cands.slice(1);
   const initial=esc(it.card.replace(/[^A-Za-z]/g,'').slice(0,2)||'?');
   const qtyHtml=quantityHtml(it);
+  const isFoil=/^foil$/i.test(it.variant);
   d.innerHTML=`
-    <div class="imgwrap${/reverse\s*holo/i.test(it.variant)?' rh':''}">
+    <div class="imgwrap${/reverse\s*holo/i.test(it.variant)?' rh':''}${isFoil?' foil':''}">
       ${url?`<img loading="lazy" decoding="async" fetchpriority="low" alt="${esc(it.card)}" data-src="${esc(url)}"
         data-alts="${esc(alts.join('|'))}" data-ph="${initial}">`
         :`<div class="ph"><b>${initial}</b><span>variant</span></div>`}
       ${it.price?`<span class="pricechip">${esc(it.price)}</span>`:''}
       <span class="havechip ${it.qty>0?'y':'n'}">${it.qty>0?'OWNED':'NEED'}</span>
       ${/reverse\s*holo/i.test(it.variant)?`<span class="rhbadge">REV HOLO</span>`:''}
+      ${isFoil?`<span class="foilbadge">FOIL</span>`:''}
       ${/verify/i.test(it.status)?`<span class="verify">verify</span>`:''}
     </div>
     <div class="meta">
@@ -524,6 +526,7 @@ function openLightbox(it,shownSrc){
   lbList=[...document.querySelectorAll('.item')].filter(card=>card.__item && card.querySelector('.imgwrap img'));
   lbIndex=lbList.findIndex(card=>card.__item===it);
   lb.querySelector('figure').classList.toggle('rh', /reverse\s*holo/i.test(it.variant));
+  lb.querySelector('figure').classList.toggle('foil', /^foil$/i.test(it.variant));
   document.getElementById('lbName').textContent=it.card;
   document.getElementById('lbNum').textContent=it.num;
   document.getElementById('lbVar').textContent=it.variant;

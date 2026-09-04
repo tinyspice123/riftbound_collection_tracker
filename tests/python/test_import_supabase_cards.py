@@ -6,7 +6,7 @@ from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 import import_supabase_cards
-from import_supabase_cards import REINDEX_OFFSET, quantity, rows_for_set, value
+from import_supabase_cards import REINDEX_OFFSET, quantity, rows_for_set, standard_print_is_always_foil, value
 
 
 class SupabaseImportTests(unittest.TestCase):
@@ -35,6 +35,35 @@ class SupabaseImportTests(unittest.TestCase):
         self.assertEqual(first[0]["price"], "1.25")
         self.assertEqual(first[0]["quantity"], 2)
         self.assertEqual(len(first[0]["id"]), 32)
+
+    def test_regular_cards_get_an_unowned_foil_counterpart(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "demo.csv"
+            path.write_text(
+                "Group,Card,Number,Variant / Stamp,Source,Have,Image\n"
+                "Fury,,,,,,\n"
+                ",Test Card,001/166,Regular,Common Unit,2,https://example.com/card.webp\n",
+                encoding="utf-8",
+            )
+            cards = rows_for_set("demo", path)
+        self.assertEqual([card["variant"] for card in cards], ["Regular", "Foil"])
+        self.assertEqual(cards[1]["quantity"], 0)
+        self.assertEqual(cards[1]["image_url"], cards[0]["image_url"])
+
+    def test_base_rares_and_epics_are_already_foil(self):
+        self.assertTrue(standard_print_is_always_foil("Rare Unit"))
+        self.assertTrue(standard_print_is_always_foil("Epic Spell"))
+        self.assertFalse(standard_print_is_always_foil("Uncommon Unit"))
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "demo.csv"
+            path.write_text(
+                "Group,Card,Number,Variant / Stamp,Source,Have\n"
+                "Fury,,,,,\n"
+                ",Rare Card,001/166,Regular,Rare Unit,2\n",
+                encoding="utf-8",
+            )
+            cards = rows_for_set("demo", path)
+        self.assertEqual(len(cards), 1)
 
     def test_main_requires_credentials(self):
         with mock.patch.dict('os.environ',{},clear=True):
