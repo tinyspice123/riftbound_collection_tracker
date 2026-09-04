@@ -84,6 +84,28 @@ Apply the consolidated migration under `supabase/migrations/`, then import the
 checked-in snapshots with `python scripts/import_supabase_cards.py` using
 `SUPABASE_URL` and `SUPABASE_SECRET_KEY`.
 
+### Importing card and foil rows
+
+The importer creates separate foil checklist rows for base Common and
+Uncommon cards. Base Rare and Epic cards are already foil in their standard
+printing, so they are not duplicated.
+
+In PowerShell, use the Supabase **API URL**, not the dashboard URL. Find the
+secret key under **Project Settings → API Keys** (or use the legacy
+`service_role` key):
+
+```powershell
+$env:SUPABASE_URL="https://YOUR_PROJECT_REF.supabase.co"
+$env:SUPABASE_SECRET_KEY="sb_secret_..."
+python scripts/import_supabase_cards.py
+Remove-Item Env:SUPABASE_SECRET_KEY
+```
+
+For example, project `ekyngjwtoxvkqfalxebm` uses:
+`https://ekyngjwtoxvkqfalxebm.supabase.co`.
+
+Never commit or paste the secret key into browser code, Git, or support chats.
+
 ## Logos and local card images
 
 Set logos are committed under `public/assets/logos/`. The tracker looks for a
