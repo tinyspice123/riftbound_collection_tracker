@@ -10,6 +10,7 @@ const browserGlobals={
   SETS:'readonly', RiftboundDb:'readonly', csvToRows:'readonly', rowsToItems:'readonly', esc:'readonly',
   detectColumns:'readonly',
   setSafeImageSource:'readonly', imgCandidatesPure:'readonly', manifestKey:'readonly',
+  collectionVariant:'readonly',
   sortItems:'readonly', marketplaceSearchUrls:'readonly', priceMid:'readonly',
   matchesQuery:'readonly', exportText:'readonly', exportCsv:'readonly', csvEscape:'readonly',
   parseHaveQty:'readonly',
