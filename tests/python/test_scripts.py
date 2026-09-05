@@ -8,7 +8,7 @@ from unittest import mock
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 import backup_supabase
 from backup_supabase import parse_sets, parse_supabase_config, rows_to_csv
-from download_card_images import compressed_url, filename_for, image_extension
+from download_card_images import compressed_url, filename_for, image_extension, process_set
 from validate_data import validate_set
 
 
@@ -88,6 +88,26 @@ class ImageTests(unittest.TestCase):
         self.assertEqual(image_extension(b'\xff\xd8\xffmore'), 'jpg')
         self.assertEqual(image_extension(b'\x89PNG\r\n\x1a\nmore'), 'png')
         self.assertIsNone(image_extension(b'<html>not an image</html>'))
+
+    def test_process_set_counts_downloaded_images(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            backups = root / 'backups'
+            images = root / 'img'
+            backups.mkdir()
+            (backups / 'origins.csv').write_text(
+                'Card,Number,Variant / Stamp,Image\nTest,001/166,Regular,https://example.test/card\n',
+                encoding='utf-8')
+            image = images / 'origins' / filename_for({
+                'Number': '001/166', 'Card': 'Test',
+                'Image': 'https://example.test/card',
+            })
+            image.parent.mkdir(parents=True)
+            image.write_bytes(b'RIFFxxxxWEBP' + b'x' * 1000)
+            with mock.patch('download_card_images.BACKUPS', backups), \
+                 mock.patch('download_card_images.IMAGE_ROOT', images):
+                count, size = process_set('origins')
+            self.assertEqual((count, size), (1, image.stat().st_size))
 
 
 class DataValidationTests(unittest.TestCase):

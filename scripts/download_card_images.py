@@ -95,7 +95,8 @@ def process_set(set_id: str) -> tuple[int, int]:
         raise RuntimeError("\n".join(failures))
     manifest = ["|".join((*key, filenames[key])) for key, _, _ in jobs]
     (target / "manifest.txt").write_text("\n".join(manifest) + "\n", encoding="utf-8")
-    return len(rows), sum(path.stat().st_size for _, path in jobs)
+    return len(rows), sum((target / filenames[key]).stat().st_size
+                          for key, _, _ in jobs)
 
 
 def main() -> int:
