@@ -8,7 +8,8 @@ from unittest import mock
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 import backup_supabase
 from backup_supabase import parse_sets, parse_supabase_config, rows_to_csv
-from download_card_images import compressed_url, filename_for, image_extension, process_set
+from download_card_images import (compressed_url, download, filename_for,
+                                  image_extension, process_set)
 from validate_data import validate_set
 
 
@@ -108,6 +109,28 @@ class ImageTests(unittest.TestCase):
                  mock.patch('download_card_images.IMAGE_ROOT', images):
                 count, size = process_set('origins')
             self.assertEqual((count, size), (1, image.stat().st_size))
+
+    def test_download_retries_and_keeps_a_valid_jpeg(self):
+        with tempfile.TemporaryDirectory() as directory:
+            destination = Path(directory) / 'card'
+            response = mock.MagicMock()
+            response.__enter__.return_value.read.return_value = b'\xff\xd8\xff' + b'x' * 1000
+            opener = mock.Mock(side_effect=[OSError('temporary'), response])
+            sleeper = mock.Mock()
+            saved = download(('https://example.test/card', destination), opener, sleeper, attempts=2)
+            self.assertEqual(saved.suffix, '.jpg')
+            self.assertTrue(saved.exists())
+            sleeper.assert_called_once_with(2)
+
+    def test_download_does_not_reuse_an_invalid_cache_entry(self):
+        with tempfile.TemporaryDirectory() as directory:
+            destination = Path(directory) / 'card'
+            destination.with_suffix('.webp').write_bytes(b'<html>' + b'x' * 1000)
+            response = mock.MagicMock()
+            response.__enter__.return_value.read.return_value = b'RIFFxxxxWEBP' + b'x' * 1000
+            saved = download(('https://example.test/card', destination), mock.Mock(return_value=response))
+            self.assertEqual(saved.suffix, '.webp')
+            self.assertTrue(saved.read_bytes().startswith(b'RIFF'))
 
 
 class DataValidationTests(unittest.TestCase):

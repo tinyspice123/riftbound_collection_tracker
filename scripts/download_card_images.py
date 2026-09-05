@@ -10,6 +10,7 @@ import csv
 import hashlib
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -19,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BACKUPS = ROOT / "backups"
 IMAGE_ROOT = ROOT / "public" / "img"
 SETS = ("origins", "spiritforged", "unleashed", "vendetta")
+MAX_ATTEMPTS = 3
 
 
 def filename_for(row: dict[str, str], extension: str = "webp") -> str:
@@ -44,15 +46,30 @@ def image_extension(data: bytes) -> str | None:
     return None
 
 
-def download(job: tuple[str, Path]) -> Path:
+def valid_image_file(path: Path) -> bool:
+    if not path.exists() or path.stat().st_size <= 1000:
+        return False
+    with path.open("rb") as handle:
+        return image_extension(handle.read(12)) is not None
+
+
+def download(job: tuple[str, Path], opener=urllib.request.urlopen,
+             sleeper=time.sleep, attempts: int = MAX_ATTEMPTS) -> Path:
     url, destination = job
     for extension in ("webp", "jpg", "png"):
         existing = destination.with_suffix(f".{extension}")
-        if existing.exists() and existing.stat().st_size > 1000:
+        if valid_image_file(existing):
             return existing
     request = urllib.request.Request(url, headers={"User-Agent": "RiftboundCollectionTracker/1.0"})
-    with urllib.request.urlopen(request, timeout=45) as response:
-        data = response.read()
+    for attempt in range(1, attempts + 1):
+        try:
+            with opener(request, timeout=45) as response:
+                data = response.read()
+            break
+        except OSError:
+            if attempt == attempts:
+                raise
+            sleeper(2 ** attempt)
     extension = image_extension(data)
     if len(data) < 1000 or extension is None:
         raise ValueError(f"invalid image response for {url}")
