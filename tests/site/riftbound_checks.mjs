@@ -76,7 +76,9 @@ for (const policy of [
   'cron: "0 9 * * *"',
   'contents: write',
   'python scripts/backup_supabase.py',
+  'python scripts/download_card_images.py',
   'git add backups/',
+  'git add public/img/',
   'gh workflow run ci-quality-deploy.yml --ref main',
 ]) {
   if (!backupWorkflow.includes(policy)) throw new Error(`Backup workflow is missing: ${policy}`);

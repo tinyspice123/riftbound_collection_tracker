@@ -142,20 +142,22 @@ Run the backup operation manually with:
 
 ```bash
 python scripts/backup_supabase.py
+python scripts/download_card_images.py
 python scripts/validate_data.py
 ```
 
 `backup_supabase.py` exports every configured set and writes the latest
-snapshots to the single canonical `backups/` directory. The
-validator checks the CSVs, exact manifest mappings, and local image files.
+snapshots to the single canonical `backups/` directory. Refresh the local
+images and manifests after an export, then run the validator; it checks exact
+CSV-to-manifest mappings and local image files.
 
 The scheduled **Backup Supabase collection** workflow runs daily at 09:00 UTC and
-commits only changed snapshots. When data changes, it dispatches the normal
+commits changed snapshots and local image fallbacks. When data changes, it dispatches the normal
 test-and-deploy pipeline.
 
 At runtime the tracker requests Supabase first. If it is unreachable or returns
 no data, the tracker requests `backups/<set-id>.csv` from the deployed site and
-displays a read-only warning. Only root `backups/` is committed; during
+displays a read-only warning. Backup CSVs and local image fallbacks are committed; during
 deployment CI copies those files into generated `public/backups/`. There is no
 committed duplicate `public/data/` directory, and older snapshots remain
 recoverable through Git history.
