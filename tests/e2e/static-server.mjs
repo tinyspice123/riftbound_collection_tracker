@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const root = path.resolve(process.argv[2] || 'public');
-const types = new Map([['.css','text/css'],['.html','text/html'],['.js','text/javascript'],['.json','application/json'],['.csv','text/csv'],['.webp','image/webp']]);
+const types = new Map([['.css','text/css'],['.html','text/html'],['.js','text/javascript'],['.json','application/json'],['.csv','text/csv'],['.webp','image/webp'],['.jpg','image/jpeg'],['.jpeg','image/jpeg'],['.png','image/png']]);
 createServer(async (request,response) => {
   try {
     const pathname=decodeURIComponent(new URL(request.url,'http://localhost').pathname);

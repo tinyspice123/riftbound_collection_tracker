@@ -132,9 +132,10 @@ Limit the downloader to selected sets by appending their IDs:
 python scripts/download_card_images.py origins vendetta
 ```
 
-Images are stored as compressed 600px WebP files. Existing valid files are
-skipped. At runtime, a matching local manifest image is preferred and the
-sheet's Image URL remains available as a network fallback.
+Images are stored as compressed 600px WebP files when the source CDN supports
+conversion; valid JPEG and PNG responses are retained otherwise. Existing valid
+files are skipped. At runtime, a matching local manifest image is preferred and
+the sheet's Image URL remains available as a network fallback.
 
 ## Backups and outage behavior
 

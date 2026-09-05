@@ -8,7 +8,7 @@ from unittest import mock
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 import backup_supabase
 from backup_supabase import parse_sets, parse_supabase_config, rows_to_csv
-from download_card_images import compressed_url, filename_for
+from download_card_images import compressed_url, filename_for, image_extension
 from validate_data import validate_set
 
 
@@ -81,6 +81,13 @@ class ImageTests(unittest.TestCase):
     def test_filename_is_stable(self):
         row={'Number':'001/166','Card':'Hero Name','Image':'https://example.com/a.png'}
         self.assertEqual(filename_for(row),'001-166-hero-name-494a3070.webp')
+        self.assertEqual(filename_for(row, 'jpg'),'001-166-hero-name-494a3070.jpg')
+
+    def test_detects_supported_image_formats(self):
+        self.assertEqual(image_extension(b'RIFFxxxxWEBPmore'), 'webp')
+        self.assertEqual(image_extension(b'\xff\xd8\xffmore'), 'jpg')
+        self.assertEqual(image_extension(b'\x89PNG\r\n\x1a\nmore'), 'png')
+        self.assertIsNone(image_extension(b'<html>not an image</html>'))
 
 
 class DataValidationTests(unittest.TestCase):
