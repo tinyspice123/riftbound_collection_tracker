@@ -1,35 +1,49 @@
 Baccai Sandspinner|001/166|Regular|001-166-baccai-sandspinner-09e754ee.webp
+Baccai Sandspinner|001/166|Foil|001-166-baccai-sandspinner-09e754ee.webp
 Fury Rune|R01|Rune|r01-fury-rune-214038c1.webp
 Kai'Sa, Survivor|SP1/006|Special collection|sp1-006-kai-sa-survivor-f99cb851.webp
 Blade Twirler|002/166|Regular|002-166-blade-twirler-50fd2164.webp
+Blade Twirler|002/166|Foil|002-166-blade-twirler-50fd2164.webp
 Calm Rune|R02|Rune|r02-calm-rune-533d2d7d.webp
 Sona, Harmonious|SP2/006|Special collection|sp2-006-sona-harmonious-0cb0255d.webp
 Ahri, Inquisitive|SP3/006|Special collection|sp3-006-ahri-inquisitive-573126cf.webp
 Brittle Steel|003/166|Regular|003-166-brittle-steel-14d4fcfc.webp
+Brittle Steel|003/166|Foil|003-166-brittle-steel-14d4fcfc.webp
 Mind Rune|R03|Rune|r03-mind-rune-29748066.webp
 Body Rune|R04|Rune|r04-body-rune-747d996e.webp
 Dune Surfer|004/166|Regular|004-166-dune-surfer-7ceaf615.webp
-Empowered|T01|Token|t01-empowered-gallery.jpg
-Gold|T02|Token|t02-gold-openrift.webp
-Mech|T03|Token|t03-mech-openrift.webp
+Dune Surfer|004/166|Foil|004-166-dune-surfer-7ceaf615.webp
+Empowered|T01|Token|t01-empowered-6fe50bb2.jpg
+Gold|T02|Token|t02-gold-398b8ec5.webp
+Mech|T03|Token|t03-mech-9fa80e29.webp
 Recruit (NX)|T04|Token|t04-recruit-nx-25f106ac.webp
-Shadow Clone|T05|Token|t05-shadow-clone-gallery.jpg
-Tentacle|T06|Token|t06-tentacle-gallery.jpg
+Shadow Clone|T05|Token|t05-shadow-clone-23eb47eb.jpg
+Tentacle|T06|Token|t06-tentacle-af855229.jpg
 Sett, Brawler|SP4/006|Special collection|sp4-006-sett-brawler-44560cb3.webp
 Chaos Rune|R05|Rune|r05-chaos-rune-16abed4f.webp
 Ezreal, Prodigy|SP5/006|Special collection|sp5-006-ezreal-prodigy-8ffd13c3.webp
 Forsaken Baccai|005/166|Regular|005-166-forsaken-baccai-231238a0.webp
+Forsaken Baccai|005/166|Foil|005-166-forsaken-baccai-231238a0.webp
 Lux, Crownguard|SP6/006|Special collection|sp6-006-lux-crownguard-00a598b1.webp
 Oasis Raider|006/166|Regular|006-166-oasis-raider-b12a591b.webp
+Oasis Raider|006/166|Foil|006-166-oasis-raider-b12a591b.webp
 Order Rune|R06|Rune|r06-order-rune-5a5fc903.webp
 Punching Poro|007/166|Regular|007-166-punching-poro-be6c0126.webp
+Punching Poro|007/166|Foil|007-166-punching-poro-be6c0126.webp
 Ruthless Strike|008/166|Regular|008-166-ruthless-strike-0634cb77.webp
+Ruthless Strike|008/166|Foil|008-166-ruthless-strike-0634cb77.webp
 Baccai Reaper|009/166|Regular|009-166-baccai-reaper-51f57667.webp
+Baccai Reaper|009/166|Foil|009-166-baccai-reaper-51f57667.webp
 Consuming Curse|010/166|Regular|010-166-consuming-curse-687894ed.webp
+Consuming Curse|010/166|Foil|010-166-consuming-curse-687894ed.webp
 Pendulum Blade|011/166|Regular|011-166-pendulum-blade-27911aa4.webp
+Pendulum Blade|011/166|Foil|011-166-pendulum-blade-27911aa4.webp
 Perfect Execution|012/166|Regular|012-166-perfect-execution-c66d5689.webp
+Perfect Execution|012/166|Foil|012-166-perfect-execution-c66d5689.webp
 Shadow Assassin|013/166|Regular|013-166-shadow-assassin-b1bc4d19.webp
+Shadow Assassin|013/166|Foil|013-166-shadow-assassin-b1bc4d19.webp
 Shadow Fiend|014/166|Regular|014-166-shadow-fiend-f25fdb37.webp
+Shadow Fiend|014/166|Foil|014-166-shadow-fiend-f25fdb37.webp
 Decree of Rage|015/166|Regular|015-166-decree-of-rage-f7f6005d.webp
 Eclipse Dragon|016/166|Regular|016-166-eclipse-dragon-714d30a5.webp
 Morgana, Vindictive|017/166|Regular|017-166-morgana-vindictive-781e2394.webp
@@ -43,19 +57,33 @@ Endless Riches|022/166|Regular|022-166-endless-riches-dd7d7b16.webp
 Zed, From the Shadows|023a/166|Alternate art|023a-166-zed-from-the-shadows-0b14f941.webp
 Zed, From the Shadows|023/166|Regular|023-166-zed-from-the-shadows-14abd4d0.webp
 Affectionate Poro|024/166|Regular|024-166-affectionate-poro-3c6c930b.webp
+Affectionate Poro|024/166|Foil|024-166-affectionate-poro-3c6c930b.webp
 Esteemed Hierophant|025/166|Regular|025-166-esteemed-hierophant-b9622850.webp
+Esteemed Hierophant|025/166|Foil|025-166-esteemed-hierophant-b9622850.webp
 Field Musicians|026/166|Regular|026-166-field-musicians-fc7cb350.webp
+Field Musicians|026/166|Foil|026-166-field-musicians-fc7cb350.webp
 Hand Hammer|027/166|Regular|027-166-hand-hammer-390294e8.webp
+Hand Hammer|027/166|Foil|027-166-hand-hammer-390294e8.webp
 Mournful Witness|028/166|Regular|028-166-mournful-witness-312cc1c6.webp
+Mournful Witness|028/166|Foil|028-166-mournful-witness-312cc1c6.webp
 Ol' Poro|029/166|Regular|029-166-ol-poro-b0e6e9b6.webp
+Ol' Poro|029/166|Foil|029-166-ol-poro-b0e6e9b6.webp
 Serene Ascetic|030/166|Regular|030-166-serene-ascetic-1341eac9.webp
+Serene Ascetic|030/166|Foil|030-166-serene-ascetic-1341eac9.webp
 Twilight Shroud|031/166|Regular|031-166-twilight-shroud-8cf8c234.webp
+Twilight Shroud|031/166|Foil|031-166-twilight-shroud-8cf8c234.webp
 Frostcoat Mother|032/166|Regular|032-166-frostcoat-mother-99f6e398.webp
+Frostcoat Mother|032/166|Foil|032-166-frostcoat-mother-99f6e398.webp
 Pakaa Protector|033/166|Regular|033-166-pakaa-protector-2ea221eb.webp
+Pakaa Protector|033/166|Foil|033-166-pakaa-protector-2ea221eb.webp
 Resonating Strike|034/166|Regular|034-166-resonating-strike-79725943.webp
+Resonating Strike|034/166|Foil|034-166-resonating-strike-79725943.webp
 Sanction|035/166|Regular|035-166-sanction-9495329a.webp
+Sanction|035/166|Foil|035-166-sanction-9495329a.webp
 Sandstone Chimera|036/166|Regular|036-166-sandstone-chimera-9781e405.webp
+Sandstone Chimera|036/166|Foil|036-166-sandstone-chimera-9781e405.webp
 Tomb-Raider Barbara|037/166|Regular|037-166-tomb-raider-barbara-d88b7c6a.webp
+Tomb-Raider Barbara|037/166|Foil|037-166-tomb-raider-barbara-d88b7c6a.webp
 Akali, Silent|038/166|Regular|038-166-akali-silent-4d35617e.webp
 Akali, Silent|038a/166|Alternate art|038a-166-akali-silent-1251fec4.webp
 Crumbling Sands|039/166|Regular|039-166-crumbling-sands-5fa714a3.webp
@@ -69,19 +97,33 @@ Helm of Suppression|045/166|Regular|045-166-helm-of-suppression-1e6859e3.webp
 Nasus, Ascended|046/166|Regular|046-166-nasus-ascended-ff25b5e8.webp
 Nasus, Ascended|046a/166|Alternate art|046a-166-nasus-ascended-02525821.webp
 Apprentice Mage|047/166|Regular|047-166-apprentice-mage-c55df2e4.webp
+Apprentice Mage|047/166|Foil|047-166-apprentice-mage-c55df2e4.webp
 Cloud Drake|048/166|Regular|048-166-cloud-drake-31047ca7.webp
+Cloud Drake|048/166|Foil|048-166-cloud-drake-31047ca7.webp
 Dredge Up|049/166|Regular|049-166-dredge-up-b4f0610e.webp
+Dredge Up|049/166|Foil|049-166-dredge-up-b4f0610e.webp
 Grumpy Rockbear|050/166|Regular|050-166-grumpy-rockbear-13a3ce27.webp
+Grumpy Rockbear|050/166|Foil|050-166-grumpy-rockbear-13a3ce27.webp
 Iterative Design|051/166|Regular|051-166-iterative-design-4311a775.webp
+Iterative Design|051/166|Foil|051-166-iterative-design-4311a775.webp
 Mesmerize|052/166|Regular|052-166-mesmerize-df7d8524.webp
+Mesmerize|052/166|Foil|052-166-mesmerize-df7d8524.webp
 Otterpus|053/166|Regular|053-166-otterpus-c07a7529.webp
+Otterpus|053/166|Foil|053-166-otterpus-c07a7529.webp
 Questionable Tome|054/166|Regular|054-166-questionable-tome-c84461d4.webp
+Questionable Tome|054/166|Foil|054-166-questionable-tome-c84461d4.webp
 Applied Researchers|055/166|Regular|055-166-applied-researchers-ac28414c.webp
+Applied Researchers|055/166|Foil|055-166-applied-researchers-ac28414c.webp
 Clairvoyance|056/166|Regular|056-166-clairvoyance-02623568.webp
+Clairvoyance|056/166|Foil|056-166-clairvoyance-02623568.webp
 Covert Informant|057/166|Regular|057-166-covert-informant-191f7653.webp
+Covert Informant|057/166|Foil|057-166-covert-informant-191f7653.webp
 Patched Porobot|058/166|Regular|058-166-patched-porobot-31aef8a4.webp
+Patched Porobot|058/166|Foil|058-166-patched-porobot-31aef8a4.webp
 Shock Blast|059/166|Regular|059-166-shock-blast-5f3e0f43.webp
+Shock Blast|059/166|Foil|059-166-shock-blast-5f3e0f43.webp
 Sky Cruiser|060/166|Regular|060-166-sky-cruiser-2c4651b9.webp
+Sky Cruiser|060/166|Foil|060-166-sky-cruiser-2c4651b9.webp
 Decree of Insight|061/166|Regular|061-166-decree-of-insight-5b08eea2.webp
 Hextech Formula|062/166|Regular|062-166-hextech-formula-ab968638.webp
 Nasus, Guardian of Knowledge|063/166|Regular|063-166-nasus-guardian-of-knowledge-a63d24ab.webp
@@ -95,19 +137,33 @@ Jayce, Brilliant Inventor|068/166|Regular|068-166-jayce-brilliant-inventor-2d930
 Mel, Newly Awakened|069/166|Regular|069-166-mel-newly-awakened-5156f451.webp
 Mel, Newly Awakened|069a/166|Alternate art|069a-166-mel-newly-awakened-e0bfc8cc.webp
 Brutal Hunter|070/166|Regular|070-166-brutal-hunter-3cbad6e0.webp
+Brutal Hunter|070/166|Foil|070-166-brutal-hunter-3cbad6e0.webp
 Fretful Feline|071/166|Regular|071-166-fretful-feline-305666c7.webp
+Fretful Feline|071/166|Foil|071-166-fretful-feline-305666c7.webp
 Guttural Roar|072/166|Regular|072-166-guttural-roar-0eaee317.webp
+Guttural Roar|072/166|Foil|072-166-guttural-roar-0eaee317.webp
 Jagged Cutlass|073/166|Regular|073-166-jagged-cutlass-1f698133.webp
+Jagged Cutlass|073/166|Foil|073-166-jagged-cutlass-1f698133.webp
 Legion Marauder|074/166|Regular|074-166-legion-marauder-73dd34ab.webp
+Legion Marauder|074/166|Foil|074-166-legion-marauder-73dd34ab.webp
 Platewyrm Egg|075/166|Regular|075-166-platewyrm-egg-b2a88e55.webp
+Platewyrm Egg|075/166|Foil|075-166-platewyrm-egg-b2a88e55.webp
 Repair Specialist|076/166|Regular|076-166-repair-specialist-c4720734.webp
+Repair Specialist|076/166|Foil|076-166-repair-specialist-c4720734.webp
 Tools of Empire|077/166|Regular|077-166-tools-of-empire-b506c573.webp
+Tools of Empire|077/166|Foil|077-166-tools-of-empire-b506c573.webp
 Baccai Witherclaw|078/166|Regular|078-166-baccai-witherclaw-2730fae4.webp
+Baccai Witherclaw|078/166|Foil|078-166-baccai-witherclaw-2730fae4.webp
 Dame the Despoiler|079/166|Regular|079-166-dame-the-despoiler-6baf2aaf.webp
+Dame the Despoiler|079/166|Foil|079-166-dame-the-despoiler-6baf2aaf.webp
 Noxian Demolitionist|080/166|Regular|080-166-noxian-demolitionist-3a6e8937.webp
+Noxian Demolitionist|080/166|Foil|080-166-noxian-demolitionist-3a6e8937.webp
 Onslaught|081/166|Regular|081-166-onslaught-870bdfb6.webp
+Onslaught|081/166|Foil|081-166-onslaught-870bdfb6.webp
 Profiteer|082/166|Regular|082-166-profiteer-d65e8228.webp
+Profiteer|082/166|Foil|082-166-profiteer-d65e8228.webp
 Rampage|083/166|Regular|083-166-rampage-448c2aa7.webp
+Rampage|083/166|Foil|083-166-rampage-448c2aa7.webp
 Ambessa, The Wolf|084/166|Regular|084-166-ambessa-the-wolf-6570d631.webp
 Ambessa, The Wolf|084a/166|Alternate art|084a-166-ambessa-the-wolf-5063b5a7.webp
 Decree of Strength|085/166|Regular|085-166-decree-of-strength-d485e1cf.webp
@@ -121,19 +177,33 @@ Corrupted Dragon|091/166|Regular|091-166-corrupted-dragon-f93bf532.webp
 Renekton, Brute|092/166|Regular|092-166-renekton-brute-fb511b56.webp
 Renekton, Brute|092a/166|Alternate art|092a-166-renekton-brute-8853b663.webp
 Kinkou Lifeblade|093/166|Regular|093-166-kinkou-lifeblade-3abc4c59.webp
+Kinkou Lifeblade|093/166|Foil|093-166-kinkou-lifeblade-3abc4c59.webp
 Mask Mother|094/166|Regular|094-166-mask-mother-e3ce3283.webp
+Mask Mother|094/166|Foil|094-166-mask-mother-e3ce3283.webp
 Shadow Order Disciple|095/166|Regular|095-166-shadow-order-disciple-90852b19.webp
+Shadow Order Disciple|095/166|Foil|095-166-shadow-order-disciple-90852b19.webp
 Shadowblade Lurker|096/166|Regular|096-166-shadowblade-lurker-0e0c4b7e.webp
+Shadowblade Lurker|096/166|Foil|096-166-shadowblade-lurker-0e0c4b7e.webp
 Spiderling|097/166|Regular|097-166-spiderling-8cb16d2e.webp
+Spiderling|097/166|Foil|097-166-spiderling-8cb16d2e.webp
 Stargazer|098/166|Regular|098-166-stargazer-db11394f.webp
+Stargazer|098/166|Foil|098-166-stargazer-db11394f.webp
 Tornado Warrior|099/166|Regular|099-166-tornado-warrior-9548f5d9.webp
+Tornado Warrior|099/166|Foil|099-166-tornado-warrior-9548f5d9.webp
 Up from the Deep|100/166|Regular|100-166-up-from-the-deep-17f0278b.webp
+Up from the Deep|100/166|Foil|100-166-up-from-the-deep-17f0278b.webp
 Gust Monk|101/166|Regular|101-166-gust-monk-9c7af7c1.webp
+Gust Monk|101/166|Foil|101-166-gust-monk-9c7af7c1.webp
 Ravenbloom Prefect|102/166|Regular|102-166-ravenbloom-prefect-939adc02.webp
+Ravenbloom Prefect|102/166|Foil|102-166-ravenbloom-prefect-939adc02.webp
 Shadows of the Past|103/166|Regular|103-166-shadows-of-the-past-b6d4999d.webp
+Shadows of the Past|103/166|Foil|103-166-shadows-of-the-past-b6d4999d.webp
 Tail-Cloaked Matriarch|104/166|Regular|104-166-tail-cloaked-matriarch-1cbc9ddc.webp
+Tail-Cloaked Matriarch|104/166|Foil|104-166-tail-cloaked-matriarch-1cbc9ddc.webp
 Twilight Step|105/166|Regular|105-166-twilight-step-4c35a0b6.webp
+Twilight Step|105/166|Foil|105-166-twilight-step-4c35a0b6.webp
 Wind and Ghosts|106/166|Regular|106-166-wind-and-ghosts-3670f7b1.webp
+Wind and Ghosts|106/166|Foil|106-166-wind-and-ghosts-3670f7b1.webp
 Decree of Discord|107/166|Regular|107-166-decree-of-discord-bfc6799b.webp
 Forgotten Relic|108/166|Regular|108-166-forgotten-relic-0f84b354.webp
 Illaoi, Prophet of the Great Kraken|109/166|Regular|109-166-illaoi-prophet-of-the-great-kraken-7c577fb0.webp
@@ -147,19 +217,33 @@ Kennen, Storm of Shuriken|113/166|Regular|113-166-kennen-storm-of-shuriken-e4034
 Kharox|114/166|Regular|114-166-kharox-04622830.webp
 Ocean Drake|115/166|Regular|115-166-ocean-drake-a0b226a7.webp
 Dragon Form|116/166|Regular|116-166-dragon-form-72921677.webp
+Dragon Form|116/166|Foil|116-166-dragon-form-72921677.webp
 Disciple of Shen|117/166|Regular|117-166-disciple-of-shen-d82b49c1.webp
+Disciple of Shen|117/166|Foil|117-166-disciple-of-shen-d82b49c1.webp
 Horns of the Dragon|118/166|Regular|118-166-horns-of-the-dragon-d4679247.webp
+Horns of the Dragon|118/166|Foil|118-166-horns-of-the-dragon-d4679247.webp
 Keeper of Law|119/166|Regular|119-166-keeper-of-law-18bf9252.webp
+Keeper of Law|119/166|Foil|119-166-keeper-of-law-18bf9252.webp
 Masa, Crashing Thunder|120/166|Regular|120-166-masa-crashing-thunder-c9f94eaf.webp
+Masa, Crashing Thunder|120/166|Foil|120-166-masa-crashing-thunder-c9f94eaf.webp
 Reluctant Leader|121/166|Regular|121-166-reluctant-leader-1c75ff56.webp
+Reluctant Leader|121/166|Foil|121-166-reluctant-leader-1c75ff56.webp
 Solari Sunhawk|122/166|Regular|122-166-solari-sunhawk-d5792b7f.webp
+Solari Sunhawk|122/166|Foil|122-166-solari-sunhawk-d5792b7f.webp
 Soulspinner|123/166|Regular|123-166-soulspinner-78a0d0b6.webp
+Soulspinner|123/166|Foil|123-166-soulspinner-78a0d0b6.webp
 Escaped Grayback|124/166|Regular|124-166-escaped-grayback-9051a2a1.webp
+Escaped Grayback|124/166|Foil|124-166-escaped-grayback-9051a2a1.webp
 Hungry Wolf|125/166|Regular|125-166-hungry-wolf-2d3d1790.webp
+Hungry Wolf|125/166|Foil|125-166-hungry-wolf-2d3d1790.webp
 Ki Barrier|126/166|Regular|126-166-ki-barrier-96221ac5.webp
+Ki Barrier|126/166|Foil|126-166-ki-barrier-96221ac5.webp
 Lacerate|127/166|Regular|127-166-lacerate-a7d9e19b.webp
+Lacerate|127/166|Foil|127-166-lacerate-a7d9e19b.webp
 Noxian Emissary|128/166|Regular|128-166-noxian-emissary-940557c6.webp
+Noxian Emissary|128/166|Foil|128-166-noxian-emissary-940557c6.webp
 Sacred Protector|129/166|Regular|129-166-sacred-protector-ec4bc500.webp
+Sacred Protector|129/166|Foil|129-166-sacred-protector-ec4bc500.webp
 Aurok General|130/166|Regular|130-166-aurok-general-4adc1e59.webp
 Decree of Unity|131/166|Regular|131-166-decree-of-unity-050b7878.webp
 Fallen Feline|132/166|Regular|132-166-fallen-feline-7c3f495f.webp
@@ -178,7 +262,7 @@ Butcher of the Sands|141/166|Regular|141-166-butcher-of-the-sands-e7400d71.webp
 Dominus|142/166|Regular|142-166-dominus-b7615605.webp
 Master of Shadows|143/166|Regular|143-166-master-of-shadows-ba4f8928.webp
 Death Mark|144/166|Regular|144-166-death-mark-7c1118da.webp
-Curator of the Sands|145/166|Regular|145-166-curator-of-the-sands-official.webp
+Curator of the Sands|145/166|Regular|145-166-curator-of-the-sands-064bcd89.webp
 Siphoning Strike|146/166|Regular|146-166-siphoning-strike-1b032d5e.webp
 Eye of Twilight|147/166|Regular|147-166-eye-of-twilight-625c2571.webp
 Shadow Dash|148/166|Regular|148-166-shadow-dash-a2c7178e.webp
@@ -191,15 +275,25 @@ Public Execution|154/166|Regular|154-166-public-execution-4d1ecf7a.webp
 Heart of the Tempest|155/166|Regular|155-166-heart-of-the-tempest-fc3436a1.webp
 Lightning Rush|156/166|Regular|156-166-lightning-rush-546712a7.webp
 Dragon Roost|157/166|Regular|157-166-dragon-roost-706c3973.webp
+Dragon Roost|157/166|Foil|157-166-dragon-roost-706c3973.webp
 Heisho, Shell of the World|158/166|Regular|158-166-heisho-shell-of-the-world-0b77534b.webp
+Heisho, Shell of the World|158/166|Foil|158-166-heisho-shell-of-the-world-0b77534b.webp
 Kinkou Temple|159/166|Regular|159-166-kinkou-temple-e38571b3.webp
+Kinkou Temple|159/166|Foil|159-166-kinkou-temple-e38571b3.webp
 Mystic Vortex|160/166|Regular|160-166-mystic-vortex-e6829ad5.webp
+Mystic Vortex|160/166|Foil|160-166-mystic-vortex-e6829ad5.webp
 Piltovan Forge|161/166|Regular|161-166-piltovan-forge-36864a83.webp
+Piltovan Forge|161/166|Foil|161-166-piltovan-forge-36864a83.webp
 Protective Sands|162/166|Regular|162-166-protective-sands-061ade75.webp
+Protective Sands|162/166|Foil|162-166-protective-sands-061ade75.webp
 Risen Altar|163/166|Regular|163-166-risen-altar-53996848.webp
+Risen Altar|163/166|Foil|163-166-risen-altar-53996848.webp
 Sandswept Tomb|164/166|Regular|164-166-sandswept-tomb-0363980c.webp
+Sandswept Tomb|164/166|Foil|164-166-sandswept-tomb-0363980c.webp
 Shadow Temple|165/166|Regular|165-166-shadow-temple-a0e92a6f.webp
+Shadow Temple|165/166|Foil|165-166-shadow-temple-a0e92a6f.webp
 Threshold of the Gray|166/166|Regular|166-166-threshold-of-the-gray-49716788.webp
+Threshold of the Gray|166/166|Foil|166-166-threshold-of-the-gray-49716788.webp
 Vi, Destructive|167/166|Overnumbered|167-166-vi-destructive-938c655a.webp
 Jinx, Demolitionist|168/166|Overnumbered|168-166-jinx-demolitionist-77912b54.webp
 Zed, From the Shadows|169/166|Overnumbered|169-166-zed-from-the-shadows-65e095b6.webp

@@ -1,28 +1,52 @@
 Blazing Scorcher|001/298|Regular|001-298-blazing-scorcher-5814ed9c.webp
+Blazing Scorcher|001/298|Foil|001-298-blazing-scorcher-5814ed9c.webp
 Brazen Buccaneer|002/298|Regular|002-298-brazen-buccaneer-d027c764.webp
+Brazen Buccaneer|002/298|Foil|002-298-brazen-buccaneer-d027c764.webp
 Chemtech Enforcer|003/298|Regular|003-298-chemtech-enforcer-24aec5eb.webp
+Chemtech Enforcer|003/298|Foil|003-298-chemtech-enforcer-24aec5eb.webp
 Cleave|004/298|Regular|004-298-cleave-a3182903.webp
+Cleave|004/298|Foil|004-298-cleave-a3182903.webp
 Disintegrate|005/298|Regular|005-298-disintegrate-534f9bb7.webp
+Disintegrate|005/298|Foil|005-298-disintegrate-534f9bb7.webp
 Flame Chompers|006/298|Regular|006-298-flame-chompers-a0d32546.webp
+Flame Chompers|006/298|Foil|006-298-flame-chompers-a0d32546.webp
 Fury Rune|007/298|Regular|007-298-fury-rune-b9bec81a.webp
+Fury Rune|007/298|Foil|007-298-fury-rune-b9bec81a.webp
 Fury Rune|007a/298|Alternate art|007a-298-fury-rune-e0593d43.webp
 Get Excited!|008/298|Regular|008-298-get-excited-3af24e7d.webp
+Get Excited!|008/298|Foil|008-298-get-excited-3af24e7d.webp
 Hextech Ray|009/298|Regular|009-298-hextech-ray-3be87152.webp
+Hextech Ray|009/298|Foil|009-298-hextech-ray-3be87152.webp
 Legion Rearguard|010/298|Regular|010-298-legion-rearguard-fe5d224a.webp
+Legion Rearguard|010/298|Foil|010-298-legion-rearguard-fe5d224a.webp
 Magma Wurm|011/298|Regular|011-298-magma-wurm-d2c22c6a.webp
+Magma Wurm|011/298|Foil|011-298-magma-wurm-d2c22c6a.webp
 Noxus Hopeful|012/298|Regular|012-298-noxus-hopeful-4fdd7251.webp
+Noxus Hopeful|012/298|Foil|012-298-noxus-hopeful-4fdd7251.webp
 Pouty Poro|013/298|Regular|013-298-pouty-poro-4aa749fd.webp
+Pouty Poro|013/298|Foil|013-298-pouty-poro-4aa749fd.webp
 Sky Splitter|014/298|Regular|014-298-sky-splitter-da72965b.webp
+Sky Splitter|014/298|Foil|014-298-sky-splitter-da72965b.webp
 Captain Farron|015/298|Regular|015-298-captain-farron-cebacdf5.webp
+Captain Farron|015/298|Foil|015-298-captain-farron-cebacdf5.webp
 Dangerous Duo|016/298|Regular|016-298-dangerous-duo-0639c852.webp
+Dangerous Duo|016/298|Foil|016-298-dangerous-duo-0639c852.webp
 Iron Ballista|017/298|Regular|017-298-iron-ballista-ee8517cf.webp
+Iron Ballista|017/298|Foil|017-298-iron-ballista-ee8517cf.webp
 Noxus Saboteur|018/298|Regular|018-298-noxus-saboteur-19d1a947.webp
+Noxus Saboteur|018/298|Foil|018-298-noxus-saboteur-19d1a947.webp
 Raging Soul|019/298|Regular|019-298-raging-soul-b4f1b0e1.webp
+Raging Soul|019/298|Foil|019-298-raging-soul-b4f1b0e1.webp
 Scrapyard Champion|020/298|Regular|020-298-scrapyard-champion-47d5942b.webp
+Scrapyard Champion|020/298|Foil|020-298-scrapyard-champion-47d5942b.webp
 Sun Disc|021/298|Regular|021-298-sun-disc-a801105a.webp
+Sun Disc|021/298|Foil|021-298-sun-disc-a801105a.webp
 Thermo Beam|022/298|Regular|022-298-thermo-beam-6f9140e8.webp
+Thermo Beam|022/298|Foil|022-298-thermo-beam-6f9140e8.webp
 Unlicensed Armory|023/298|Regular|023-298-unlicensed-armory-c691633a.webp
+Unlicensed Armory|023/298|Foil|023-298-unlicensed-armory-c691633a.webp
 Void Seeker|024/298|Regular|024-298-void-seeker-f2562ecc.webp
+Void Seeker|024/298|Foil|024-298-void-seeker-f2562ecc.webp
 Blind Fury|025/298|Regular|025-298-blind-fury-ea0843d7.webp
 Brynhir Thundersong|026/298|Regular|026-298-brynhir-thundersong-f2fe8203.webp
 Darius, Trifarian|027/298|Regular|027-298-darius-trifarian-f7d03084.webp
@@ -46,29 +70,53 @@ Volibear, Furious|041/298|Regular|041-298-volibear-furious-c95b1421.webp
 Volibear, Furious|041a/298|Alternate art|041a-298-volibear-furious-dc1ad481.webp
 Calm Rune|042a/298|Alternate art|042a-298-calm-rune-11accf9b.webp
 Calm Rune|042/298|Regular|042-298-calm-rune-5f74b660.webp
+Calm Rune|042/298|Foil|042-298-calm-rune-5f74b660.webp
 Charm|043/298|Regular|043-298-charm-c74bc005.webp
+Charm|043/298|Foil|043-298-charm-c74bc005.webp
 Clockwork Keeper|044/298|Regular|044-298-clockwork-keeper-685c925e.webp
+Clockwork Keeper|044/298|Foil|044-298-clockwork-keeper-685c925e.webp
 Defy|045/298|Regular|045-298-defy-d1c240fd.webp
+Defy|045/298|Foil|045-298-defy-d1c240fd.webp
 En Garde|046/298|Regular|046-298-en-garde-4f8d7364.webp
+En Garde|046/298|Foil|046-298-en-garde-4f8d7364.webp
 Find Your Center|047/298|Regular|047-298-find-your-center-0174a709.webp
+Find Your Center|047/298|Foil|047-298-find-your-center-0174a709.webp
 Meditation|048/298|Regular|048-298-meditation-1d64c297.webp
+Meditation|048/298|Foil|048-298-meditation-1d64c297.webp
 Playful Phantom|049/298|Regular|049-298-playful-phantom-d6c7f561.webp
+Playful Phantom|049/298|Foil|049-298-playful-phantom-d6c7f561.webp
 Rune Prison|050/298|Regular|050-298-rune-prison-e85d741d.webp
+Rune Prison|050/298|Foil|050-298-rune-prison-e85d741d.webp
 Solari Shieldbearer|051/298|Regular|051-298-solari-shieldbearer-26e1e99e.webp
+Solari Shieldbearer|051/298|Foil|051-298-solari-shieldbearer-26e1e99e.webp
 Stalwart Poro|052/298|Regular|052-298-stalwart-poro-5a2143db.webp
+Stalwart Poro|052/298|Foil|052-298-stalwart-poro-5a2143db.webp
 Stand United|053/298|Regular|053-298-stand-united-b63c39d8.webp
+Stand United|053/298|Foil|053-298-stand-united-b63c39d8.webp
 Sunlit Guardian|054/298|Regular|054-298-sunlit-guardian-88c44d52.webp
+Sunlit Guardian|054/298|Foil|054-298-sunlit-guardian-88c44d52.webp
 Wielder of Water|055/298|Regular|055-298-wielder-of-water-f64c4175.webp
+Wielder of Water|055/298|Foil|055-298-wielder-of-water-f64c4175.webp
 Adaptatron|056/298|Regular|056-298-adaptatron-1ec62616.webp
+Adaptatron|056/298|Foil|056-298-adaptatron-1ec62616.webp
 Block|057/298|Regular|057-298-block-7ba7a6ba.webp
+Block|057/298|Foil|057-298-block-7ba7a6ba.webp
 Discipline|058/298|Regular|058-298-discipline-315c12a7.webp
+Discipline|058/298|Foil|058-298-discipline-315c12a7.webp
 Eclipse Herald|059/298|Regular|059-298-eclipse-herald-ed60f62b.webp
+Eclipse Herald|059/298|Foil|059-298-eclipse-herald-ed60f62b.webp
 Mask of Foresight|060/298|Regular|060-298-mask-of-foresight-672e6e01.webp
+Mask of Foresight|060/298|Foil|060-298-mask-of-foresight-672e6e01.webp
 Poro Herder|061/298|Regular|061-298-poro-herder-aaed01cc.webp
+Poro Herder|061/298|Foil|061-298-poro-herder-aaed01cc.webp
 Reinforce|062/298|Regular|062-298-reinforce-7906f6aa.webp
+Reinforce|062/298|Foil|062-298-reinforce-7906f6aa.webp
 Spirit's Refuge|063/298|Regular|063-298-spirit-s-refuge-99469745.webp
+Spirit's Refuge|063/298|Foil|063-298-spirit-s-refuge-99469745.webp
 Wind Wall|064/298|Regular|064-298-wind-wall-365991e5.webp
+Wind Wall|064/298|Foil|064-298-wind-wall-365991e5.webp
 Wizened Elder|065/298|Regular|065-298-wizened-elder-8caedbb0.webp
+Wizened Elder|065/298|Foil|065-298-wizened-elder-8caedbb0.webp
 Ahri, Alluring|066a/298|Alternate art|066a-298-ahri-alluring-ecc1add5.webp
 Ahri, Alluring|066/298|Regular|066-298-ahri-alluring-e66aab50.webp
 Blitzcrank, Impassive|067/298|Regular|067-298-blitzcrank-impassive-a99f9a15.webp
@@ -91,30 +139,54 @@ Mystic Reversal|080/298|Regular|080-298-mystic-reversal-2ef0de64.webp
 Seal of Focus|081/298|Regular|081-298-seal-of-focus-4b26de22.webp
 Whiteflame Protector|082/298|Regular|082-298-whiteflame-protector-605c4ae3.webp
 Consult the Past|083/298|Regular|083-298-consult-the-past-e1d83593.webp
+Consult the Past|083/298|Foil|083-298-consult-the-past-e1d83593.webp
 Eager Apprentice|084/298|Regular|084-298-eager-apprentice-e21a6aa3.webp
+Eager Apprentice|084/298|Foil|084-298-eager-apprentice-e21a6aa3.webp
 Falling Comet|085/298|Regular|085-298-falling-comet-f2937aa2.webp
+Falling Comet|085/298|Foil|085-298-falling-comet-f2937aa2.webp
 Jeweled Colossus|086/298|Regular|086-298-jeweled-colossus-0f46ed45.webp
+Jeweled Colossus|086/298|Foil|086-298-jeweled-colossus-0f46ed45.webp
 Lecturing Yordle|087/298|Regular|087-298-lecturing-yordle-8e3bdab1.webp
+Lecturing Yordle|087/298|Foil|087-298-lecturing-yordle-8e3bdab1.webp
 Mega-Mech|088/298|Regular|088-298-mega-mech-0d727967.webp
+Mega-Mech|088/298|Foil|088-298-mega-mech-0d727967.webp
 Mind Rune|089a/298|Alternate art|089a-298-mind-rune-72407179.webp
 Mind Rune|089/298|Regular|089-298-mind-rune-3b0a5614.webp
+Mind Rune|089/298|Foil|089-298-mind-rune-3b0a5614.webp
 Orb of Regret|090/298|Regular|090-298-orb-of-regret-9787df74.webp
+Orb of Regret|090/298|Foil|090-298-orb-of-regret-9787df74.webp
 Pit Crew|091/298|Regular|091-298-pit-crew-bcdf522b.webp
+Pit Crew|091/298|Foil|091-298-pit-crew-bcdf522b.webp
 Riptide Rex|092/298|Regular|092-298-riptide-rex-2a89ceec.webp
+Riptide Rex|092/298|Foil|092-298-riptide-rex-2a89ceec.webp
 Smoke Screen|093/298|Regular|093-298-smoke-screen-1c7cd1bc.webp
+Smoke Screen|093/298|Foil|093-298-smoke-screen-1c7cd1bc.webp
 Sprite Call|094/298|Regular|094-298-sprite-call-ca73a240.webp
+Sprite Call|094/298|Foil|094-298-sprite-call-ca73a240.webp
 Stupefy|095/298|Regular|095-298-stupefy-08809184.webp
+Stupefy|095/298|Foil|095-298-stupefy-08809184.webp
 Watchful Sentry|096/298|Regular|096-298-watchful-sentry-ddff7e52.webp
+Watchful Sentry|096/298|Foil|096-298-watchful-sentry-ddff7e52.webp
 Blastcone Fae|097/298|Regular|097-298-blastcone-fae-b603fc40.webp
+Blastcone Fae|097/298|Foil|097-298-blastcone-fae-b603fc40.webp
 Energy Conduit|098/298|Regular|098-298-energy-conduit-6d2a7254.webp
+Energy Conduit|098/298|Foil|098-298-energy-conduit-6d2a7254.webp
 Garbage Grabber|099/298|Regular|099-298-garbage-grabber-7b9d1ff0.webp
+Garbage Grabber|099/298|Foil|099-298-garbage-grabber-7b9d1ff0.webp
 Gemcraft Seer|100/298|Regular|100-298-gemcraft-seer-aa51defb.webp
+Gemcraft Seer|100/298|Foil|100-298-gemcraft-seer-aa51defb.webp
 Mushroom Pouch|101/298|Regular|101-298-mushroom-pouch-cdacca31.webp
+Mushroom Pouch|101/298|Foil|101-298-mushroom-pouch-cdacca31.webp
 Portal Rescue|102/298|Regular|102-298-portal-rescue-cbc24781.webp
+Portal Rescue|102/298|Foil|102-298-portal-rescue-cbc24781.webp
 Ravenbloom Student|103/298|Regular|103-298-ravenbloom-student-10321fa2.webp
+Ravenbloom Student|103/298|Foil|103-298-ravenbloom-student-10321fa2.webp
 Retreat|104/298|Regular|104-298-retreat-378f13d8.webp
+Retreat|104/298|Foil|104-298-retreat-378f13d8.webp
 Singularity|105/298|Regular|105-298-singularity-b522778a.webp
+Singularity|105/298|Foil|105-298-singularity-b522778a.webp
 Sprite Mother|106/298|Regular|106-298-sprite-mother-d5d82b6f.webp
+Sprite Mother|106/298|Foil|106-298-sprite-mother-d5d82b6f.webp
 Ava Achiever|107/298|Regular|107-298-ava-achiever-3b99f7a5.webp
 Convergent Mutation|108/298|Regular|108-298-convergent-mutation-32a26a93.webp
 Dr. Mundo, Expert|109/298|Regular|109-298-dr-mundo-expert-a17a43e2.webp
@@ -137,30 +209,54 @@ Teemo, Strategist|121a/298|Alternate art|121a-298-teemo-strategist-28a8fd4d.webp
 Time Warp|122/298|Regular|122-298-time-warp-dc85f342.webp
 Unchecked Power|123/298|Regular|123-298-unchecked-power-f741f25f.webp
 Arena Bar|124/298|Regular|124-298-arena-bar-9e646313.webp
+Arena Bar|124/298|Foil|124-298-arena-bar-9e646313.webp
 Bilgewater Bully|125/298|Regular|125-298-bilgewater-bully-8b178f9f.webp
+Bilgewater Bully|125/298|Foil|125-298-bilgewater-bully-8b178f9f.webp
 Body Rune|126/298|Regular|126-298-body-rune-28e37be7.webp
+Body Rune|126/298|Foil|126-298-body-rune-28e37be7.webp
 Body Rune|126a/298|Alternate art|126a-298-body-rune-33fabbaf.webp
 Cannon Barrage|127/298|Regular|127-298-cannon-barrage-99cd6589.webp
+Cannon Barrage|127/298|Foil|127-298-cannon-barrage-99cd6589.webp
 Challenge|128/298|Regular|128-298-challenge-815c0863.webp
+Challenge|128/298|Foil|128-298-challenge-815c0863.webp
 Confront|129/298|Regular|129-298-confront-f2eaf7a8.webp
+Confront|129/298|Foil|129-298-confront-f2eaf7a8.webp
 Crackshot Corsair|130/298|Regular|130-298-crackshot-corsair-623340c5.webp
+Crackshot Corsair|130/298|Foil|130-298-crackshot-corsair-623340c5.webp
 Dune Drake|131/298|Regular|131-298-dune-drake-5cf2d53f.webp
+Dune Drake|131/298|Foil|131-298-dune-drake-5cf2d53f.webp
 First Mate|132/298|Regular|132-298-first-mate-805d64a6.webp
+First Mate|132/298|Foil|132-298-first-mate-805d64a6.webp
 Flurry of Blades|133/298|Regular|133-298-flurry-of-blades-527cdda3.webp
+Flurry of Blades|133/298|Foil|133-298-flurry-of-blades-527cdda3.webp
 Mobilize|134/298|Regular|134-298-mobilize-9c0f1322.webp
+Mobilize|134/298|Foil|134-298-mobilize-9c0f1322.webp
 Pakaa Cub|135/298|Regular|135-298-pakaa-cub-e55d7ae2.webp
+Pakaa Cub|135/298|Foil|135-298-pakaa-cub-e55d7ae2.webp
 Pit Rookie|136/298|Regular|136-298-pit-rookie-4e3916cd.webp
+Pit Rookie|136/298|Foil|136-298-pit-rookie-4e3916cd.webp
 Stormclaw Ursine|137/298|Regular|137-298-stormclaw-ursine-3b5d8528.webp
+Stormclaw Ursine|137/298|Foil|137-298-stormclaw-ursine-3b5d8528.webp
 Catalyst of Aeons|138/298|Regular|138-298-catalyst-of-aeons-9ead5ea0.webp
+Catalyst of Aeons|138/298|Foil|138-298-catalyst-of-aeons-9ead5ea0.webp
 Cithria of Cloudfield|139/298|Regular|139-298-cithria-of-cloudfield-e2bc6ef7.webp
+Cithria of Cloudfield|139/298|Foil|139-298-cithria-of-cloudfield-e2bc6ef7.webp
 Herald of Scales|140/298|Regular|140-298-herald-of-scales-a362e240.webp
+Herald of Scales|140/298|Foil|140-298-herald-of-scales-a362e240.webp
 Kinkou Monk|141/298|Regular|141-298-kinkou-monk-5c1ede28.webp
+Kinkou Monk|141/298|Foil|141-298-kinkou-monk-5c1ede28.webp
 Mountain Drake|142/298|Regular|142-298-mountain-drake-1602fff7.webp
+Mountain Drake|142/298|Foil|142-298-mountain-drake-1602fff7.webp
 Pirate's Haven|143/298|Regular|143-298-pirate-s-haven-ec4ba12a.webp
+Pirate's Haven|143/298|Foil|143-298-pirate-s-haven-ec4ba12a.webp
 Spoils of War|144/298|Regular|144-298-spoils-of-war-13c80b28.webp
+Spoils of War|144/298|Foil|144-298-spoils-of-war-13c80b28.webp
 Unyielding Spirit|145/298|Regular|145-298-unyielding-spirit-5523ceb0.webp
+Unyielding Spirit|145/298|Foil|145-298-unyielding-spirit-5523ceb0.webp
 Wallop|146/298|Regular|146-298-wallop-a12ea5bb.webp
+Wallop|146/298|Foil|146-298-wallop-a12ea5bb.webp
 Wildclaw Shaman|147/298|Regular|147-298-wildclaw-shaman-9c80c6d8.webp
+Wildclaw Shaman|147/298|Foil|147-298-wildclaw-shaman-9c80c6d8.webp
 Anivia, Primal|148/298|Regular|148-298-anivia-primal-fb70b188.webp
 Carnivorous Snapvine|149/298|Regular|149-298-carnivorous-snapvine-da6e7c6f.webp
 Kraken Hunter|150/298|Regular|150-298-kraken-hunter-abf7737c.webp
@@ -183,30 +279,54 @@ Seal of Strength|163/298|Regular|163-298-seal-of-strength-8e68d509.webp
 Sett, Brawler|164a/298|Alternate art|164a-298-sett-brawler-94afb841.webp
 Sett, Brawler|164/298|Regular|164-298-sett-brawler-6fb2943e.webp
 Cemetery Attendant|165/298|Regular|165-298-cemetery-attendant-bd627dac.webp
+Cemetery Attendant|165/298|Foil|165-298-cemetery-attendant-bd627dac.webp
 Chaos Rune|166a/298|Alternate art|166a-298-chaos-rune-60aa812e.webp
 Chaos Rune|166/298|Regular|166-298-chaos-rune-c94ff6a5.webp
+Chaos Rune|166/298|Foil|166-298-chaos-rune-c94ff6a5.webp
 Ember Monk|167/298|Regular|167-298-ember-monk-8bcc654f.webp
+Ember Monk|167/298|Foil|167-298-ember-monk-8bcc654f.webp
 Fight or Flight|168/298|Regular|168-298-fight-or-flight-fd5f6a2b.webp
+Fight or Flight|168/298|Foil|168-298-fight-or-flight-fd5f6a2b.webp
 Gust|169/298|Regular|169-298-gust-046bb3a0.webp
+Gust|169/298|Foil|169-298-gust-046bb3a0.webp
 Morbid Return|170/298|Regular|170-298-morbid-return-11b99d28.webp
+Morbid Return|170/298|Foil|170-298-morbid-return-11b99d28.webp
 Mystic Poro|171/298|Regular|171-298-mystic-poro-11492976.webp
+Mystic Poro|171/298|Foil|171-298-mystic-poro-11492976.webp
 Rebuke|172/298|Regular|172-298-rebuke-e7e0a595.webp
+Rebuke|172/298|Foil|172-298-rebuke-e7e0a595.webp
 Ride the Wind|173/298|Regular|173-298-ride-the-wind-b66c049f.webp
+Ride the Wind|173/298|Foil|173-298-ride-the-wind-b66c049f.webp
 Sai Scout|174/298|Regular|174-298-sai-scout-1bbab021.webp
+Sai Scout|174/298|Foil|174-298-sai-scout-1bbab021.webp
 Shipyard Skulker|175/298|Regular|175-298-shipyard-skulker-698e3d49.webp
+Shipyard Skulker|175/298|Foil|175-298-shipyard-skulker-698e3d49.webp
 Sneaky Deckhand|176/298|Regular|176-298-sneaky-deckhand-f108d87b.webp
+Sneaky Deckhand|176/298|Foil|176-298-sneaky-deckhand-f108d87b.webp
 Stealthy Pursuer|177/298|Regular|177-298-stealthy-pursuer-6135fbb5.webp
+Stealthy Pursuer|177/298|Foil|177-298-stealthy-pursuer-6135fbb5.webp
 Undercover Agent|178/298|Regular|178-298-undercover-agent-70074f4b.webp
+Undercover Agent|178/298|Foil|178-298-undercover-agent-70074f4b.webp
 Acceptable Losses|179/298|Regular|179-298-acceptable-losses-5dc57f91.webp
+Acceptable Losses|179/298|Foil|179-298-acceptable-losses-5dc57f91.webp
 Fading Memories|180/298|Regular|180-298-fading-memories-b207ec66.webp
+Fading Memories|180/298|Foil|180-298-fading-memories-b207ec66.webp
 Pack of Wonders|181/298|Regular|181-298-pack-of-wonders-bbd20808.webp
+Pack of Wonders|181/298|Foil|181-298-pack-of-wonders-bbd20808.webp
 Scrapheap|182/298|Regular|182-298-scrapheap-2d4a835c.webp
+Scrapheap|182/298|Foil|182-298-scrapheap-2d4a835c.webp
 Stacked Deck|183/298|Regular|183-298-stacked-deck-27cab056.webp
+Stacked Deck|183/298|Foil|183-298-stacked-deck-27cab056.webp
 The Syren|184/298|Regular|184-298-the-syren-8eb08753.webp
+The Syren|184/298|Foil|184-298-the-syren-8eb08753.webp
 Traveling Merchant|185/298|Regular|185-298-traveling-merchant-a49c2d22.webp
+Traveling Merchant|185/298|Foil|185-298-traveling-merchant-a49c2d22.webp
 Treasure Trove|186/298|Regular|186-298-treasure-trove-cf049cf7.webp
+Treasure Trove|186/298|Foil|186-298-treasure-trove-cf049cf7.webp
 Whirlwind|187/298|Regular|187-298-whirlwind-1b87c363.webp
+Whirlwind|187/298|Foil|187-298-whirlwind-1b87c363.webp
 Zaunite Bouncer|188/298|Regular|188-298-zaunite-bouncer-b3f38869.webp
+Zaunite Bouncer|188/298|Foil|188-298-zaunite-bouncer-b3f38869.webp
 Kayn, Unleashed|189/298|Regular|189-298-kayn-unleashed-9c7bb71b.webp
 Kog'Maw, Caustic|190/298|Regular|190-298-kog-maw-caustic-ab833f48.webp
 Maddened Marauder|191/298|Regular|191-298-maddened-marauder-779b0374.webp
@@ -229,30 +349,54 @@ Seal of Discord|204/298|Regular|204-298-seal-of-discord-0dd43b85.webp
 Yasuo, Windrider|205/298|Regular|205-298-yasuo-windrider-8be10222.webp
 Yasuo, Windrider|205a/298|Alternate art|205a-298-yasuo-windrider-6da73505.webp
 Back to Back|206/298|Regular|206-298-back-to-back-4e47581c.webp
+Back to Back|206/298|Foil|206-298-back-to-back-4e47581c.webp
 Call to Glory|207/298|Regular|207-298-call-to-glory-c3680264.webp
+Call to Glory|207/298|Foil|207-298-call-to-glory-c3680264.webp
 Cruel Patron|208/298|Regular|208-298-cruel-patron-d04bc9b6.webp
+Cruel Patron|208/298|Foil|208-298-cruel-patron-d04bc9b6.webp
 Cull the Weak|209/298|Regular|209-298-cull-the-weak-277bf5c2.webp
+Cull the Weak|209/298|Foil|209-298-cull-the-weak-277bf5c2.webp
 Daring Poro|210/298|Regular|210-298-daring-poro-f45a5bde.webp
+Daring Poro|210/298|Foil|210-298-daring-poro-f45a5bde.webp
 Faithful Manufactor|211/298|Regular|211-298-faithful-manufactor-521f2780.webp
+Faithful Manufactor|211/298|Foil|211-298-faithful-manufactor-521f2780.webp
 Forge of the Future|212/298|Regular|212-298-forge-of-the-future-5992f31b.webp
+Forge of the Future|212/298|Foil|212-298-forge-of-the-future-5992f31b.webp
 Hidden Blade|213/298|Regular|213-298-hidden-blade-65568fd1.webp
+Hidden Blade|213/298|Foil|213-298-hidden-blade-65568fd1.webp
 Order Rune|214/298|Regular|214-298-order-rune-ec6f2c39.webp
+Order Rune|214/298|Foil|214-298-order-rune-ec6f2c39.webp
 Order Rune|214a/298|Alternate art|214a-298-order-rune-b88cc8c0.webp
 Petty Officer|215/298|Regular|215-298-petty-officer-f2c02ee9.webp
+Petty Officer|215/298|Foil|215-298-petty-officer-f2c02ee9.webp
 Soaring Scout|216/298|Regular|216-298-soaring-scout-3161039f.webp
+Soaring Scout|216/298|Foil|216-298-soaring-scout-3161039f.webp
 Trifarian Gloryseeker|217/298|Regular|217-298-trifarian-gloryseeker-19a83b61.webp
+Trifarian Gloryseeker|217/298|Foil|217-298-trifarian-gloryseeker-19a83b61.webp
 Vanguard Captain|218/298|Regular|218-298-vanguard-captain-0198b509.webp
+Vanguard Captain|218/298|Foil|218-298-vanguard-captain-0198b509.webp
 Vanguard Sergeant|219/298|Regular|219-298-vanguard-sergeant-c045c8ad.webp
+Vanguard Sergeant|219/298|Foil|219-298-vanguard-sergeant-c045c8ad.webp
 Facebreaker|220/298|Regular|220-298-facebreaker-8702c479.webp
+Facebreaker|220/298|Foil|220-298-facebreaker-8702c479.webp
 Imperial Decree|221/298|Regular|221-298-imperial-decree-4f727434.webp
+Imperial Decree|221/298|Foil|221-298-imperial-decree-4f727434.webp
 Noxian Drummer|222/298|Regular|222-298-noxian-drummer-abe7d35e.webp
+Noxian Drummer|222/298|Foil|222-298-noxian-drummer-abe7d35e.webp
 Peak Guardian|223/298|Regular|223-298-peak-guardian-3a79fb2e.webp
+Peak Guardian|223/298|Foil|223-298-peak-guardian-3a79fb2e.webp
 Salvage|224/298|Regular|224-298-salvage-2d6732eb.webp
+Salvage|224/298|Foil|224-298-salvage-2d6732eb.webp
 Solari Chief|225/298|Regular|225-298-solari-chief-c305333a.webp
+Solari Chief|225/298|Foil|225-298-solari-chief-c305333a.webp
 Spectral Matron|226/298|Regular|226-298-spectral-matron-27be130a.webp
+Spectral Matron|226/298|Foil|226-298-spectral-matron-27be130a.webp
 Symbol of the Solari|227/298|Regular|227-298-symbol-of-the-solari-a838627a.webp
+Symbol of the Solari|227/298|Foil|227-298-symbol-of-the-solari-a838627a.webp
 Vanguard Helm|228/298|Regular|228-298-vanguard-helm-db93e57d.webp
+Vanguard Helm|228/298|Foil|228-298-vanguard-helm-db93e57d.webp
 Vengeance|229/298|Regular|229-298-vengeance-684ee8c1.webp
+Vengeance|229/298|Foil|229-298-vengeance-684ee8c1.webp
 Albus Ferros|230/298|Regular|230-298-albus-ferros-7ea4a9f8.webp
 Commander Ledros|231/298|Regular|231-298-commander-ledros-a0e95c4b.webp
 Fiora, Victorious|232/298|Regular|232-298-fiora-victorious-a4d37626.webp
@@ -299,33 +443,61 @@ Bullet Time|268/298|Regular|268-298-bullet-time-23ac3a59.webp
 The Boss|269/298|Regular|269-298-the-boss-ecf05682.webp
 Showstopper|270/298|Regular|270-298-showstopper-18a86de9.webp
 Recruit (DE)|271/298|Regular|271-298-recruit-de-6bf21f46.webp
+Recruit (DE)|271/298|Foil|271-298-recruit-de-6bf21f46.webp
 Recruit (NX)|272/298|Regular|272-298-recruit-nx-a55dfbf9.webp
+Recruit (NX)|272/298|Foil|272-298-recruit-nx-a55dfbf9.webp
 Recruit (ZN)|273/298|Regular|273-298-recruit-zn-9d32509b.webp
+Recruit (ZN)|273/298|Foil|273-298-recruit-zn-9d32509b.webp
 Sprite|274/298|Regular|274-298-sprite-8755128f.webp
+Sprite|274/298|Foil|274-298-sprite-8755128f.webp
 Altar to Unity|275/298|Regular|275-298-altar-to-unity-16d1d3ca.webp
+Altar to Unity|275/298|Foil|275-298-altar-to-unity-16d1d3ca.webp
 Aspirant's Climb|276/298|Regular|276-298-aspirant-s-climb-13f94de3.webp
+Aspirant's Climb|276/298|Foil|276-298-aspirant-s-climb-13f94de3.webp
 Back-Alley Bar|277/298|Regular|277-298-back-alley-bar-b016ad07.webp
+Back-Alley Bar|277/298|Foil|277-298-back-alley-bar-b016ad07.webp
 Bandle Tree|278/298|Regular|278-298-bandle-tree-3b74f65c.webp
+Bandle Tree|278/298|Foil|278-298-bandle-tree-3b74f65c.webp
 Fortified Position|279/298|Regular|279-298-fortified-position-df5a44e7.webp
+Fortified Position|279/298|Foil|279-298-fortified-position-df5a44e7.webp
 Grove of the God-Willow|280/298|Regular|280-298-grove-of-the-god-willow-f1ee37c4.webp
+Grove of the God-Willow|280/298|Foil|280-298-grove-of-the-god-willow-f1ee37c4.webp
 Hallowed Tomb|281/298|Regular|281-298-hallowed-tomb-3473ba3d.webp
+Hallowed Tomb|281/298|Foil|281-298-hallowed-tomb-3473ba3d.webp
 Monastery of Hirana|282/298|Regular|282-298-monastery-of-hirana-92a43f52.webp
+Monastery of Hirana|282/298|Foil|282-298-monastery-of-hirana-92a43f52.webp
 Navori Fighting Pit|283/298|Regular|283-298-navori-fighting-pit-bbf248f4.webp
+Navori Fighting Pit|283/298|Foil|283-298-navori-fighting-pit-bbf248f4.webp
 Obelisk of Power|284/298|Regular|284-298-obelisk-of-power-6cb8e86e.webp
+Obelisk of Power|284/298|Foil|284-298-obelisk-of-power-6cb8e86e.webp
 Reaver's Row|285/298|Regular|285-298-reaver-s-row-24400779.webp
+Reaver's Row|285/298|Foil|285-298-reaver-s-row-24400779.webp
 Reckoner's Arena|286/298|Regular|286-298-reckoner-s-arena-85ba8807.webp
+Reckoner's Arena|286/298|Foil|286-298-reckoner-s-arena-85ba8807.webp
 Sigil of the Storm|287/298|Regular|287-298-sigil-of-the-storm-2635b820.webp
+Sigil of the Storm|287/298|Foil|287-298-sigil-of-the-storm-2635b820.webp
 Startipped Peak|288/298|Regular|288-298-startipped-peak-bbafd065.webp
+Startipped Peak|288/298|Foil|288-298-startipped-peak-bbafd065.webp
 Targon's Peak|289/298|Regular|289-298-targon-s-peak-fac913b5.webp
+Targon's Peak|289/298|Foil|289-298-targon-s-peak-fac913b5.webp
 The Arena's Greatest|290/298|Regular|290-298-the-arena-s-greatest-cb533fd8.webp
+The Arena's Greatest|290/298|Foil|290-298-the-arena-s-greatest-cb533fd8.webp
 The Candlelit Sanctum|291/298|Regular|291-298-the-candlelit-sanctum-e61536ff.webp
+The Candlelit Sanctum|291/298|Foil|291-298-the-candlelit-sanctum-e61536ff.webp
 The Dreaming Tree|292/298|Regular|292-298-the-dreaming-tree-b15f9764.webp
+The Dreaming Tree|292/298|Foil|292-298-the-dreaming-tree-b15f9764.webp
 The Grand Plaza|293/298|Regular|293-298-the-grand-plaza-da5a906d.webp
+The Grand Plaza|293/298|Foil|293-298-the-grand-plaza-da5a906d.webp
 Trifarian War Camp|294/298|Regular|294-298-trifarian-war-camp-0757aa34.webp
+Trifarian War Camp|294/298|Foil|294-298-trifarian-war-camp-0757aa34.webp
 Vilemaw's Lair|295/298|Regular|295-298-vilemaw-s-lair-03a1afeb.webp
+Vilemaw's Lair|295/298|Foil|295-298-vilemaw-s-lair-03a1afeb.webp
 Void Gate|296/298|Regular|296-298-void-gate-a8c38cbe.webp
+Void Gate|296/298|Foil|296-298-void-gate-a8c38cbe.webp
 Windswept Hillock|297/298|Regular|297-298-windswept-hillock-8ac6d87b.webp
+Windswept Hillock|297/298|Foil|297-298-windswept-hillock-8ac6d87b.webp
 Zaun Warrens|298/298|Regular|298-298-zaun-warrens-a2f9054d.webp
+Zaun Warrens|298/298|Foil|298-298-zaun-warrens-a2f9054d.webp
 Daughter of the Void|299/298|Overnumbered|299-298-daughter-of-the-void-87773ca0.webp
 Daughter of the Void|299*/298|Signature overnumbered|299-298-daughter-of-the-void-39920b21.webp
 Relentless Storm|300/298|Overnumbered|300-298-relentless-storm-3621eb31.webp
