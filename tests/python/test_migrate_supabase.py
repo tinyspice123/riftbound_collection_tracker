@@ -54,3 +54,4 @@ class MigrationTests(unittest.TestCase):
         self.assertEqual(len(rows), 313)
         self.assertEqual(len({row["id"] for row in rows}), len(rows))
         self.assertTrue(all(row["quantity"] == 0 for row in rows))
+        self.assertEqual({row["group_name"] for row in rows}, {"Base set"})
