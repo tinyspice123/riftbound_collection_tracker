@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SETS = ("origins", "spiritforged", "unleashed", "vendetta")
+SETS = ("origins", "spiritforged", "unleashed", "vendetta", "radiance")
 
 
 def validate_set(set_id: str, root: Path = ROOT) -> list[str]:

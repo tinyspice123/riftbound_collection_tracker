@@ -34,7 +34,10 @@ def rows_for_set(set_id: str, path: Path) -> list[dict[str, object]]:
     cards: list[dict[str, object]] = []
     group = "Ungrouped"
     with path.open(encoding="utf-8-sig", newline="") as handle:
-        for row in csv.DictReader(handle):
+        rows = list(csv.DictReader(handle))
+        existing_foils = {(value(row, "card"), value(row, "number"))
+                          for row in rows if value(row, "variant").casefold() == "foil"}
+        for row in rows:
             card = value(row, "card")
             incoming_group = value(row, "group")
             if incoming_group and not card:
@@ -62,7 +65,9 @@ def rows_for_set(set_id: str, path: Path) -> list[dict[str, object]]:
             # regular printing, but are separate entries in a collection.
             # Do not copy the owned quantity: an existing Regular copy is not
             # evidence that its Foil counterpart is owned.
-            if variant.casefold() == "regular" and not standard_print_is_always_foil(value(row, "source")):
+            if (variant.casefold() == "regular"
+                    and (card, number) not in existing_foils
+                    and not standard_print_is_always_foil(value(row, "source"))):
                 foil_identity = "\0".join((set_id, card, number, "Foil")).encode()
                 cards.append({
                     "id": hashlib.sha256(foil_identity).hexdigest()[:32],

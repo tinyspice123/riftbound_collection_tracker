@@ -26,4 +26,10 @@ const SETS = {
     homeGroup: "core",
     subtitle: "Set 4 collection checklist",
   },
+  radiance: {
+    name: "Radiance",
+    code: "RAD",
+    homeGroup: "core",
+    subtitle: "Set 5 collection checklist",
+  },
 };

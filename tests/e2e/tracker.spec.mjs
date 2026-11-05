@@ -17,10 +17,10 @@ async function mockDatabase(page,{editor=false}={}){
     route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({email:'editor@example.com'})}));
 }
 
-test('home lists all four released sets', async ({page}) => {
+test('home lists all five released sets', async ({page}) => {
   await mockDatabase(page);
   await page.goto('/index.html');
-  await expect(page.locator('.setcard')).toHaveCount(4);
+  await expect(page.locator('.setcard')).toHaveCount(5);
   await expect(page.getByRole('img',{name:'Origins',exact:true})).toBeVisible();
   await expect(page.getByRole('img',{name:'Vendetta',exact:true})).toBeVisible();
 });

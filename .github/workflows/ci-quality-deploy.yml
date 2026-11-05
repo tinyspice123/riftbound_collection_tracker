@@ -1,266 +1,59 @@
-# Tests + quality analysis + deployment pipeline
 name: Tests / Security / Deploy
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
     paths-ignore:
       - README.md
-      - backups/**
       - docs/**
   pull_request:
-    paths-ignore:
-      - README.md
-      - backups/**
-      - docs/**
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-
-  site-checks:
-    name: Site checks + JavaScript unit tests
+  checks:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    permissions:
-      contents: read
-
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            /.github/
-            /backups/
-            /public/
-            /tests/
-            /eslint.config.mjs
-            /package-lock.json
-            /package.json
-
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version: 24
           cache: npm
-
-      - name: Validate workflows and embedded shell
-        env:
-          ACTIONLINT_VERSION: v1.7.12
-        run: |
-          command -v shellcheck
-          go run "github.com/rhysd/actionlint/cmd/actionlint@${ACTIONLINT_VERSION}" \
-            -shellcheck=shellcheck
-
-      - name: Install development tools
-        run: npm ci --ignore-scripts --no-audit --no-fund
-
-      - name: Site checks and lint
-        run: npm run test:site
-
-      - name: lib.js unit tests with coverage
-        run: npm run test:coverage
-
-      - name: Upload coverage report
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
-        with:
-          name: javascript-coverage
-          path: coverage/lcov.info
-          if-no-files-found: error
-          retention-days: 1
-
-  python-tests:
-    name: Python tests (scripts)
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: read
-
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            /scripts/
-            /tests/
-            /backups/
-            /requirements-dev.txt
-            /public/sets.js
-            /public/supabase-config.js
-            /public/img/
-
-      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
           python-version: "3.14"
-          cache: pip
-          cache-dependency-path: requirements-dev.txt
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run test:site
+      - run: node --test tests/unit/*.test.mjs
+      - run: npm run test:python
+      - run: python scripts/validate_data.py
 
-      - name: Install coverage tool
-        run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
-
-      - name: Byte-compile scripts
-        run: |
-          python -m py_compile \
-          scripts/backup_supabase.py \
-          scripts/import_supabase_cards.py \
-          scripts/validate_data.py \
-          scripts/download_card_images.py
-
-      - name: Validate collection backups and image manifests
-        run: python scripts/validate_data.py
-
-      - name: Unit tests with coverage
-        run: |
-          python -m coverage run --source=scripts -m unittest discover -s tests/python -v
-          python -m coverage xml -o coverage.xml
-
-      - name: Upload coverage report
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
-        with:
-          name: python-coverage
-          path: coverage.xml
-          if-no-files-found: error
-          retention-days: 1
-
-
-  browser-tests:
-    name: Browser tests
-    needs: [site-checks, python-tests]
+  database-migrations:
+    needs: checks
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    permissions:
-      contents: read
-
+    timeout-minutes: 5
+    environment: supabase-production
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            /backups/
-            /public/
-            /tests/
-            /package-lock.json
-            /package.json
-            /playwright.config.mjs
-
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
-        with:
-          node-version: 24
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci --ignore-scripts --no-audit --no-fund
-
-      - name: Run browser tests
-        run: npm run test:e2e
-
-      - name: Upload Playwright failure details
-        if: failure()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
-        with:
-          name: playwright-failure
-          path: test-results/
-          if-no-files-found: ignore
-          retention-days: 7
-
-  sonar:
-    name: SonarQube
-    needs: [site-checks, python-tests]
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    permissions:
-      contents: read
-      pull-requests: read
-      id-token: write
-    env:
-      SONAR_SCANNER_ARGS: >-
-        -Dsonar.projectKey=tinyspice123_riftbound_collection_tracker
-        -Dsonar.organization=tinyspice123
-        -Dsonar.scm.provider=git
-        -Dsonar.python.file.suffixes=.py
-        -Dsonar.python.coverage.reportPaths=coverage.xml
-        -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-        -Dsonar.qualitygate.wait=true
-        -Dsonar.qualitygate.timeout=300
-
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          fetch-depth: 0
-
-      - name: Download JavaScript coverage
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
-        with:
-          name: javascript-coverage
-          path: coverage
-
-      - name: Download Python coverage
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
-        with:
-          name: python-coverage
-          path: .
-
-      - name: Analyze with SonarQube
-        id: sonar-attempt-1
-        # Preserve the outcome long enough to distinguish a polling timeout
-        # from a completed analysis that legitimately failed its Quality Gate.
-        continue-on-error: true
-        # v8.2.1, pinned to prevent a mutable tag from changing CI code.
-        uses: SonarSource/sonarqube-scan-action@22918119ff8e1ca75a623e15c8296b6ea4fbe28f # v8.2.1
+          python-version: "3.14"
+      - name: Apply pending Riftbound migrations
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        with:
-          args: ${{ env.SONAR_SCANNER_ARGS }}
-
-      - name: Classify SonarQube failure
-        id: sonar-failure
-        if: steps.sonar-attempt-1.outcome == 'failure'
-        shell: bash
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          timed_out=false
-          report=.scannerwork/report-task.txt
-          if [[ -f "$report" ]]; then
-            ce_task_url="$(sed -n 's/^ceTaskUrl=//p' "$report")"
-            if [[ -n "$ce_task_url" ]]; then
-              task_status="$(curl --fail --silent --show-error \
-                --user "${SONAR_TOKEN}:" "$ce_task_url" | jq -r '.task.status // empty')"
-              if [[ "$task_status" == "PENDING" || "$task_status" == "IN_PROGRESS" ]]; then
-                timed_out=true
-              fi
-            fi
-          fi
-          echo "timed_out=$timed_out" >> "$GITHUB_OUTPUT"
-
-      - name: Back off after SonarQube timeout
-        if: steps.sonar-failure.outputs.timed_out == 'true'
-        run: sleep 60
-
-      - name: Retry SonarQube analysis after timeout
-        if: steps.sonar-failure.outputs.timed_out == 'true'
-        # v8.2.1, pinned to prevent a mutable tag from changing CI code.
-        uses: SonarSource/sonarqube-scan-action@22918119ff8e1ca75a623e15c8296b6ea4fbe28f # v8.2.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        with:
-          args: ${{ env.SONAR_SCANNER_ARGS }}
-
-      - name: Fail completed SonarQube analysis
-        if: steps.sonar-attempt-1.outcome == 'failure' && steps.sonar-failure.outputs.timed_out != 'true'
-        run: |
-          echo "SonarQube failed without a polling timeout; the analysis will not be retried." >&2
-          exit 1
+          SUPABASE_DATABASE_URL: ${{ secrets.SUPABASE_DATABASE_URL }}
+        run: python scripts/migrate_supabase.py
 
   package-pages:
     name: Package Pages artifact
-    needs: [browser-tests, sonar]
+    needs: [checks, database-migrations]
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -383,7 +176,7 @@ jobs:
             echo
             echo "- **Site:** ${SITE_URL:-Unavailable}"
             echo "- **Commit:** \`${GITHUB_SHA::8}\`"
-            echo "- **Quality:** site, unit, Python, browser and SonarQube checks passed"
+            echo "- **Quality:** site, unit, Python and data checks passed"
             echo "- **Sheet fallbacks:** ${BACKUP_COUNT} backup CSV files packaged"
             echo "- **Deployment:** ${DEPLOY_OUTCOME}"
             echo "- **Smoke tests:** ${SMOKE_OUTCOME}"

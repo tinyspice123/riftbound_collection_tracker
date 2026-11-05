@@ -1,0 +1,313 @@
+Amateur Demolitionist|001/167|Regular|001-167-amateur-demolitionist-21862da7.webp
+Amateur Demolitionist|001/167|Foil|001-167-amateur-demolitionist-21862da7.webp
+Banner of Conquest|002/167|Regular|002-167-banner-of-conquest-03f960ee.webp
+Banner of Conquest|002/167|Foil|002-167-banner-of-conquest-03f960ee.webp
+Bilgewater Tracker|003/167|Regular|003-167-bilgewater-tracker-7d30b7d2.webp
+Bilgewater Tracker|003/167|Foil|003-167-bilgewater-tracker-7d30b7d2.webp
+Brawl|004/167|Regular|004-167-brawl-7236998e.webp
+Brawl|004/167|Foil|004-167-brawl-7236998e.webp
+Lingering Animus|005/167|Regular|005-167-lingering-animus-3b8617e2.webp
+Lingering Animus|005/167|Foil|005-167-lingering-animus-3b8617e2.webp
+Scorched Earth|006/167|Regular|006-167-scorched-earth-7b7309e7.webp
+Scorched Earth|006/167|Foil|006-167-scorched-earth-7b7309e7.webp
+Rally for War|007/167|Regular|007-167-rally-for-war-3ae629d0.webp
+Rally for War|007/167|Foil|007-167-rally-for-war-3ae629d0.webp
+War Scout|008/167|Regular|008-167-war-scout-07576336.webp
+War Scout|008/167|Foil|008-167-war-scout-07576336.webp
+Antagonistic Apparatus|009/167|Regular|009-167-antagonistic-apparatus-04fa0aad.webp
+Antagonistic Apparatus|009/167|Foil|009-167-antagonistic-apparatus-04fa0aad.webp
+Forbidden Technique|010/167|Regular|010-167-forbidden-technique-ded8d198.webp
+Forbidden Technique|010/167|Foil|010-167-forbidden-technique-ded8d198.webp
+Incorrigible Construct|011/167|Regular|011-167-incorrigible-construct-94c84d03.webp
+Incorrigible Construct|011/167|Foil|011-167-incorrigible-construct-94c84d03.webp
+Runeblade Anvil|012/167|Regular|012-167-runeblade-anvil-69150af7.webp
+Runeblade Anvil|012/167|Foil|012-167-runeblade-anvil-69150af7.webp
+Lost to the Sands|013/167|Regular|013-167-lost-to-the-sands-cf03f488.webp
+Lost to the Sands|013/167|Foil|013-167-lost-to-the-sands-cf03f488.webp
+Shimmering Swimmer|014/167|Regular|014-167-shimmering-swimmer-c4965c74.webp
+Shimmering Swimmer|014/167|Foil|014-167-shimmering-swimmer-c4965c74.webp
+Akali|015/167|Regular|015-167-akali-ef6ab996.webp
+Coalesced Energy|016/167|Regular|016-167-coalesced-energy-7fef2663.webp
+Detonation Amplifier|017/167|Regular|017-167-detonation-amplifier-b538472c.webp
+Drakehound Packmaster|018/167|Regular|018-167-drakehound-packmaster-afe4f5e5.webp
+Firebrand Raider|019/167|Regular|019-167-firebrand-raider-b50b9bda.webp
+Mordekaiser|020/167|Regular|020-167-mordekaiser-b39879a0.webp
+Mordekaiser|020a/167|Showcase|020a-167-mordekaiser-298cd8a7.webp
+Ekko|021/167|Regular|021-167-ekko-8c8ef7fd.webp
+Ekko|021a/167|Showcase|021a-167-ekko-6297b3dd.webp
+Whirling Twirligig|022/167|Regular|022-167-whirling-twirligig-1525e5f3.webp
+Ziggs|023/167|Regular|023-167-ziggs-a6c45b2f.webp
+Ziggs|023a/167|Showcase|023a-167-ziggs-a564433d.webp
+Blossoming Dreamroot|024/167|Regular|024-167-blossoming-dreamroot-a8d728a4.webp
+Blossoming Dreamroot|024/167|Foil|024-167-blossoming-dreamroot-a8d728a4.webp
+Consult the Heavens|025/167|Regular|025-167-consult-the-heavens-7b43b00b.webp
+Consult the Heavens|025/167|Foil|025-167-consult-the-heavens-7b43b00b.webp
+Entrenched Boar|026/167|Regular|026-167-entrenched-boar-c46a5a76.webp
+Entrenched Boar|026/167|Foil|026-167-entrenched-boar-c46a5a76.webp
+Iridescent Avian|027/167|Regular|027-167-iridescent-avian-0863342f.webp
+Iridescent Avian|027/167|Foil|027-167-iridescent-avian-0863342f.webp
+Ki Burst|028/167|Regular|028-167-ki-burst-c8b7e30c.webp
+Ki Burst|028/167|Foil|028-167-ki-burst-c8b7e30c.webp
+Life from Stone|029/167|Regular|029-167-life-from-stone-5750f668.webp
+Life from Stone|029/167|Foil|029-167-life-from-stone-5750f668.webp
+Sanctum Conservator|030/167|Regular|030-167-sanctum-conservator-e5a648b3.webp
+Sanctum Conservator|030/167|Foil|030-167-sanctum-conservator-e5a648b3.webp
+Stoic Ferryman|031/167|Regular|031-167-stoic-ferryman-8396f7d5.webp
+Stoic Ferryman|031/167|Foil|031-167-stoic-ferryman-8396f7d5.webp
+Battle Preparations|032/167|Regular|032-167-battle-preparations-3ae502c1.webp
+Battle Preparations|032/167|Foil|032-167-battle-preparations-3ae502c1.webp
+Command: Attack|033/167|Regular|033-167-command-attack-0c369179.webp
+Command: Attack|033/167|Foil|033-167-command-attack-0c369179.webp
+Hunker Down|034/167|Regular|034-167-hunker-down-a9250a24.webp
+Hunker Down|034/167|Foil|034-167-hunker-down-a9250a24.webp
+Invigorating Bloom|035/167|Regular|035-167-invigorating-bloom-5e4dd304.webp
+Invigorating Bloom|035/167|Foil|035-167-invigorating-bloom-5e4dd304.webp
+Storm Raptor|036/167|Regular|036-167-storm-raptor-2c06658b.webp
+Storm Raptor|036/167|Foil|036-167-storm-raptor-2c06658b.webp
+Watchful Curator|037/167|Regular|037-167-watchful-curator-64d14c87.webp
+Watchful Curator|037/167|Foil|037-167-watchful-curator-64d14c87.webp
+Ahri|038/167|Regular|038-167-ahri-24385ae4.webp
+Ephemeral Ward|039/167|Regular|039-167-ephemeral-ward-5dec4b7b.webp
+Heartening Soul|040/167|Regular|040-167-heartening-soul-54c4aeb7.webp
+Hush|041/167|Regular|041-167-hush-867303f4.webp
+Orianna|042/167|Regular|042-167-orianna-99872a31.webp
+Orianna|042a/167|Showcase|042a-167-orianna-1f4fcbfc.webp
+Riven|043/167|Regular|043-167-riven-d9fc446d.webp
+Riven|043a/167|Showcase|043a-167-riven-c9332086.webp
+Hunting Blind|044/167|Regular|044-167-hunting-blind-4c0d60af.webp
+K'Sante|045/167|Regular|045-167-k-sante-eae8d344.webp
+K'Sante|045a/167|Showcase|045a-167-k-sante-52b1f718.webp
+Resplendent Rostrum|046/167|Regular|046-167-resplendent-rostrum-8b61026f.webp
+Fanfare|047/167|Regular|047-167-fanfare-e7f9dd20.webp
+Fanfare|047/167|Foil|047-167-fanfare-e7f9dd20.webp
+High Note|048/167|Regular|048-167-high-note-45280f75.webp
+High Note|048/167|Foil|048-167-high-note-45280f75.webp
+Industrious Mechsmith|049/167|Regular|049-167-industrious-mechsmith-61ba2b41.webp
+Industrious Mechsmith|049/167|Foil|049-167-industrious-mechsmith-61ba2b41.webp
+Mysterious Chronomancer|050/167|Regular|050-167-mysterious-chronomancer-edcf2579.webp
+Mysterious Chronomancer|050/167|Foil|050-167-mysterious-chronomancer-edcf2579.webp
+Parallel Convergence|051/167|Regular|051-167-parallel-convergence-eafdd046.webp
+Parallel Convergence|051/167|Foil|051-167-parallel-convergence-eafdd046.webp
+Resource Extractor|052/167|Regular|052-167-resource-extractor-5a18b877.webp
+Resource Extractor|052/167|Foil|052-167-resource-extractor-5a18b877.webp
+Strigian Oracle|053/167|Regular|053-167-strigian-oracle-6da5010c.webp
+Strigian Oracle|053/167|Foil|053-167-strigian-oracle-6da5010c.webp
+Trinket Peddler|054/167|Regular|054-167-trinket-peddler-de01ba22.webp
+Trinket Peddler|054/167|Foil|054-167-trinket-peddler-de01ba22.webp
+Clanging Sentry|055/167|Regular|055-167-clanging-sentry-7c909c94.webp
+Clanging Sentry|055/167|Foil|055-167-clanging-sentry-7c909c94.webp
+Improvised Projectile|056/167|Regular|056-167-improvised-projectile-4f5e07c3.webp
+Improvised Projectile|056/167|Foil|056-167-improvised-projectile-4f5e07c3.webp
+Piltovan Guidebot|057/167|Regular|057-167-piltovan-guidebot-d0111666.webp
+Piltovan Guidebot|057/167|Foil|057-167-piltovan-guidebot-d0111666.webp
+Riptide Mage|058/167|Regular|058-167-riptide-mage-62ed17f0.webp
+Riptide Mage|058/167|Foil|058-167-riptide-mage-62ed17f0.webp
+Supernova|059/167|Regular|059-167-supernova-3b6a902e.webp
+Supernova|059/167|Foil|059-167-supernova-3b6a902e.webp
+The Empyrean|060/167|Regular|060-167-the-empyrean-3525edb4.webp
+The Empyrean|060/167|Foil|060-167-the-empyrean-3525edb4.webp
+Ekko|061/167|Regular|061-167-ekko-2601f9de.webp
+Ekko|061a/167|Showcase|061a-167-ekko-bcba08a5.webp
+Gravity Field|062/167|Regular|062-167-gravity-field-24dde384.webp
+Kai'Sa|063/167|Regular|063-167-kai-sa-0e7f4fc6.webp
+Scrutinizing Scope|064/167|Regular|064-167-scrutinizing-scope-87cdbb17.webp
+Seraphine|065/167|Regular|065-167-seraphine-3b49cc0f.webp
+Seraphine|065a/167|Showcase|065a-167-seraphine-7a2cac12.webp
+Spirit of the Forge|066/167|Regular|066-167-spirit-of-the-forge-35c2c6b6.webp
+Clocktower Guardian|067/167|Regular|067-167-clocktower-guardian-d9a7189e.webp
+Orianna|068/167|Regular|068-167-orianna-4865d17a.webp
+Orianna|068a/167|Showcase|068a-167-orianna-c7e53532.webp
+Zero Point Inflection|069/167|Regular|069-167-zero-point-inflection-a19a3039.webp
+Hold 'Em|070/167|Regular|070-167-hold-em-0667a1b8.webp
+Hold 'Em|070/167|Foil|070-167-hold-em-0667a1b8.webp
+Nazuman Ntofo|071/167|Regular|071-167-nazuman-ntofo-e07a4224.webp
+Nazuman Ntofo|071/167|Foil|071-167-nazuman-ntofo-e07a4224.webp
+Overloaded Traveler|072/167|Regular|072-167-overloaded-traveler-2acec339.webp
+Overloaded Traveler|072/167|Foil|072-167-overloaded-traveler-2acec339.webp
+Pillaged Armory|073/167|Regular|073-167-pillaged-armory-45a834c8.webp
+Pillaged Armory|073/167|Foil|073-167-pillaged-armory-45a834c8.webp
+Raving Witness|074/167|Regular|074-167-raving-witness-72f9fbc6.webp
+Raving Witness|074/167|Foil|074-167-raving-witness-72f9fbc6.webp
+Skystrike Squadron|075/167|Regular|075-167-skystrike-squadron-ae949bc9.webp
+Skystrike Squadron|075/167|Foil|075-167-skystrike-squadron-ae949bc9.webp
+Sneaky Zeebles|076/167|Regular|076-167-sneaky-zeebles-5c2a7f13.webp
+Sneaky Zeebles|076/167|Foil|076-167-sneaky-zeebles-5c2a7f13.webp
+Wrath of the Freljord|077/167|Regular|077-167-wrath-of-the-freljord-3270013f.webp
+Wrath of the Freljord|077/167|Foil|077-167-wrath-of-the-freljord-3270013f.webp
+Armored Tusker|078/167|Regular|078-167-armored-tusker-791f942f.webp
+Armored Tusker|078/167|Foil|078-167-armored-tusker-791f942f.webp
+Avalanche|079/167|Regular|079-167-avalanche-2b23ae4f.webp
+Avalanche|079/167|Foil|079-167-avalanche-2b23ae4f.webp
+Bloodscent Swarm|080/167|Regular|080-167-bloodscent-swarm-97343fe7.webp
+Bloodscent Swarm|080/167|Foil|080-167-bloodscent-swarm-97343fe7.webp
+Elnuk Herd|081/167|Regular|081-167-elnuk-herd-a55ea149.webp
+Elnuk Herd|081/167|Foil|081-167-elnuk-herd-a55ea149.webp
+Primordial Roar|082/167|Regular|082-167-primordial-roar-eb1f6eb4.webp
+Primordial Roar|082/167|Foil|082-167-primordial-roar-eb1f6eb4.webp
+Stalwart Goatherd|083/167|Regular|083-167-stalwart-goatherd-b81681b0.webp
+Stalwart Goatherd|083/167|Foil|083-167-stalwart-goatherd-b81681b0.webp
+Cataclysm|084/167|Regular|084-167-cataclysm-5733b7a5.webp
+Graves|085/167|Regular|085-167-graves-f6b2f73c.webp
+K'Sante|086/167|Regular|086-167-k-sante-5fdf82b0.webp
+K'Sante|086a/167|Showcase|086a-167-k-sante-d338db76.webp
+Portable Portal|087/167|Regular|087-167-portable-portal-c551bc00.webp
+Staunch Survivor|088/167|Regular|088-167-staunch-survivor-f91a3aab.webp
+Titanic Shrine|089/167|Regular|089-167-titanic-shrine-01fa90df.webp
+Evelynn|090/167|Regular|090-167-evelynn-f3489303.webp
+Evelynn|090a/167|Showcase|090a-167-evelynn-36e099f1.webp
+Jarvan IV|091/167|Regular|091-167-jarvan-iv-c312297b.webp
+Jarvan IV|091a/167|Showcase|091a-167-jarvan-iv-8c04d719.webp
+Seraphic Wyvern|092/167|Regular|092-167-seraphic-wyvern-15cacb1c.webp
+Disposal Expert|093/167|Regular|093-167-disposal-expert-b73372ad.webp
+Disposal Expert|093/167|Foil|093-167-disposal-expert-b73372ad.webp
+Explosimian|094/167|Regular|094-167-explosimian-ea48693e.webp
+Explosimian|094/167|Foil|094-167-explosimian-ea48693e.webp
+Momentary Companion|095/167|Regular|095-167-momentary-companion-10e8718e.webp
+Momentary Companion|095/167|Foil|095-167-momentary-companion-10e8718e.webp
+Satchel Charge|096/167|Regular|096-167-satchel-charge-2467abc4.webp
+Satchel Charge|096/167|Foil|096-167-satchel-charge-2467abc4.webp
+Siren of the Shallows|097/167|Regular|097-167-siren-of-the-shallows-e5f2e509.webp
+Siren of the Shallows|097/167|Foil|097-167-siren-of-the-shallows-e5f2e509.webp
+Siren's Song|098/167|Regular|098-167-siren-s-song-96795d81.webp
+Siren's Song|098/167|Foil|098-167-siren-s-song-96795d81.webp
+Suave Negotiator|099/167|Regular|099-167-suave-negotiator-f7c00a06.webp
+Suave Negotiator|099/167|Foil|099-167-suave-negotiator-f7c00a06.webp
+The Waters' Wage|100/167|Regular|100-167-the-waters-wage-12fa0230.webp
+The Waters' Wage|100/167|Foil|100-167-the-waters-wage-12fa0230.webp
+An Offer You Can't Refuse|101/167|Regular|101-167-an-offer-you-can-t-refuse-4d3d13f2.webp
+An Offer You Can't Refuse|101/167|Foil|101-167-an-offer-you-can-t-refuse-4d3d13f2.webp
+Demon Shade|102/167|Regular|102-167-demon-shade-d241b9bd.webp
+Demon Shade|102/167|Foil|102-167-demon-shade-d241b9bd.webp
+Gutter Guardian|103/167|Regular|103-167-gutter-guardian-315f8c6d.webp
+Gutter Guardian|103/167|Foil|103-167-gutter-guardian-315f8c6d.webp
+Pitiless Stalker|104/167|Regular|104-167-pitiless-stalker-16dbad5e.webp
+Pitiless Stalker|104/167|Foil|104-167-pitiless-stalker-16dbad5e.webp
+Reckless Innovator|105/167|Regular|105-167-reckless-innovator-b7cb112e.webp
+Reckless Innovator|105/167|Foil|105-167-reckless-innovator-b7cb112e.webp
+The Good Stuff|106/167|Regular|106-167-the-good-stuff-770297e7.webp
+The Good Stuff|106/167|Foil|106-167-the-good-stuff-770297e7.webp
+Bedeviling Stranger|107/167|Regular|107-167-bedeviling-stranger-9ea17de8.webp
+Bushwhack Trap|108/167|Regular|108-167-bushwhack-trap-71f6b2c7.webp
+Evelynn|109/167|Regular|109-167-evelynn-939f0b3b.webp
+Evelynn|109a/167|Showcase|109a-167-evelynn-f62ec1d6.webp
+Lulu|110/167|Regular|110-167-lulu-797265eb.webp
+Mechanical Bandit|111/167|Regular|111-167-mechanical-bandit-cc9f6c8b.webp
+Ziggs|112/167|Regular|112-167-ziggs-d51a9917.webp
+Ziggs|112a/167|Showcase|112a-167-ziggs-13a21cbf.webp
+Angler Wyrm|113/167|Regular|113-167-angler-wyrm-19bfce5e.webp
+Riven|114/167|Regular|114-167-riven-86a57011.webp
+Riven|114a/167|Showcase|114a-167-riven-e86daf33.webp
+Transpositionist|115/167|Regular|115-167-transpositionist-49fc7e2e.webp
+Concert Poster|116/167|Regular|116-167-concert-poster-9c4a9316.webp
+Concert Poster|116/167|Foil|116-167-concert-poster-9c4a9316.webp
+For Demacia!|117/167|Regular|117-167-for-demacia-baf4a566.webp
+For Demacia!|117/167|Foil|117-167-for-demacia-baf4a566.webp
+Herald of the Emperor|118/167|Regular|118-167-herald-of-the-emperor-9a65f047.webp
+Herald of the Emperor|118/167|Foil|118-167-herald-of-the-emperor-9a65f047.webp
+Hunting Dog|119/167|Regular|119-167-hunting-dog-cfe9f4dc.webp
+Hunting Dog|119/167|Foil|119-167-hunting-dog-cfe9f4dc.webp
+Meticulous Restorationist|120/167|Regular|120-167-meticulous-restorationist-2bb20e72.webp
+Meticulous Restorationist|120/167|Foil|120-167-meticulous-restorationist-2bb20e72.webp
+One-Two Punch|121/167|Regular|121-167-one-two-punch-3a873b0c.webp
+One-Two Punch|121/167|Foil|121-167-one-two-punch-3a873b0c.webp
+Party Crasher|122/167|Regular|122-167-party-crasher-4245ec85.webp
+Party Crasher|122/167|Foil|122-167-party-crasher-4245ec85.webp
+Protector's Shield|123/167|Regular|123-167-protector-s-shield-a7222bfa.webp
+Protector's Shield|123/167|Foil|123-167-protector-s-shield-a7222bfa.webp
+Burn Away|124/167|Regular|124-167-burn-away-0b5c4e15.webp
+Burn Away|124/167|Foil|124-167-burn-away-0b5c4e15.webp
+Dune Devourer|125/167|Regular|125-167-dune-devourer-2ea3d09c.webp
+Dune Devourer|125/167|Foil|125-167-dune-devourer-2ea3d09c.webp
+Mournful Spirit|126/167|Regular|126-167-mournful-spirit-8e16489f.webp
+Mournful Spirit|126/167|Foil|126-167-mournful-spirit-8e16489f.webp
+Rousing Display|127/167|Regular|127-167-rousing-display-a9b15ade.webp
+Rousing Display|127/167|Foil|127-167-rousing-display-a9b15ade.webp
+Steadfast Outrider|128/167|Regular|128-167-steadfast-outrider-530f9716.webp
+Steadfast Outrider|128/167|Foil|128-167-steadfast-outrider-530f9716.webp
+Trifarian Captain|129/167|Regular|129-167-trifarian-captain-f9a2a153.webp
+Trifarian Captain|129/167|Foil|129-167-trifarian-captain-f9a2a153.webp
+Battlefield Armorer|130/167|Regular|130-167-battlefield-armorer-4102d889.webp
+Demacian Illuminators|131/167|Regular|131-167-demacian-illuminators-ae1ccb5b.webp
+Heimerdinger|132/167|Regular|132-167-heimerdinger-c6a04c2b.webp
+Jarvan IV|133/167|Regular|133-167-jarvan-iv-e22a800b.webp
+Jarvan IV|133a/167|Showcase|133a-167-jarvan-iv-78cdff84.webp
+Raucous Anthem|134/167|Regular|134-167-raucous-anthem-22e26640.webp
+Remember the Fallen|135/167|Regular|135-167-remember-the-fallen-3c5970f5.webp
+Dockside Lock-Up|136/167|Regular|136-167-dockside-lock-up-4ee0c0af.webp
+Mordekaiser|137/167|Regular|137-167-mordekaiser-e9aef911.webp
+Mordekaiser|137a/167|Showcase|137a-167-mordekaiser-b8fc32dd.webp
+Seraphine|138/167|Regular|138-167-seraphine-d08f35c4.webp
+Seraphine|138a/167|Showcase|138a-167-seraphine-ca2871ec.webp
+Boy Who Shattered Time|139/167|Regular|139-167-boy-who-shattered-time-b6d1203a.webp
+Chronobreak|140/167|Regular|140-167-chronobreak-65053e5b.webp
+Hexplosives Expert|141/167|Regular|141-167-hexplosives-expert-9876906a.webp
+Hexplosive Minefield|142/167|Regular|142-167-hexplosive-minefield-addef603.webp
+Iron Revenant|143/167|Regular|143-167-iron-revenant-55d7d972.webp
+Realm of Death|144/167|Regular|144-167-realm-of-death-0ee116d6.webp
+Lady of Clockwork|145/167|Regular|145-167-lady-of-clockwork-2866d41a.webp
+The Ball|146/167|Regular|146-167-the-ball-7fade21b.webp
+Pride of Nazumah|147/167|Regular|147-167-pride-of-nazumah-bb885171.webp
+Ntofo Strikes|148/167|Regular|148-167-ntofo-strikes-1083cee2.webp
+The Exile|149/167|Regular|149-167-the-exile-50f3bbe5.webp
+Blade of the Exile|150/167|Regular|150-167-blade-of-the-exile-66a72833.webp
+Starry-Eyed Songstress|151/167|Regular|151-167-starry-eyed-songstress-cd5e8c6e.webp
+Encore|152/167|Regular|152-167-encore-5838ee27.webp
+Agony's Embrace|153/167|Regular|153-167-agony-s-embrace-63d8e372.webp
+Last Caress|154/167|Regular|154-167-last-caress-ea4987b3.webp
+Exemplar of Demacia|155/167|Regular|155-167-exemplar-of-demacia-3283cd15.webp
+Demacian Standard|156/167|Regular|156-167-demacian-standard-fb70ef2d.webp
+Bandle Scouts' Academy|157/167|Regular|157-167-bandle-scouts-academy-3b827378.webp
+Bandle Scouts' Academy|157/167|Foil|157-167-bandle-scouts-academy-3b827378.webp
+Black Market|158/167|Regular|158-167-black-market-c8e87769.webp
+Black Market|158/167|Foil|158-167-black-market-c8e87769.webp
+Black Rose Sanctum|159/167|Regular|159-167-black-rose-sanctum-db4fb433.webp
+Black Rose Sanctum|159/167|Foil|159-167-black-rose-sanctum-db4fb433.webp
+Cosmic Vista|160/167|Regular|160-167-cosmic-vista-249c8b94.webp
+Cosmic Vista|160/167|Foil|160-167-cosmic-vista-249c8b94.webp
+Durand Memorial|161/167|Regular|161-167-durand-memorial-8014d385.webp
+Durand Memorial|161/167|Foil|161-167-durand-memorial-8014d385.webp
+Firelights' Hideout|162/167|Regular|162-167-firelights-hideout-4441a82f.webp
+Firelights' Hideout|162/167|Foil|162-167-firelights-hideout-4441a82f.webp
+Hunters' Circle|163/167|Regular|163-167-hunters-circle-10105f3a.webp
+Hunters' Circle|163/167|Foil|163-167-hunters-circle-10105f3a.webp
+Packed Amphitheater|164/167|Regular|164-167-packed-amphitheater-81a690f3.webp
+Packed Amphitheater|164/167|Foil|164-167-packed-amphitheater-81a690f3.webp
+Rakelstake|165/167|Regular|165-167-rakelstake-89c7fbba.webp
+Rakelstake|165/167|Foil|165-167-rakelstake-89c7fbba.webp
+Ruined Monastery|166/167|Regular|166-167-ruined-monastery-7a7a10a7.webp
+Ruined Monastery|166/167|Foil|166-167-ruined-monastery-7a7a10a7.webp
+Neeko|167/167|Regular|167-167-neeko-b3b3d506.webp
+Boy Who Shattered Time|168/167|Showcase|168-167-boy-who-shattered-time-036e8598.webp
+Hexplosives Expert|169/167|Showcase|169-167-hexplosives-expert-1d3ee916.webp
+Iron Revenant|170/167|Showcase|170-167-iron-revenant-1924f15f.webp
+Lady of Clockwork|171/167|Showcase|171-167-lady-of-clockwork-3fd45722.webp
+Pride of Nazumah|172/167|Showcase|172-167-pride-of-nazumah-1cb902bb.webp
+The Exile|173/167|Showcase|173-167-the-exile-27bb3840.webp
+Starry-Eyed Songstress|174/167|Showcase|174-167-starry-eyed-songstress-84e264cd.webp
+Agony's Embrace|175/167|Showcase|175-167-agony-s-embrace-12737856.webp
+Exemplar of Demacia|176/167|Showcase|176-167-exemplar-of-demacia-91918420.webp
+Ekko|177/167|Showcase|177-167-ekko-289fc60b.webp
+K'Sante|178/167|Showcase|178-167-k-sante-4fbd306e.webp
+Aphelios|179/167|Showcase|179-167-aphelios-07c01811.webp
+Ezreal|180/167|Showcase|180-167-ezreal-2591e5ba.webp
+Yone|181/167|Showcase|181-167-yone-20a20cf3.webp
+Kayn|182/167|Showcase|182-167-kayn-8b30a147.webp
+Sett|183/167|Showcase|183-167-sett-f755981b.webp
+Packed Amphitheater|184/167|Showcase|184-167-packed-amphitheater-118fdfdc.webp
+Fury Rune|R01|Rune|r01-fury-rune-eb8fed0b.webp
+Fury Rune|R01a|Showcase|r01a-fury-rune-34f14419.webp
+Calm Rune|R02|Rune|r02-calm-rune-f11e66a1.webp
+Calm Rune|R02a|Showcase|r02a-calm-rune-7df82192.webp
+Mind Rune|R03|Rune|r03-mind-rune-9223c7b2.webp
+Mind Rune|R03a|Showcase|r03a-mind-rune-76fae6d9.webp
+Body Rune|R04|Rune|r04-body-rune-30b2f6a1.webp
+Body Rune|R04a|Showcase|r04a-body-rune-7aa4dbad.webp
+Chaos Rune|R05|Rune|r05-chaos-rune-d67e18ba.webp
+Chaos Rune|R05a|Showcase|r05a-chaos-rune-e8c39628.webp
+Order Rune|R06|Rune|r06-order-rune-70531b05.webp
+Order Rune|R06a|Showcase|r06a-order-rune-63c72117.webp
+Ahri|SP1/005|Showcase|sp1-005-ahri-3515f3d0.webp
+Akali|SP2/005|Showcase|sp2-005-akali-83416028.webp
+Evelynn|SP3/005|Showcase|sp3-005-evelynn-93192912.webp
+Kai'Sa|SP4/005|Showcase|sp4-005-kai-sa-f88621c0.webp
+Seraphine|SP5/005|Showcase|sp5-005-seraphine-8a8e44ff.webp

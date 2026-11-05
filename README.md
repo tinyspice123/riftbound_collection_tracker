@@ -2,7 +2,7 @@
 
 A static, mobile-friendly Riftbound TCG collection tracker backed by Supabase.
 The home page lists Origins, Spiritforged, Unleashed, and
-Vendetta; each set opens the shared tracker with filtering, quantities,
+Vendetta, and Radiance; each set opens the shared tracker with filtering, quantities,
 completion totals, exports, local card images, marketplace searches, and
 offline caching.
 
@@ -57,7 +57,7 @@ Presentation configuration lives in `public/sets.js`. Card rows and quantities
 live in `public.riftbound_card_main`; quantity changes are audited in
 `public.riftbound_card_quantity_history`.
 
-The four configured sets are:
+The five configured sets are:
 
 | ID | Name | Code |
 | --- | --- | --- |
@@ -65,6 +65,7 @@ The four configured sets are:
 | `spiritforged` | Spiritforged | SFD |
 | `unleashed` | Unleashed | UNL |
 | `vendetta` | Vendetta | VEN |
+| `radiance` | Radiance | RAD |
 
 The import and backup scripts preserve these CSV columns:
 
@@ -172,15 +173,36 @@ The test layers are:
 - `npm run test:python`: maintenance-script unit tests
 - `npm run test:e2e`: desktop and mobile Playwright checks
 
-On pushes to `main` and pull requests, `.github/workflows/ci-quality-deploy.yml`
-runs workflow linting, JavaScript and Python coverage, backup/image validation,
-browser tests, and the SonarQube Quality Gate. For a deployable push, CI then:
+On pushes to `main`, the lean deployment workflow runs lint, static checks,
+JavaScript and Python unit tests, and backup/image validation, applies pending
+Riftbound migrations, then publishes GitHub Pages. Pull requests run checks only.
+There is no SonarQube gate or browser-test installation on the deployment path.
 
-1. Replaces the service worker's build-version placeholder with the commit SHA.
-2. Copies `backups/*.csv` into generated `public/backups/`.
-3. Uploads `public/` as the GitHub Pages artifact.
-4. Deploys it and smoke-tests the home page, tracker, manifest, service worker,
-   a backup CSV, and a local image manifest.
+### Automatic Supabase migrations
+
+In this repository, create the GitHub Actions environment `supabase-production`
+and add its secret `SUPABASE_DATABASE_URL`: the Supabase Postgres connection URI
+from **Connect** (use the session pooler for GitHub-hosted runners). This is a
+database password connection, not the public API URL or service-role key.
+Secrets from the Pokemon repository are not automatically shared here.
+
+`scripts/migrate_supabase.py` uses `psql` (available on Ubuntu runners), a single
+transaction, an advisory lock, and checksums to apply each SQL file once before
+Pages deployment. A failed migration rolls back and blocks deployment. Applied
+files are immutable; add a new timestamped SQL file for subsequent changes.
+
+Both trackers share Supabase, and their original migration version numbers
+collide. Riftbound therefore tracks its own files in the private
+`riftbound_migrations.applied` ledger, leaving Pokemon's CLI history untouched.
+The existing idempotent Riftbound schema is applied once to establish this
+ledger; it requires the shared `is_collection_editor()` function already used
+by the live tracker. The Radiance migration inserts missing rows with zero
+quantity and leaves existing card quantities unchanged.
+
+Radiance includes 219 entries from the [official gallery](https://playriftbound.com/en-us/card-gallery/)
+plus 94 separate Common/Uncommon foil entries (313 checklist rows). Its backup
+and local image manifest support the same read-only outage fallback as other sets.
+The set name appears when a dedicated logo is unavailable.
 
 The weekly **Production dependency canary** verifies live published sheets,
 committed backups, and local image manifests. **Toggle maintenance mode** can

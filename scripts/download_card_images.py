@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BACKUPS = ROOT / "backups"
 IMAGE_ROOT = ROOT / "public" / "img"
-SETS = ("origins", "spiritforged", "unleashed", "vendetta")
+SETS = ("origins", "spiritforged", "unleashed", "vendetta", "radiance")
 MAX_ATTEMPTS = 3
 
 
@@ -98,18 +98,22 @@ def process_set(set_id: str) -> tuple[int, int]:
     failures: list[str] = []
     filenames: dict[tuple[str, str, str], str] = {}
     with ThreadPoolExecutor(max_workers=12) as pool:
-        futures = {pool.submit(download, (url, destination)): (key, url)
-                   for key, url, destination in jobs}
+        # Regular and foil rows share scans. Download each destination once
+        # so concurrent workers cannot overwrite the same temporary file.
+        unique = {(url, destination) for _, url, destination in jobs}
+        futures = {pool.submit(download, job): job for job in unique}
+        downloaded = {}
         for index, future in enumerate(as_completed(futures), 1):
             try:
-                filenames[futures[future][0]] = future.result().name
+                downloaded[futures[future]] = future.result().name
             except Exception as exc:  # report every failed URL before exiting
                 failures.append(f"{futures[future][1]}: {exc}")
-            if index % 50 == 0 or index == len(jobs):
-                print(f"{set_id}: {index}/{len(jobs)}", flush=True)
+            if index % 50 == 0 or index == len(futures):
+                print(f"{set_id}: {index}/{len(futures)}", flush=True)
 
     if failures:
         raise RuntimeError("\n".join(failures))
+    filenames = {key: downloaded[(url, destination)] for key, url, destination in jobs}
     manifest = ["|".join((*key, filenames[key])) for key, _, _ in jobs]
     (target / "manifest.txt").write_text("\n".join(manifest) + "\n", encoding="utf-8")
     return len(rows), sum((target / filenames[key]).stat().st_size

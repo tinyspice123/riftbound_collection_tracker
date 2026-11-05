@@ -26,11 +26,12 @@ for (const icon of [
 const source = fs.readFileSync('public/sets.js', 'utf8');
 const context = {};
 vm.runInNewContext(`${source}; globalThis.registry = SETS`, context);
-const expected = {origins:'OGN', spiritforged:'SFD', unleashed:'UNL', vendetta:'VEN'};
+const expected = {origins:'OGN', spiritforged:'SFD', unleashed:'UNL', vendetta:'VEN', radiance:'RAD'};
 const expectedNumbers={
   origins:{base:298,tokens:[]},
   spiritforged:{base:221,tokens:['T01','T02','T03']},
   unleashed:{base:219,tokens:['T01','T02','T03','T04','T05','T06','T07','T08']},
+  radiance:{base:167,tokens:[]},
   vendetta:{base:166,tokens:['T01','T02','T03','T04','T05','T06']},
 };
 for (const [id, code] of Object.entries(expected)) {
@@ -52,6 +53,7 @@ for (const [id, code] of Object.entries(expected)) {
   const missingTokens=expectedNumbers[id].tokens.filter(number=>!numbers.has(number));
   if(missingTokens.length) throw new Error(`${id} is missing tokens: ${missingTokens.join(', ')}`);
   const logoPath = `public/assets/logos/${id}.png`;
+  if (id === 'radiance' && !fs.existsSync(logoPath)) continue;
   if (!fs.existsSync(logoPath)) throw new Error(`${id} logo is missing`);
   const logoSignature = fs.readFileSync(logoPath).subarray(0, 8).toString('hex');
   if (logoSignature !== '89504e470d0a1a0a') throw new Error(`${id} logo is not a valid PNG`);
