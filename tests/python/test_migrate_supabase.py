@@ -2,6 +2,7 @@ import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch, Mock
 
 spec = importlib.util.spec_from_file_location(
     "migrate", Path(__file__).resolve().parents[2] / "scripts/migrate_supabase.py")
@@ -10,6 +11,27 @@ spec.loader.exec_module(migrate)
 
 
 class MigrationTests(unittest.TestCase):
+    def test_connection_uri_is_passed_explicitly(self):
+        uri = "postgresql://postgres:password@example.com:5432/postgres?sslmode=require"
+        with patch.dict(migrate.os.environ, {"SUPABASE_DATABASE_URL": uri}), patch.object(
+                migrate.subprocess, "run", return_value=Mock(returncode=0)) as run:
+            migrate.main()
+        self.assertEqual(run.call_args.args[0][-2:], ["--dbname", uri])
+
+    def test_rejects_api_urls_before_connecting(self):
+        with patch.dict(migrate.os.environ, {"SUPABASE_DATABASE_URL": "https://example.supabase.co"}), patch.object(
+                migrate.subprocess, "run") as run:
+            with self.assertRaises(SystemExit):
+                migrate.main()
+        run.assert_not_called()
+
+    def test_failure_does_not_expose_command_credentials(self):
+        with patch.dict(migrate.os.environ, {"SUPABASE_DATABASE_URL": "postgresql://user:secret@example.com/postgres"}), patch.object(
+                migrate.subprocess, "run", return_value=Mock(returncode=2)):
+            with self.assertRaises(SystemExit) as error:
+                migrate.main()
+        self.assertNotIn("secret", str(error.exception))
+
     def test_atomic_ordered_and_isolated_history(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

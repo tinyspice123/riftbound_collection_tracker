@@ -177,6 +177,9 @@ On pushes to `main`, the lean deployment workflow runs lint, static checks,
 JavaScript and Python unit tests, and backup/image validation, applies pending
 Riftbound migrations, then publishes GitHub Pages. Pull requests run checks only.
 There is no SonarQube gate or browser-test installation on the deployment path.
+After a successful push deployment, `release.yml` automatically creates a GitHub
+release with generated notes and a unique `deploy-<run>-<commit>` tag. Failed
+deployments never create releases.
 
 ### Automatic Supabase migrations
 

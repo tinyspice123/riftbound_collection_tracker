@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import os
 import subprocess
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -38,13 +39,18 @@ insert into riftbound_migrations.applied(name, checksum) values ('{name}', '{che
 
 
 def main() -> None:
-    # libpq reads PGDATABASE from the environment; credentials never enter argv.
-    database = os.environ.get("SUPABASE_DATABASE_URL")
-    if not database:
-        raise SystemExit("Set SUPABASE_DATABASE_URL to the Postgres connection URI")
-    subprocess.run(["psql", "-X", "--no-password"],
+    database = os.environ.get("SUPABASE_DATABASE_URL", "").strip()
+    parsed = urlsplit(database)
+    if parsed.scheme not in {"postgres", "postgresql"} or not parsed.hostname:
+        raise SystemExit("SUPABASE_DATABASE_URL must be a full postgres:// or postgresql:// connection URI from Supabase Connect")
+    # psql must receive a connection string as dbname explicitly. PGDATABASE
+    # alone can be treated as a literal database name and fall back to sockets.
+    result = subprocess.run(["psql", "-X", "--no-password", "--dbname", database],
                    input=migration_sql(ROOT / "supabase" / "migrations"),
-                   text=True, check=True, env={**os.environ, "PGDATABASE": database})
+                   text=True, check=False, env={**os.environ, "PGCONNECT_TIMEOUT": "20"})
+    if result.returncode:
+        # Avoid CalledProcessError printing the credential-bearing command.
+        raise SystemExit("Supabase migration failed; see psql output above")
 
 
 if __name__ == "__main__":
