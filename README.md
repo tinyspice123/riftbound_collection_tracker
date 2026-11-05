@@ -107,11 +107,87 @@ For example, project `ekyngjwtoxvkqfalxebm` uses:
 
 Never commit or paste the secret key into browser code, Git, or support chats.
 
+## Adding sets, cards, and logos
+
+### Add a new set
+
+1. Choose a permanent lowercase ID, such as `radiance`. Add its name, code,
+   `homeGroup: "core"`, and subtitle to `public/sets.js`, following an existing
+   entry. This creates its home-page link and shared tracker page automatically.
+2. Create `backups/<set-id>.csv` using the header in `docs/template.csv` (or an
+   existing backup). Add verified official-gallery card names, collector numbers,
+   variants, rarity/type source notes, image URLs, and zero `Have` quantities.
+   A group heading goes on its own row with only the `Group` column populated;
+   the following card rows have an empty `Group`. Keep numbers as text.
+3. Include each printing once. Common/Uncommon Regular cards can have separate
+   Foil entries; the migration generator adds missing foil rows automatically.
+   Standard Rare/Epic cards do not need duplicate foil rows. Include generated
+   foil rows in the CSV too so the offline checklist matches the database.
+4. Add the ID to `SETS` in both `scripts/download_card_images.py` and
+   `scripts/validate_data.py`. Add its code and verified base-card total/token
+   numbers to `expected` and `expectedNumbers` in
+   `tests/site/riftbound_checks.mjs`. Update the home-page set count in
+   `tests/e2e/tracker.spec.mjs` and the set table in this README.
+5. Save the official transparent PNG logo as
+   `public/assets/logos/<set-id>.png`. Use an actual PNG, not a renamed WebP/SVG.
+   No logo registry or HTML edit is necessary: both home and tracker look up
+   this exact path. Use official publisher/retailer marketing assets.
+6. Download scans, create the manifest, and generate a **new** SQL migration:
+
+   ```bash
+   python scripts/download_card_images.py radiance
+   python scripts/generate_card_migration.py radiance supabase/migrations/202611060001_add_radiance_cards.sql
+   ```
+
+   Replace `radiance` with the new set ID and use a fresh numeric timestamp in
+   the filename. The example is a command pattern; Radiance is already seeded.
+   The generator refuses to overwrite a file, adds missing identities with zero
+   quantity, and appends their sort positions without modifying existing cards.
+7. Review the CSV, PNG, image manifest, and SQL. Run:
+
+   ```bash
+   python scripts/validate_data.py
+   npm run test:site
+   npm run test:python
+   ```
+
+8. Commit the registry, backup, logo, scans/manifest, scripts/tests, and new SQL
+   together. Push to `main`. CI applies migrations before deploying Pages, then
+   creates a semantic release after a successful deployment. The
+   `supabase-production` environment must already have `SUPABASE_DATABASE_URL`
+   set to its **Session pooler** PostgreSQL URI.
+
+Do not run `backup_supabase.py` between preparing new CSV rows and applying the
+migration: the database export would replace your unimported additions.
+
+### Add cards to an existing set
+
+First run `python scripts/backup_supabase.py` to refresh the current snapshot.
+Append the new verified printings to `backups/<set-id>.csv`, with zero quantities
+and the correct group heading. Run the image downloader and migration generator
+above, using that set ID and a fresh migration filename. The generator can read
+the entire snapshot: existing card IDs are skipped, so owned quantities remain
+unchanged. Validate, commit, and push the backup, new scans/manifest, and SQL.
+
+Card identity is based on set ID, card name, number, and variant. Changing one
+of those creates a different identity; renames, corrections, deletions, and
+changes to existing metadata require a deliberate new SQL migration. Never edit
+an applied migration. The general `import_supabase_cards.py` tool is intended
+for initial imports/restores and **overwrites quantities from the snapshots**;
+use the insert-only migration generator for routine catalogue additions.
+
+### Add or replace a logo only
+
+Replace `public/assets/logos/<set-id>.png` with the official PNG, run
+`npm run test:site`, then commit and push. No database migration or card import
+is needed. The next deployment updates the site and its service-worker version.
+
 ## Logos and local card images
 
 Set logos are committed under `public/assets/logos/`. The tracker looks for a
 local `<set-id>.png` first and falls back to the set name if no valid image is
-available.
+available. Radiance?s standalone wordmark is sourced from the
+[Red Riot Games set listing](https://redriotgames.ca/pages/riftbound-singles).
 
 Card artwork is committed under `public/img/<set-id>/`. Each directory has a
 `manifest.txt` mapping exact sheet identities to local filenames:
@@ -209,7 +285,7 @@ quantity and leaves existing card quantities unchanged.
 Radiance includes 219 entries from the [official gallery](https://playriftbound.com/en-us/card-gallery/)
 plus 94 separate Common/Uncommon foil entries (313 checklist rows). Its backup
 and local image manifest support the same read-only outage fallback as other sets.
-The set name appears when a dedicated logo is unavailable.
+A set name appears as a fallback if its logo cannot be loaded.
 
 The weekly **Production dependency canary** verifies live published sheets,
 committed backups, and local image manifests. **Toggle maintenance mode** can

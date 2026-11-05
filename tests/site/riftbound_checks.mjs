@@ -53,7 +53,6 @@ for (const [id, code] of Object.entries(expected)) {
   const missingTokens=expectedNumbers[id].tokens.filter(number=>!numbers.has(number));
   if(missingTokens.length) throw new Error(`${id} is missing tokens: ${missingTokens.join(', ')}`);
   const logoPath = `public/assets/logos/${id}.png`;
-  if (id === 'radiance' && !fs.existsSync(logoPath)) continue;
   if (!fs.existsSync(logoPath)) throw new Error(`${id} logo is missing`);
   const logoSignature = fs.readFileSync(logoPath).subarray(0, 8).toString('hex');
   if (logoSignature !== '89504e470d0a1a0a') throw new Error(`${id} logo is not a valid PNG`);

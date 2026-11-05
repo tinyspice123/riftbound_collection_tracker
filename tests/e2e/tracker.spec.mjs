@@ -23,6 +23,7 @@ test('home lists all five released sets', async ({page}) => {
   await expect(page.locator('.setcard')).toHaveCount(5);
   await expect(page.getByRole('img',{name:'Origins',exact:true})).toBeVisible();
   await expect(page.getByRole('img',{name:'Vendetta',exact:true})).toBeVisible();
+  await expect(page.getByRole('img',{name:'Radiance',exact:true})).toBeVisible();
 });
 
 test('Origins tracker loads cards from Supabase', async ({page}) => {
