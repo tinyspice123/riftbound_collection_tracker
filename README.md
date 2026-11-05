@@ -178,8 +178,12 @@ JavaScript and Python unit tests, and backup/image validation, applies pending
 Riftbound migrations, then publishes GitHub Pages. Pull requests run checks only.
 There is no SonarQube gate or browser-test installation on the deployment path.
 After a successful push deployment, `release.yml` automatically creates a GitHub
-release with generated notes and a unique `deploy-<run>-<commit>` tag. Failed
-deployments never create releases.
+release with generated notes and a semantic version tag, starting at `v1.0.0`.
+Commits since the latest semantic tag determine the bump: `feat:` or
+`feat(scope):` bumps minor; `type!:` or a `BREAKING CHANGE:` footer bumps major;
+other commits bump patch. Existing `deploy-*` releases remain in place.
+Reruns and delayed deployments of older commits do not create extra releases.
+Failed deployments never create releases.
 
 ### Automatic Supabase migrations
 
